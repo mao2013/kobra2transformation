@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://schema.omg.org/spec/UML/2.1.1" xsi:schemaLocation="http://schema.omg.org/spec/UML/2.1.1 http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_UTdq56YlEd2MXbsTh363tA" name="Profile" metamodelReference="_UTdq9aYlEd2MXbsTh363tA">
+  <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UTdq6KYlEd2MXbsTh363tA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <contents xmi:type="ecore:EPackage" xmi:id="_UTdq6aYlEd2MXbsTh363tA" name="Profile" nsURI="http:///schemas/Profile/_9T0fQKYkEd2MXbsTh363tA/2" nsPrefix="Profile">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_UTdq6qYlEd2MXbsTh363tA" name="ComponentClass">
+          <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UTdq66YlEd2MXbsTh363tA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_UTdq9qYlEd2MXbsTh363tA"/>
+          </xmi:Extension>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_UTdq7KYlEd2MXbsTh363tA" name="base_Class" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//Class"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_UTdq7qYlEd2MXbsTh363tA" name="Property">
+          <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UTdq76YlEd2MXbsTh363tA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_UTdq-KYlEd2MXbsTh363tA"/>
+          </xmi:Extension>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_UTdq8KYlEd2MXbsTh363tA" name="base_Class" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/2.1.0/UML#//Class"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+      </contents>
+      <contents xmi:type="ecore:EPackage" xmi:id="_UTdq8qYlEd2MXbsTh363tA" name="Profile" nsURI="http:///schemas/Profile/_hNjYIKYkEd2MXbsTh363tA/1" nsPrefix="Profile"/>
+      <contents xmi:type="ecore:EPackage" xmi:id="_UTdq86YlEd2MXbsTh363tA" name="Profile" nsURI="http:///schemas/Profile/_bHlfdaYkEd2MXbsTh363tA/0" nsPrefix="Profile"/>
+    </eAnnotations>
+  </xmi:Extension>
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_UTdq9KYlEd2MXbsTh363tA">
+    <importedPackage xmi:type="uml:Model" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#_0"/>
+  </packageImport>
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_UTdq9aYlEd2MXbsTh363tA">
+    <importedPackage xmi:type="uml:Model" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_UTdq9qYlEd2MXbsTh363tA" name="ComponentClass">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_UTdq96YlEd2MXbsTh363tA" name="base_Class" association="_UTdq-qYlEd2MXbsTh363tA">
+      <type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Class"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_UTdq-KYlEd2MXbsTh363tA" name="Property">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_UTdq-aYlEd2MXbsTh363tA" name="base_Class" association="_UTdq_KYlEd2MXbsTh363tA">
+      <type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Class"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_UTdq-qYlEd2MXbsTh363tA" name="Class_ComponentClass" memberEnd="_UTdq-6YlEd2MXbsTh363tA _UTdq96YlEd2MXbsTh363tA">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_UTdq-6YlEd2MXbsTh363tA" name="extension_ComponentClass" type="_UTdq9qYlEd2MXbsTh363tA" aggregation="composite" association="_UTdq-qYlEd2MXbsTh363tA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_UTdq_KYlEd2MXbsTh363tA" name="Class_Property" memberEnd="_UTdq_aYlEd2MXbsTh363tA _UTdq-aYlEd2MXbsTh363tA">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_UTdq_aYlEd2MXbsTh363tA" name="extension_Property" type="_UTdq-KYlEd2MXbsTh363tA" aggregation="composite" association="_UTdq_KYlEd2MXbsTh363tA"/>
+  </packagedElement>
+</uml:Profile>
