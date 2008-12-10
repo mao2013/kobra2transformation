@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TransformationConfiguration forwardTransformation="com.ibm.xtools.transform.samples.modeltomodel.class2service.multiplerule.root" version="7.0.0">
+<!--xtools2_universal_type_manager-->
+<Property id="CONTEXT_SOURCE" value="&amp;lt;Collection&amp;gt;,java.util.ArrayList,@47&amp;lt;comma&amp;gt;39@com.ibm.xtools.uml.transform.core.metatype.uml2DataIn::KobrA2::SUM::Structure::Elementplatform:/resource/K2Meta2Profile/Kobra2-MM.emx#_XlVd08VTEd239M1pPQ_9PQ"/>
+<Property id="CONTEXT_TARGET_CONTAINER" value="@47,7@com.ibm.xtools.uml.transform.core.metatype.uml2DataOutplatform:/resource/K2Meta2Profile/models/OutputExampleModel.emx#_WuGMgPLQEdidBuaHTtff6Q"/>
+<Property id="logTrace" value="@46,=@com.ibm.xtools.transform.core.metatype.booleanfalse"/>
+</TransformationConfiguration>
