@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="com.ibm.xtools.transform.samples.modeltomodel"
+   name="%Plugin.name"
+   version="7.0.0"
+   provider-name="%Plugin.providerName"
+   class="com.ibm.xtools.transform.samples.modeltomodel.ModelToModelPlugin">
+
+   <runtime>
+      <library name="modeltomodel.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+   <requires>
+      <import plugin="org.eclipse.core.runtime" version="3.2.0" match="compatible"/>
+      <import plugin="com.ibm.xtools.uml.transform.core" version="7.0.0" match="compatible"/>
+      <import plugin="com.ibm.xtools.transform.core" version="7.0.0" match="compatible"/>
+      <import plugin="org.eclipse.emf.query" version="1.0.0" match="compatible"/>
+      <import plugin="org.eclipse.uml2.uml" version="2.0.0" match="compatible"/>
+      <import plugin="org.eclipse.gmf.runtime.common.core" version="1.0.0" match="compatible"/>
+      <import plugin="org.eclipse.gmf.runtime.emf.core" version="1.0.0" match="compatible"/>
+      <import plugin="com.ibm.xtools.modeler.ui" version="7.0.0" match="compatible"/>
+      <import plugin="com.ibm.xtools.transform.ui" version="7.0.0" match="compatible"/>
+   </requires>
+
+
+   <extension
+         id="com.ibm.xtools.transform.samples.modeltomodel.transformation.provider"
+         name="KobrA2 Meta-Model 2 Profile Transformation"
+         point="com.ibm.xtools.transform.core.transformationProviders">
+      <TransformationProvider
+            class="com.ibm.xtools.transform.samples.modeltomodel.ModelToModelTransformationProvider">
+         <Priority
+               name="Highest">
+         </Priority>
+         
+         <!-- 
+         <Transformation
+         	   id="com.ibm.xtools.transform.samples.modeltomodel.class2service.singlerule.root"
+               name="%ClassToServiceTransformationSingleRule.name"
+			   transformGUI="com.ibm.xtools.transform.samples.modeltomodel.TransformGUI"
+               description="%ClassToServiceTransformationSingleRule.description"
+               version="1.0"
+               author="%ClassToServiceTransformation.author"
+               groupPath="%ClassToServiceTransformation.groupPath"
+               document="doc/classToServiceSingleRule.html"
+               sourceModelType="UML2"
+               targetModelType="UML2">
+         </Transformation>
+         -->
+         
+         <Transformation
+         	   id="com.ibm.xtools.transform.samples.modeltomodel.class2service.multiplerule.root"
+               name="%ClassToServiceTransformationMultipleRule.name"
+			   transformGUI="com.ibm.xtools.transform.samples.modeltomodel.TransformGUI"
+               description="%ClassToServiceTransformationMultipleRule.description"
+               version="1.0"
+               author="%ClassToServiceTransformation.author"
+               groupPath="%ClassToServiceTransformation.groupPath"
+               document="doc/classToServiceMultipleRules.html"
+               sourceModelType="UML2"
+               targetModelType="UML2">
+         </Transformation>
+         
+         <!--
+         <Transformation
+         	   id="com.ibm.xtools.transform.samples.modeltomodel.markedup.class2service.root"
+               name="%MarkedupClassToServiceTransformation.name"
+			   transformGUI="com.ibm.xtools.transform.samples.modeltomodel.TransformGUI"
+               description="%MarkedupClassToServiceTransformation.description"
+               version="1.0"
+               author="%ClassToServiceTransformation.author"
+               groupPath="%ClassToServiceTransformation.groupPath"
+               document="doc/markedupClassToService.html"
+               profiles="ClassToService"
+               sourceModelType="UML2"
+               targetModelType="UML2">
+         </Transformation>
+         -->
+         
+      </TransformationProvider>
+   </extension>
+   
+   <!-- Extensions for registering profiles. Not always necessary for transformations. -->
+   <!--
+   <extension
+         id="ClassToServiceProfile"
+         name="ClassToService Profile"
+         point="com.ibm.xtools.uml.msl.UMLProfiles">
+      <UMLProfile
+            visible="true"
+            path="pathmap://TRANSFORM_MODEL2MODEL_SAMPLE_PROFILES/ClassToServiceProfile.epx"
+            name="ClassToService"/>
+   </extension>
+   <extension
+         id="TransformModel2ModelSampleProfiles"
+         name="Transform Model2Model Sample Profiles"
+         point="org.eclipse.gmf.runtime.emf.core.Pathmaps">
+      <pathmap
+            name="TRANSFORM_MODEL2MODEL_SAMPLE_PROFILES"
+            plugin="com.ibm.xtools.transform.samples.modeltomodel"
+            path="profiles"> 
+      </pathmap> 
+   </extension>
+	-->
+</plugin>
