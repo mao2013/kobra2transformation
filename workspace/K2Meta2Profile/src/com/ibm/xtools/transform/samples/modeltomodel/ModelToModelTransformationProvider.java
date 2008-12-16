@@ -12,8 +12,10 @@ package com.ibm.xtools.transform.samples.modeltomodel;
 
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.uml2.uml.Model;
 import org.eclipse.uml2.uml.UMLPackage;
 
+import com.ibm.xtools.modeler.ui.UMLModeler;
 import com.ibm.xtools.transform.core.AbstractTransform;
 import com.ibm.xtools.transform.core.AbstractTransformationProvider;
 import com.ibm.xtools.transform.core.ITransformContext;
@@ -22,7 +24,10 @@ import com.ibm.xtools.transform.samples.modeltomodel.classtoservice.markedup.tra
 import com.ibm.xtools.transform.samples.modeltomodel.classtoservice.multiplerules.transforms.ClassToServiceMultipleRuleRootTransform;
 import com.ibm.xtools.transform.samples.modeltomodel.classtoservice.singlerule.transforms.ClassToServiceSingleRuleRootTransform;
 import com.ibm.xtools.transform.samples.modeltomodel.l10n.ResourceManager;
+import com.ibm.xtools.uml.core.internal.util.ProfileUtil;
 
+import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IResource;
 /**
  * The provider for the model to model transformation samples.
  * 
@@ -77,10 +82,24 @@ public class ModelToModelTransformationProvider
     	AbstractTransform transform = context.getTransform();
 		boolean sourceOk = transform.canAccept(context);
 		Object target = context.getTargetContainer();
+		
+		//System.out.println("target" + target.getClass());
+		
+		
 		boolean targetOk = false;
-        if (target instanceof EObject) {
-            targetOk = ((EObject) target).eClass() == UMLPackage.eINSTANCE.getPackage() ||
-                       ((EObject) target).eClass() == UMLPackage.eINSTANCE.getModel() ;
+        if (target instanceof IResource) {
+        	
+        	IResource targetResource = (IResource) target;
+        	
+        	if (ProfileUtil.isProfileFile(targetResource.getLocation().toString())){
+        		System.out.println("target ok");
+        		targetOk = true;
+        	}
+        	//IFile targetFile = (IFile) target;
+        	//System.out.println(targetFile.getFullPath().toString());
+        	//System.out.println("target "+ ((EObject) target).eClass());
+        	//System.out.println("profile "+ UMLPackage.eINSTANCE.getProfile());
+            //targetOk = ((EObject) target).eClass() == UMLPackage.eINSTANCE.getProfile()  ;
         }
 		boolean propertiesOk = true;
 
