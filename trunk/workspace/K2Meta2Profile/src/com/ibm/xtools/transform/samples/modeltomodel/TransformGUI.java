@@ -107,7 +107,7 @@ public class TransformGUI extends AbstractTransformGUI {
         		// a UML package, it is a valid target container
     			EClass kind = ((EObject) suggestedTargetContainer).eClass();
     			UMLPackage uml2 = UMLPackage.eINSTANCE;
-    			if (kind == uml2.getModel() || kind == uml2.getPackage()) {
+    			if (kind == uml2.getProfile()) {
     				isValid = true;
     			}
     		} else if (suggestedTargetContainer instanceof IResource) {

@@ -3,7 +3,9 @@ package com.ibm.xtools.transform.samples.modeltomodel.classtoservice.rules;
 import org.eclipse.uml2.uml.Class;
 import org.eclipse.uml2.uml.Interface;
 import org.eclipse.uml2.uml.Package;
+import org.eclipse.uml2.uml.Profile;
 import org.eclipse.uml2.uml.Stereotype;
+import org.eclipse.uml2.uml.UMLFactory;
 import org.eclipse.uml2.uml.UMLPackage;
 
 import com.ibm.xtools.transform.core.ITransformContext;
@@ -11,6 +13,7 @@ import com.ibm.xtools.transform.core.ModelRule;
 import com.ibm.xtools.transform.samples.modeltomodel.IsTopLevelClassCondition;
 import com.ibm.xtools.transform.samples.modeltomodel.ModelUtility;
 import com.ibm.xtools.transform.samples.modeltomodel.l10n.ResourceManager;
+import com.ibm.xtools.uml.core.internal.util.ProfileUtil;
 import com.ibm.xtools.uml.transform.core.IsElementKindCondition;
 
 public class CreateStereotypeClassRule extends ModelRule {
@@ -34,22 +37,16 @@ public class CreateStereotypeClassRule extends ModelRule {
 	
 	protected Object createTarget(ITransformContext ruleContext) throws Exception {
 		final String srcName = ((Class) ruleContext.getSource()).getName();
-		final Package pkg = (Package) ruleContext.getPropertyValue("targetPackage"); //$NON-NLS-1$
+		final Profile profile = (Profile) ruleContext.getPropertyValue("targetProfile"); //$NON-NLS-1$
+		
 		Class targetStereotype = null;
 		
-		if (pkg != null) {
-			String targetStereotypeName = srcName; //$NON-NLS-1$
-		
-			targetStereotype = (Stereotype) ModelUtility.getClassByName(pkg, targetStereotypeName);
-			
-			if (targetStereotype == null) {
-				targetStereotype = pkg.createOwnedClass(targetStereotypeName, false);
-				//targetStereotype.iss
-			}
+		if (profile != null) {
+			System.out.println("owned setereotyoe created");
+			profile.createOwnedStereotype(srcName);		
 		}
 
 		System.out.println(ID + " is executed"); //$NON-NLS-1$
-
 		return targetStereotype;
 	}
 

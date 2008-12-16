@@ -8,6 +8,7 @@ import com.ibm.xtools.transform.core.ITransformationDescriptor;
 import com.ibm.xtools.transform.samples.modeltomodel.OperationVisibilityCondition;
 import com.ibm.xtools.transform.samples.modeltomodel.classtoservice.rules.CreateAccessorRule;
 import com.ibm.xtools.transform.samples.modeltomodel.classtoservice.rules.CreateInterfaceClassRule;
+import com.ibm.xtools.transform.samples.modeltomodel.classtoservice.rules.CreateStereotypeClassRule;
 import com.ibm.xtools.transform.samples.modeltomodel.classtoservice.rules.OperationRule;
 import com.ibm.xtools.transform.samples.modeltomodel.classtoservice.rules.ParameterRule;
 import com.ibm.xtools.uml.transform.core.UMLKindTransform;
@@ -47,8 +48,8 @@ public class ClassToStereotypeTransform extends UMLKindTransform {
 		//EClass parameterKind = UMLPackage.eINSTANCE.getParameter();
 		//EClass propertyKind = UMLPackage.eINSTANCE.getProperty();
 
-		addByKind(classKind, new CreateInterfaceClassRule(CreateInterfaceClassRule.ID,
-			CreateInterfaceClassRule.NAME));
+		addByKind(classKind, new CreateStereotypeClassRule(CreateStereotypeClassRule.ID,
+			CreateStereotypeClassRule.NAME));
 
 		// Create an operation rule, set it up to accept only public operations
 		// and add to transform
