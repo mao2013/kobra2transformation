@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML">
+  <uml:Profile xmi:id="a1" name="K2Transformations" metaclassReference="a2">
+    <elementImport xmi:type="uml:ElementImport" href="/K2Transformations/K2Profile.profile.uml#a2"/>
+    <packagedElement xmi:type="uml:Extension" xmi:id="a3" name="Extension_GeneralizationSet" memberEnd="a40 a4">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="a4" name="extension_GeneralizationSet" type="a39" aggregation="composite" association="a3"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="a5" name="Extension_Acquires" memberEnd="a48 a6">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="a6" name="extension_Acquires" type="a47" aggregation="composite" association="a5"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="a7" name="Extension_Property" memberEnd="a38 a8">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="a8" name="extension_Property" type="a37" aggregation="composite" association="a7"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="a9" name="Extension_Classifier" memberEnd="a52 a10">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="a10" name="extension_Classifier" type="a51" aggregation="composite" association="a9"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="a11" name="Extension_Association" memberEnd="a46 a12">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="a12" name="extension_Association" type="a45" aggregation="composite" association="a11"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="a13" name="Extension_Usage" memberEnd="a58 a14">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="a14" name="extension_Usage" type="a57" aggregation="composite" association="a13"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="a15" name="Extension_Operation" memberEnd="a54 a16">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="a16" name="extension_Operation" type="a53" aggregation="composite" association="a15"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="a17" name="Extension_ComponentClass" memberEnd="a34 a18">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="a18" name="extension_ComponentClass" type="a33" aggregation="composite" association="a17"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="a19" name="Extension_Nests" memberEnd="a50 a20">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="a20" name="extension_Nests" type="a49" aggregation="composite" association="a19"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="a21" name="Extension_AssociationClass" memberEnd="a44 a22">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="a22" name="extension_AssociationClass" type="a43" aggregation="composite" association="a21"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="a23" name="Extension_Parameter" memberEnd="a56 a24">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="a24" name="extension_Parameter" type="a55" aggregation="composite" association="a23"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="a25" name="Extension_Component" memberEnd="a36 a26">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="a26" name="extension_Component" type="a35" aggregation="composite" association="a25"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="a27" name="Extension_Class" memberEnd="a42 a28">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="a28" name="extension_Class" type="a41" aggregation="composite" association="a27"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Profile" xmi:id="a29" name="KobrA2">
+      <packagedElement xmi:type="uml:Profile" xmi:id="a30" name="SUM">
+        <packagedElement xmi:type="uml:Profile" xmi:id="a31" name="Structure">
+          <packagedElement xmi:type="uml:Profile" xmi:id="a32" name="Classes">
+            <packagedElement xmi:type="uml:Stereotype" xmi:id="a33" name="ComponentClass">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="a34" name="base_Element_ComponentClass" isUnique="false" association="a17"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Stereotype" xmi:id="a35" name="Component">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="a36" name="base_Element_Component" isUnique="false" association="a25"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Stereotype" xmi:id="a37" name="Property">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="a38" name="base_Element_Property" isUnique="false" association="a7"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Stereotype" xmi:id="a39" name="GeneralizationSet">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="a40" name="base_Element_GeneralizationSet" isUnique="false" association="a3"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Stereotype" xmi:id="a41" name="Class">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="a42" name="base_Element_Class" isUnique="false" association="a27"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Stereotype" xmi:id="a43" name="AssociationClass">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="a44" name="base_Element_AssociationClass" isUnique="false" association="a21"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Stereotype" xmi:id="a45" name="Association">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="a46" name="base_Element_Association" isUnique="false" association="a11"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Stereotype" xmi:id="a47" name="Acquires">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="a48" name="base_Element_Acquires" isUnique="false" association="a5"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Stereotype" xmi:id="a49" name="Nests">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="a50" name="base_Element_Nests" isUnique="false" association="a19"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Stereotype" xmi:id="a51" name="Classifier">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="a52" name="base_Element_Classifier" isUnique="false" association="a9"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Stereotype" xmi:id="a53" name="Operation">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="a54" name="base_Element_Operation" isUnique="false" association="a15"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Stereotype" xmi:id="a55" name="Parameter">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="a56" name="base_Element_Parameter" isUnique="false" association="a23"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Stereotype" xmi:id="a57" name="Usage">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="a58" name="base_Element_Usage" isUnique="false" association="a13"/>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </uml:Profile>
+  <uml:ElementImport xmi:id="a2" alias="Class">
+    <importingNamespace xmi:type="uml:Profile" href="/K2Transformations/K2Profile.profile.uml#a1"/>
+  </uml:ElementImport>
+</xmi:XMI>
