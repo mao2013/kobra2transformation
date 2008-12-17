@@ -1,12 +1,3 @@
-/*
- *+--------------------------------------------------------------------------------------+
- *| Licensed Materials - Use restricted, please refer to the "Samples Gallery" terms and |
- *| conditions in the IBM International Program License Agreement.						 |	
- *| © Copyright IBM Corporation 2003, 2004. All Rights Reserved.						 |
- *+--------------------------------------------------------------------------------------+
- */
-
-
 package com.ibm.xtools.transform.samples.modeltomodel;
 
 import java.util.ArrayList;
@@ -23,29 +14,13 @@ import org.eclipse.uml2.uml.UMLPackage;
 
 import com.ibm.xtools.modeler.ui.UMLModeler;
 import com.ibm.xtools.transform.core.ITransformationDescriptor;
-import com.ibm.xtools.transform.samples.modeltomodel.classtoservice.markedup.transforms.MarkedupClassToServiceRootTransform;
 import com.ibm.xtools.transform.samples.modeltomodel.classtoservice.multiplerules.transforms.ClassToServiceMultipleRuleRootTransform;
-import com.ibm.xtools.transform.samples.modeltomodel.classtoservice.singlerule.transforms.ClassToServiceSingleRuleRootTransform;
 import com.ibm.xtools.transform.ui.AbstractTransformGUI;
 
-/**
- *
- * Override the default GUI to provide filtering for the 'Target' tree
- */
 public class TransformGUI extends AbstractTransformGUI {
-	/**
-	 * A collection to store (and cache) the paths of (or any other information
-	 * related to) the models that are opened in the model explorer. 
-	 */
+
 	private static final List openedModelInfoCache = new ArrayList();
     
-    /**
-     * Determines if the specified path is part of the path for any of the
-     * models opened in the Model Explorer.
-     * 
-     * @param path The specified path
-     * @return True if the specified path is part os the path of model opened
-     */
     private boolean isPartOfOpenedModelPath(String path) {
     	Iterator i = openedModelInfoCache.iterator();
     	boolean isPart = false;
@@ -56,10 +31,6 @@ public class TransformGUI extends AbstractTransformGUI {
     	return isPart;
     }
     
-    /**
-     * Saves information (currently paths) related to models that are opened
-     * in the Model Explorer in a collection, openedModelInfo.
-     */
     private void initializeOpenedModelInfoCache() {
     	// We build the cache fresh each time this method is invoked.
     	openedModelInfoCache.clear();
@@ -84,13 +55,8 @@ public class TransformGUI extends AbstractTransformGUI {
 			ITransformationDescriptor descriptor,
 			Object suggestedTargetContainer) {
     	
-    	// If transformation id is not the same as that of the transformations
-    	// provided by this provider, the target container by default is
-    	// invalid.
     	String tid = descriptor.getId();
-    	if (!tid.equals(ClassToServiceSingleRuleRootTransform.ID) &&
-    			!tid.equals(ClassToServiceMultipleRuleRootTransform.ID) &&
-				!tid.equals(MarkedupClassToServiceRootTransform.ID)) {
+    	if (!tid.equals(ClassToServiceMultipleRuleRootTransform.ID)) {
     		return super.showInTargetContainerTree(descriptor, suggestedTargetContainer);
     	}
     	
