@@ -1,0 +1,18 @@
+context StructuralClassifer
+inv: oclIsKindOf(ComponentClass) or oclIsKindOf(DataType)
+
+
+context ComponentClass
+inv: ownedBehavior->forAll(oclIsKindOf(Activity) or oclIsKindOf(ProtocolStateMachine))
+inv: let nestedComponentClasses = packagedElement->select(oclIsKindOf(ComponentClass)) 
+       in nestedComponentClasses->forAll(n:ComponentClass | 
+       let ends = ownedAttribute->select(association->notEmpty()) 
+       in ends->exists(e: Property | e.opposite = self.ownedAttribute and ownedAttribute.association->oclIsKindOf(Nests))) 
+       
+inv:   
+
+
+
+
+context Class::superClass
+derive : generalization .general->select(oclIsKindOf(Class))

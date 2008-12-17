@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Standard="http://www.eclipse.org/uml2/schemas/Standard/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xsi:schemaLocation="http://www.eclipse.org/uml2/schemas/Standard/1 pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w">
+  <uml:Model xmi:id="_PKZ4oLZzEd2-i9onMxgyRg" name="K2Transformations">
+    <packageImport xmi:id="_PKZ4obZzEd2-i9onMxgyRg">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_PKZ4orZzEd2-i9onMxgyRg" name="KobrA2">
+      <packagedElement xmi:type="uml:Package" xmi:id="_PKZ4o7ZzEd2-i9onMxgyRg" name="SUM">
+        <packagedElement xmi:type="uml:Package" xmi:id="_PKZ4pLZzEd2-i9onMxgyRg" name="Structure">
+          <packagedElement xmi:type="uml:Package" xmi:id="_PKZ4pbZzEd2-i9onMxgyRg" name="Classes">
+            <packagedElement xmi:type="uml:Class" xmi:id="_PKZ4prZzEd2-i9onMxgyRg" name="ComponentClass">
+              <generalization xmi:id="_PKZ4p7ZzEd2-i9onMxgyRg" general="_PKZ4sbZzEd2-i9onMxgyRg"/>
+              <ownedAttribute xmi:id="_PKZ4qLZzEd2-i9onMxgyRg" name="powerTypeExtent" visibility="public" type="_PKZ4s7ZzEd2-i9onMxgyRg" association="_PKZ4wLZzEd2-i9onMxgyRg">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PKZ4qbZzEd2-i9onMxgyRg" value="*"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PKZ4qrZzEd2-i9onMxgyRg"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_PKZ4q7ZzEd2-i9onMxgyRg" name="nestedClassifier" visibility="public" type="_PKZ4y7ZzEd2-i9onMxgyRg" aggregation="composite" association="_PKZ4zLZzEd2-i9onMxgyRg">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PKZ4rLZzEd2-i9onMxgyRg" value="*"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PKZ4rbZzEd2-i9onMxgyRg"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_PKZ4rrZzEd2-i9onMxgyRg" name="ownedOperation" visibility="public" type="_PKafsLZzEd2-i9onMxgyRg" aggregation="composite" association="_PKaftrZzEd2-i9onMxgyRg">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PKZ4r7ZzEd2-i9onMxgyRg" value="*"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PKZ4sLZzEd2-i9onMxgyRg"/>
+              </ownedAttribute>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_PKZ4sbZzEd2-i9onMxgyRg" name="Component"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_PKZ4srZzEd2-i9onMxgyRg" name="Property"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_PKZ4s7ZzEd2-i9onMxgyRg" name="GeneralizationSet">
+              <ownedAttribute xmi:id="_PKZ4tLZzEd2-i9onMxgyRg" name="powerType" visibility="public" type="_PKZ4prZzEd2-i9onMxgyRg" association="_PKZ4wLZzEd2-i9onMxgyRg">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PKZ4tbZzEd2-i9onMxgyRg" value="1"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PKZ4trZzEd2-i9onMxgyRg"/>
+              </ownedAttribute>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_PKZ4t7ZzEd2-i9onMxgyRg" memberEnd="_PKZ4vbZzEd2-i9onMxgyRg _PKZ4urZzEd2-i9onMxgyRg">
+              <ownedRule xmi:id="_PKZ4uLZzEd2-i9onMxgyRg" constrainedElement="_PKZ4urZzEd2-i9onMxgyRg">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_PKZ4ubZzEd2-i9onMxgyRg">
+                  <language>OCL</language>
+                  <body>subsets class</body>
+                </specification>
+              </ownedRule>
+              <ownedEnd xmi:id="_PKZ4urZzEd2-i9onMxgyRg" name="componentclass" visibility="public" type="_PKZ4prZzEd2-i9onMxgyRg" association="_PKZ4t7ZzEd2-i9onMxgyRg">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PKZ4u7ZzEd2-i9onMxgyRg" value="1"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PKZ4vLZzEd2-i9onMxgyRg"/>
+              </ownedEnd>
+              <ownedEnd xmi:id="_PKZ4vbZzEd2-i9onMxgyRg" name="ownedAttribute" visibility="public" type="_PKZ4srZzEd2-i9onMxgyRg" aggregation="composite" association="_PKZ4t7ZzEd2-i9onMxgyRg">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PKZ4vrZzEd2-i9onMxgyRg" value="*"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PKZ4v7ZzEd2-i9onMxgyRg"/>
+              </ownedEnd>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_PKZ4wLZzEd2-i9onMxgyRg" memberEnd="_PKZ4qLZzEd2-i9onMxgyRg _PKZ4tLZzEd2-i9onMxgyRg"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_PKZ4wbZzEd2-i9onMxgyRg" name="Class">
+              <generalization xmi:id="_PKZ4wrZzEd2-i9onMxgyRg" general="_PKZ4prZzEd2-i9onMxgyRg"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_PKZ4w7ZzEd2-i9onMxgyRg" name="AssociationClass">
+              <generalization xmi:id="_PKZ4xLZzEd2-i9onMxgyRg" general="_PKZ4wbZzEd2-i9onMxgyRg"/>
+              <generalization xmi:id="_PKZ4xbZzEd2-i9onMxgyRg" general="_PKZ4xrZzEd2-i9onMxgyRg"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_PKZ4xrZzEd2-i9onMxgyRg" name="Association"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_PKZ4x7ZzEd2-i9onMxgyRg" name="Acquires">
+              <generalization xmi:id="_PKZ4yLZzEd2-i9onMxgyRg" general="_PKZ4xrZzEd2-i9onMxgyRg"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_PKZ4ybZzEd2-i9onMxgyRg" name="Nests">
+              <generalization xmi:id="_PKZ4yrZzEd2-i9onMxgyRg" general="_PKZ4xrZzEd2-i9onMxgyRg"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_PKZ4y7ZzEd2-i9onMxgyRg" name="Classifier"/>
+            <packagedElement xmi:type="uml:Association" xmi:id="_PKZ4zLZzEd2-i9onMxgyRg" memberEnd="_PKZ4q7ZzEd2-i9onMxgyRg _PKZ4z7ZzEd2-i9onMxgyRg">
+              <ownedRule xmi:id="_PKZ4zbZzEd2-i9onMxgyRg" constrainedElement="_PKZ4z7ZzEd2-i9onMxgyRg">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_PKZ4zrZzEd2-i9onMxgyRg">
+                  <language>OCL</language>
+                  <body>subsets class</body>
+                </specification>
+              </ownedRule>
+              <ownedEnd xmi:id="_PKZ4z7ZzEd2-i9onMxgyRg" name="componentClass" visibility="private" type="_PKZ4prZzEd2-i9onMxgyRg" association="_PKZ4zLZzEd2-i9onMxgyRg">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PKZ40LZzEd2-i9onMxgyRg" value="1"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PKZ40bZzEd2-i9onMxgyRg"/>
+              </ownedEnd>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_PKafsLZzEd2-i9onMxgyRg" name="Operation">
+              <ownedRule xmi:id="_PKafsbZzEd2-i9onMxgyRg" constrainedElement="_PKafs7ZzEd2-i9onMxgyRg">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_PKafsrZzEd2-i9onMxgyRg">
+                  <language>OCL</language>
+                  <body>subsets client</body>
+                </specification>
+              </ownedRule>
+              <ownedAttribute xmi:id="_PKafs7ZzEd2-i9onMxgyRg" name="using" visibility="private" type="_PKafvbZzEd2-i9onMxgyRg" isDerived="true" association="_PKafyrZzEd2-i9onMxgyRg">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PKaftLZzEd2-i9onMxgyRg" value="*"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PKaftbZzEd2-i9onMxgyRg"/>
+              </ownedAttribute>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_PKaftrZzEd2-i9onMxgyRg" memberEnd="_PKZ4rrZzEd2-i9onMxgyRg _PKafubZzEd2-i9onMxgyRg">
+              <ownedRule xmi:id="_PKaft7ZzEd2-i9onMxgyRg" constrainedElement="_PKafubZzEd2-i9onMxgyRg">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_PKafuLZzEd2-i9onMxgyRg">
+                  <language>OCL</language>
+                  <body>subsets class</body>
+                </specification>
+              </ownedRule>
+              <ownedEnd xmi:id="_PKafubZzEd2-i9onMxgyRg" name="componentClass" visibility="public" type="_PKZ4prZzEd2-i9onMxgyRg" association="_PKaftrZzEd2-i9onMxgyRg">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PKafurZzEd2-i9onMxgyRg" value="1"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PKafu7ZzEd2-i9onMxgyRg"/>
+              </ownedEnd>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_PKafvLZzEd2-i9onMxgyRg" name="Parameter"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_PKafvbZzEd2-i9onMxgyRg" name="Usage">
+              <ownedRule xmi:id="_PKafvrZzEd2-i9onMxgyRg" constrainedElement="_PKafwLZzEd2-i9onMxgyRg">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_PKafv7ZzEd2-i9onMxgyRg">
+                  <language>OCL</language>
+                  <body>subsets suplier</body>
+                </specification>
+              </ownedRule>
+              <ownedAttribute xmi:id="_PKafwLZzEd2-i9onMxgyRg" name="used" visibility="public" type="_PKafsLZzEd2-i9onMxgyRg" isDerived="true" association="_PKafxrZzEd2-i9onMxgyRg">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PKafwbZzEd2-i9onMxgyRg" value="*"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PKafwrZzEd2-i9onMxgyRg" value="1"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_PKafw7ZzEd2-i9onMxgyRg" name="operation" visibility="private" type="_PKafsLZzEd2-i9onMxgyRg" association="_PKafyrZzEd2-i9onMxgyRg">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PKafxLZzEd2-i9onMxgyRg" value="*"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PKafxbZzEd2-i9onMxgyRg" value="1"/>
+              </ownedAttribute>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_PKafxrZzEd2-i9onMxgyRg" memberEnd="_PKafwLZzEd2-i9onMxgyRg _PKafx7ZzEd2-i9onMxgyRg">
+              <ownedEnd xmi:id="_PKafx7ZzEd2-i9onMxgyRg" name="" visibility="private" type="_PKafvbZzEd2-i9onMxgyRg" association="_PKafxrZzEd2-i9onMxgyRg">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PKafyLZzEd2-i9onMxgyRg" value="*"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PKafybZzEd2-i9onMxgyRg"/>
+              </ownedEnd>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_PKafyrZzEd2-i9onMxgyRg" memberEnd="_PKafs7ZzEd2-i9onMxgyRg _PKafw7ZzEd2-i9onMxgyRg"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_PKafy7ZzEd2-i9onMxgyRg">
+      <eAnnotations xmi:id="_PKafzLZzEd2-i9onMxgyRg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <Standard:Metaclass xmi:id="_PKafzbZzEd2-i9onMxgyRg" base_Class="_PKZ4sbZzEd2-i9onMxgyRg"/>
+</xmi:XMI>
