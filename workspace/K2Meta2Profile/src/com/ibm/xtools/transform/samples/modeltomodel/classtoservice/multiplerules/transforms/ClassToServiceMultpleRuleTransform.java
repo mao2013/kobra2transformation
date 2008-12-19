@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.uml2.uml.UMLPackage;
 
 import com.ibm.xtools.transform.core.ITransformationDescriptor;
+import com.ibm.xtools.transform.samples.modeltomodel.classtoservice.rules.ConstraintClassRule;
 import com.ibm.xtools.transform.samples.modeltomodel.classtoservice.rules.CreateFactoryClassRule;
 import com.ibm.xtools.transform.samples.modeltomodel.classtoservice.rules.CreateRealizationRule;
 import com.ibm.xtools.transform.samples.modeltomodel.classtoservice.rules.SetupTargetRule;
@@ -51,10 +52,15 @@ public class ClassToServiceMultpleRuleTransform
 	private void initializeTransform() {
 
 		EClass classKind = UMLPackage.eINSTANCE.getClass_();
-
+		EClass contraintKind = UMLPackage.eINSTANCE.getConstraint();
+		
 		addByKind(classKind, new SetupTargetRule());
 		addByKind(classKind, new ClassToStereotypeTransform(
 			ClassToStereotypeTransform.ID));
+		
+		addByKind(contraintKind, new ConstraintTransform(ConstraintTransform.ID));
+		
+		
 		//addByKind(classKind, new ClassToImplementationTransform(
 		//	ClassToImplementationTransform.ID));
 
