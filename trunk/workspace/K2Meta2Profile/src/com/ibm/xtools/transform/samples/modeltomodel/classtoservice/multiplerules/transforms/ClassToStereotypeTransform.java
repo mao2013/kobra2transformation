@@ -1,11 +1,13 @@
 package com.ibm.xtools.transform.samples.modeltomodel.classtoservice.multiplerules.transforms;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.uml2.uml.Constraint;
 import org.eclipse.uml2.uml.UMLPackage;
 import org.eclipse.uml2.uml.VisibilityKind;
 
 import com.ibm.xtools.transform.core.ITransformationDescriptor;
 import com.ibm.xtools.transform.samples.modeltomodel.OperationVisibilityCondition;
+import com.ibm.xtools.transform.samples.modeltomodel.classtoservice.rules.ConstraintClassRule;
 import com.ibm.xtools.transform.samples.modeltomodel.classtoservice.rules.CreateAccessorRule;
 import com.ibm.xtools.transform.samples.modeltomodel.classtoservice.rules.CreateInterfaceClassRule;
 import com.ibm.xtools.transform.samples.modeltomodel.classtoservice.rules.CreateStereotypeClassRule;
@@ -44,6 +46,8 @@ public class ClassToStereotypeTransform extends UMLKindTransform {
 	
 	private void initializeTransform() {
 		EClass classKind = UMLPackage.eINSTANCE.getClass_();
+		
+		
 		//EClass operationKind = UMLPackage.eINSTANCE.getOperation();
 		//EClass parameterKind = UMLPackage.eINSTANCE.getParameter();
 		//EClass propertyKind = UMLPackage.eINSTANCE.getProperty();
@@ -51,6 +55,8 @@ public class ClassToStereotypeTransform extends UMLKindTransform {
 		addByKind(classKind, new CreateStereotypeClassRule(CreateStereotypeClassRule.ID,
 			CreateStereotypeClassRule.NAME));
 
+		
+		
 		// Create an operation rule, set it up to accept only public operations
 		// and add to transform
 		//OperationRule opRule = new OperationRule();
