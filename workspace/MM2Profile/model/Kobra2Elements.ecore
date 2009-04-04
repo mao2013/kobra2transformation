@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Data"
+    nsURI="http:///Data.ecore" nsPrefix="Data">
+  <eSubpackages name="KobrA2" nsURI="http:///Data/KobrA2.ecore" nsPrefix="Data.KobrA2">
+    <eSubpackages name="SUM" nsURI="http:///Data/KobrA2/SUM.ecore" nsPrefix="Data.KobrA2.SUM">
+      <eSubpackages name="Structure" nsURI="http:///Data/KobrA2/SUM/Structure.ecore"
+          nsPrefix="Data.KobrA2.SUM">
+        <eSubpackages name="Elements" nsURI="http:///Data/KobrA2/SUM/Structure/Elements.ecore"
+            nsPrefix="Data.KobrA2.SUM.Structure.Elements">
+          <eClassifiers xsi:type="ecore:EClass" name="Element"/>
+          <eClassifiers xsi:type="ecore:EClass" name="Comment" eSuperTypes="#//KobrA2/SUM/Structure/Elements/StructuralBehavioralElement"/>
+          <eClassifiers xsi:type="ecore:EClass" name="StructuralBehavioralElement"
+              eSuperTypes="#//KobrA2/SUM/Structure/Elements/Element"/>
+          <eClassifiers xsi:type="ecore:EClass" name="TypeElement" eSuperTypes="#//KobrA2/SUM/Structure/Elements/StructuralElement"/>
+          <eClassifiers xsi:type="ecore:EClass" name="StructuralElement" eSuperTypes="#//KobrA2/SUM/Structure/Elements/Element"/>
+          <eClassifiers xsi:type="ecore:EClass" name="InstanceElement" eSuperTypes="#//KobrA2/SUM/Structure/Elements/StructuralElement"/>
+          <eClassifiers xsi:type="ecore:EClass" name="BehavioralElement" eSuperTypes="#//KobrA2/SUM/Structure/Elements/Element"/>
+          <eClassifiers xsi:type="ecore:EClass" name="ProtocolElement" eSuperTypes="#//KobrA2/SUM/Structure/Elements/BehavioralElement"/>
+          <eClassifiers xsi:type="ecore:EClass" name="ActivityElement" eSuperTypes="#//KobrA2/SUM/Structure/Elements/BehavioralElement"/>
+          <eClassifiers xsi:type="ecore:EClass" name="ConstraintElement" eSuperTypes="#//KobrA2/SUM/Structure/Elements/Element"/>
+          <eClassifiers xsi:type="ecore:EClass" name="StructuralConstraintElement"
+              eSuperTypes="#//KobrA2/SUM/Structure/Elements/ConstraintElement"/>
+          <eClassifiers xsi:type="ecore:EClass" name="BehavioralConstraintElement"
+              eSuperTypes="#//KobrA2/SUM/Structure/Elements/ConstraintElement"/>
+          <eClassifiers xsi:type="ecore:EClass" name="CommonConstraintElement" eSuperTypes="#//KobrA2/SUM/Structure/Elements/ConstraintElement"/>
+          <eClassifiers xsi:type="ecore:EClass" name="LiteralElement" eSuperTypes="#//KobrA2/SUM/Structure/Elements/StructuralBehavioralElement"/>
+          <eClassifiers xsi:type="ecore:EClass" name="Operation" eSuperTypes="#//KobrA2/SUM/Structure/Elements/StructuralBehavioralElement"/>
+          <eClassifiers xsi:type="ecore:EClass" name="Parameter" eSuperTypes="#//KobrA2/SUM/Structure/Elements/StructuralBehavioralElement"/>
+          <eClassifiers xsi:type="ecore:EClass" name="QueryOperation" eSuperTypes="#//KobrA2/SUM/Structure/Elements/Operation"/>
+          <eClassifiers xsi:type="ecore:EClass" name="EffectOperation" eSuperTypes="#//KobrA2/SUM/Structure/Elements/Operation"/>
+        </eSubpackages>
+      </eSubpackages>
+    </eSubpackages>
+  </eSubpackages>
+</ecore:EPackage>
