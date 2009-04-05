@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_5-lrkCC0Ed6kMowq1N0R6Q" name="Data">
+  <packagedElement xmi:type="uml:Package" xmi:id="_j6rBECC3Ed6kMowq1N0R6Q" name="Kobra2">
+    <packagedElement xmi:type="uml:Package" xmi:id="_oSCC4CC3Ed6kMowq1N0R6Q" name="SUM">
+      <packagedElement xmi:type="uml:Package" xmi:id="_pt484CC3Ed6kMowq1N0R6Q" name="Structure">
+        <packageMerge xmi:id="_lxBCMCC4Ed6kMowq1N0R6Q">
+          <mergedPackage href="Superstructure.uml#_3ADC7B74022D3C9FD9B900CF"/>
+        </packageMerge>
+        <packagedElement xmi:type="uml:Package" xmi:id="_oTImYCDIEd6kMowq1N0R6Q" name="Types">
+          <packageMerge xmi:id="_wFWlgCDIEd6kMowq1N0R6Q" mergedPackage="_hEd-ECC5Ed6kMowq1N0R6Q"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_jbd3YCDJEd6kMowq1N0R6Q" name="PrimitiveType" isAbstract="true">
+            <generalization xmi:id="_3ElMACDJEd6kMowq1N0R6Q">
+              <general xmi:type="uml:Class" href="Superstructure.uml#_3ADC7B74022D3CAB1DCD00B2"/>
+            </generalization>
+            <generalization xmi:id="_Ni2TYCDLEd6kMowq1N0R6Q" general="_dLLvoCDKEd6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_dLLvoCDKEd6kMowq1N0R6Q" name="DataType" isAbstract="true">
+            <generalization xmi:id="_Got9YCDMEd6kMowq1N0R6Q">
+              <general xmi:type="uml:Class" href="Superstructure.uml#_3ADC7B74022D3CAB1D9C03C8"/>
+            </generalization>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_i7_3sCDKEd6kMowq1N0R6Q" name="Enumeration">
+            <generalization xmi:id="_OL0X4CDLEd6kMowq1N0R6Q" general="_dLLvoCDKEd6kMowq1N0R6Q"/>
+            <ownedAttribute xmi:id="_Kq8SICDLEd6kMowq1N0R6Q" name="ownedLiteral" type="_k4DUsCDKEd6kMowq1N0R6Q" isUnique="false" aggregation="composite" association="_Kq0WUCDLEd6kMowq1N0R6Q">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Kq_8gCDLEd6kMowq1N0R6Q" value="1"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Kq_VcCDLEd6kMowq1N0R6Q"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_k4DUsCDKEd6kMowq1N0R6Q" name="EnumerationLiteral"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ohNzwCDKEd6kMowq1N0R6Q" name="String">
+            <generalization xmi:id="_ywufQCDLEd6kMowq1N0R6Q" general="_jbd3YCDJEd6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_pAHWQCDKEd6kMowq1N0R6Q" name="Numeric">
+            <generalization xmi:id="_zoChwCDLEd6kMowq1N0R6Q" general="_jbd3YCDJEd6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_phiBQCDKEd6kMowq1N0R6Q" name="Boolean">
+            <generalization xmi:id="_00BzwCDLEd6kMowq1N0R6Q" general="_jbd3YCDJEd6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_6hwBACDKEd6kMowq1N0R6Q" name="Integer">
+            <generalization xmi:id="_1hbFQCDLEd6kMowq1N0R6Q" general="_pAHWQCDKEd6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_7FUBECDKEd6kMowq1N0R6Q" name="UnllimitedNatural">
+            <generalization xmi:id="_2CiOQCDLEd6kMowq1N0R6Q" general="_pAHWQCDKEd6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_7vHzECDKEd6kMowq1N0R6Q" name="Real">
+            <generalization xmi:id="_4rsB0CDLEd6kMowq1N0R6Q" general="_pAHWQCDKEd6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_8LbUkCDKEd6kMowq1N0R6Q" name="MessageType"/>
+          <packagedElement xmi:type="uml:Association" xmi:id="_Kq0WUCDLEd6kMowq1N0R6Q" name="A_Enumeration_EnumerationLiteral" memberEnd="_Kq8SICDLEd6kMowq1N0R6Q _KrAjkCDLEd6kMowq1N0R6Q">
+            <ownedEnd xmi:id="_KrAjkCDLEd6kMowq1N0R6Q" name="enumeration" type="_i7_3sCDKEd6kMowq1N0R6Q" isUnique="false" association="_Kq0WUCDLEd6kMowq1N0R6Q">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KrDm4CDLEd6kMowq1N0R6Q" value="1"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KrEN8CDLEd6kMowq1N0R6Q" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_hEd-ECC5Ed6kMowq1N0R6Q" name="Elements">
+          <packagedElement xmi:type="uml:Class" xmi:id="__X7VgCC5Ed6kMowq1N0R6Q" name="Element" isAbstract="true"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_QmOioCC8Ed6kMowq1N0R6Q" name="StructuralElement" isAbstract="true">
+            <generalization xmi:id="_VA9MECC9Ed6kMowq1N0R6Q" general="__X7VgCC5Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_SsC_oCC8Ed6kMowq1N0R6Q" name="StructuralBehavioralElement">
+            <generalization xmi:id="_V7F5ECC9Ed6kMowq1N0R6Q" general="__X7VgCC5Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_TI4soCC8Ed6kMowq1N0R6Q" name="BehavioralElement" isAbstract="true">
+            <generalization xmi:id="_Wbq2kCC9Ed6kMowq1N0R6Q" general="__X7VgCC5Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DiEd4CC-Ed6kMowq1N0R6Q" name="TypeElement" isAbstract="true">
+            <generalization xmi:id="_o6GVMCDHEd6kMowq1N0R6Q" general="_QmOioCC8Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_EFeF4CC-Ed6kMowq1N0R6Q" name="InstanceElement" isAbstract="true">
+            <generalization xmi:id="_n0leoCDHEd6kMowq1N0R6Q" general="_QmOioCC8Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_J9-xYCC-Ed6kMowq1N0R6Q" name="Literal">
+            <generalization xmi:id="_zbEZkCDHEd6kMowq1N0R6Q" general="_SsC_oCC8Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_LzBAYCC-Ed6kMowq1N0R6Q" name="Parameter">
+            <generalization xmi:id="_0hkHkCDHEd6kMowq1N0R6Q" general="_SsC_oCC8Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_OaQIYCC-Ed6kMowq1N0R6Q" name="Operation"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_QHbb4CC-Ed6kMowq1N0R6Q" name="Comment">
+            <generalization xmi:id="_1TiXECDHEd6kMowq1N0R6Q" general="_SsC_oCC8Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_TrYq0CC-Ed6kMowq1N0R6Q" name="QueryOperation">
+            <generalization xmi:id="_wwfCoCDHEd6kMowq1N0R6Q" general="_OaQIYCC-Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_WVSsUCC-Ed6kMowq1N0R6Q" name="EffectOperation">
+            <generalization xmi:id="_yL4poCDHEd6kMowq1N0R6Q" general="_OaQIYCC-Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_xMRV0CC-Ed6kMowq1N0R6Q" name="ConstraintElement">
+            <generalization xmi:id="_ARUIsCDHEd6kMowq1N0R6Q" general="__X7VgCC5Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_1TPyQCC-Ed6kMowq1N0R6Q" name="CommonConstraintElement">
+            <generalization xmi:id="_RAVDsCDHEd6kMowq1N0R6Q" general="_xMRV0CC-Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_4UzewCC-Ed6kMowq1N0R6Q" name="BehavioralConstraintElement">
+            <generalization xmi:id="_IkxzsCDHEd6kMowq1N0R6Q" general="_xMRV0CC-Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_7dTgwCC-Ed6kMowq1N0R6Q" name="StructuralConstraintElement">
+            <generalization xmi:id="_SF-dICDHEd6kMowq1N0R6Q" general="_xMRV0CC-Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DMRogCDIEd6kMowq1N0R6Q" name="ActiviityElement" isAbstract="true">
+            <generalization xmi:id="_N1zzACDIEd6kMowq1N0R6Q" general="_TI4soCC8Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DkxBACDIEd6kMowq1N0R6Q" name="ProtocolElement" isAbstract="true">
+            <generalization xmi:id="_Ok4fgCDIEd6kMowq1N0R6Q" general="_TI4soCC8Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>
