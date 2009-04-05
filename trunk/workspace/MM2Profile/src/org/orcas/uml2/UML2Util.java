@@ -39,8 +39,6 @@ public class UML2Util {
 		
 		
 		_resourceSet.setResourceFactoryRegistry(registry);
-		//_resourceSet.getPackageRegistry().put(umlPackage.getNsURI(), umlPackage);
-		
 	}
 	
 	protected static Property createAttribute(
@@ -132,6 +130,8 @@ public class UML2Util {
         		 resource.getContents(), UMLPackage.Literals.PACKAGE);
         
         _resourceSet.getPackageRegistry().put(package_.getQualifiedName(), package_);
+        
+        _resourceSet.getResources().add(umlPackage.eResource());
         
         return package_;
 	}

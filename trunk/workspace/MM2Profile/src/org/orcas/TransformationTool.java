@@ -41,8 +41,8 @@ public class TransformationTool {
 		_uml2Util = new UML2Util();
 
 		_profileName = "KobrA2";
-		_inputModelPath = "model/Kobra2MM.uml";
-		_inputConstraintsPath = "model/ocl/K2Elements.ocl";
+		_inputModelPath = "model/Data.uml";
+		_inputConstraintsPath = "model/ocl/K2MM.ocl";
 		_outputModelPath = "profile/" + _profileName + ".uml";
 
 		_inputModelURI = URI.createURI(_inputModelPath);
@@ -74,10 +74,10 @@ public class TransformationTool {
 			}
 		}
 
-		_processResource(package_.getOwnedElements());
+	//	_processResource(package_.getOwnedElements());
 
-		_uml2Util.defineProfile(_profile);
-		_uml2Util.save(_profile, _outputModelURI);
+	//	_uml2Util.defineProfile(_profile);
+	//	_uml2Util.save(_profile, _outputModelURI);
 
 	}
 
