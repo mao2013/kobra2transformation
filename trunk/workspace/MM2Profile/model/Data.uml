@@ -21,10 +21,6 @@
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_i7_3sCDKEd6kMowq1N0R6Q" name="Enumeration">
             <generalization xmi:id="_OL0X4CDLEd6kMowq1N0R6Q" general="_dLLvoCDKEd6kMowq1N0R6Q"/>
-            <ownedAttribute xmi:id="_Kq8SICDLEd6kMowq1N0R6Q" name="ownedLiteral" type="_k4DUsCDKEd6kMowq1N0R6Q" isUnique="false" aggregation="composite" association="_Kq0WUCDLEd6kMowq1N0R6Q">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Kq_8gCDLEd6kMowq1N0R6Q" value="1"/>
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Kq_VcCDLEd6kMowq1N0R6Q"/>
-            </ownedAttribute>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_k4DUsCDKEd6kMowq1N0R6Q" name="EnumerationLiteral"/>
           <packagedElement xmi:type="uml:Class" xmi:id="_ohNzwCDKEd6kMowq1N0R6Q" name="String">
@@ -46,10 +42,14 @@
             <generalization xmi:id="_4rsB0CDLEd6kMowq1N0R6Q" general="_pAHWQCDKEd6kMowq1N0R6Q"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_8LbUkCDKEd6kMowq1N0R6Q" name="MessageType"/>
-          <packagedElement xmi:type="uml:Association" xmi:id="_Kq0WUCDLEd6kMowq1N0R6Q" name="A_Enumeration_EnumerationLiteral" memberEnd="_Kq8SICDLEd6kMowq1N0R6Q _KrAjkCDLEd6kMowq1N0R6Q">
-            <ownedEnd xmi:id="_KrAjkCDLEd6kMowq1N0R6Q" name="enumeration" type="_i7_3sCDKEd6kMowq1N0R6Q" isUnique="false" association="_Kq0WUCDLEd6kMowq1N0R6Q">
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KrDm4CDLEd6kMowq1N0R6Q" value="1"/>
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KrEN8CDLEd6kMowq1N0R6Q" value="1"/>
+          <packagedElement xmi:type="uml:Association" xmi:id="_OeroYCJeEd6l4YodxeTYTw" name="A_enumeration_ownedLiteral" memberEnd="_OesPcCJeEd6l4YodxeTYTw _OesPcyJeEd6l4YodxeTYTw">
+            <ownedEnd xmi:id="_OesPcCJeEd6l4YodxeTYTw" name="enumeration" type="_i7_3sCDKEd6kMowq1N0R6Q" association="_OeroYCJeEd6l4YodxeTYTw">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OesPciJeEd6l4YodxeTYTw" value="1"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OesPcSJeEd6l4YodxeTYTw" value="1"/>
+            </ownedEnd>
+            <ownedEnd xmi:id="_OesPcyJeEd6l4YodxeTYTw" name="ownedLiteral" type="_k4DUsCDKEd6kMowq1N0R6Q" aggregation="composite" association="_OeroYCJeEd6l4YodxeTYTw">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Oes2gSJeEd6l4YodxeTYTw" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Oes2gCJeEd6l4YodxeTYTw" value="2"/>
             </ownedEnd>
           </packagedElement>
         </packagedElement>

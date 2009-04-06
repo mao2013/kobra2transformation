@@ -4,6 +4,7 @@ package org.orcas.uml2;
 import static java.lang.System.out;
 
 import java.io.IOException;
+import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -11,11 +12,12 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.Resource.Factory.Registry;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.ocl.uml.ExpressionInOCL;
 import org.eclipse.uml2.uml.Classifier;
+import org.eclipse.uml2.uml.Constraint;
 import org.eclipse.uml2.uml.Generalization;
 import org.eclipse.uml2.uml.LiteralUnlimitedNatural;
 import org.eclipse.uml2.uml.Model;
-import org.eclipse.uml2.uml.Package;
 import org.eclipse.uml2.uml.PrimitiveType;
 import org.eclipse.uml2.uml.Profile;
 import org.eclipse.uml2.uml.Property;
@@ -23,10 +25,8 @@ import org.eclipse.uml2.uml.Stereotype;
 import org.eclipse.uml2.uml.Type;
 import org.eclipse.uml2.uml.UMLFactory;
 import org.eclipse.uml2.uml.UMLPackage;
-import org.eclipse.uml2.uml.internal.resource.UML22UMLResourceFactoryImpl;
 import org.eclipse.uml2.uml.internal.resource.UMLResourceFactoryImpl;
 import org.eclipse.uml2.uml.resource.UMLResource;
-import org.eclipse.uml2.uml.util.UMLUtil;
 
 public class UML2Util {
 	
@@ -37,7 +37,14 @@ public class UML2Util {
 		Registry registry = Resource.Factory.Registry.INSTANCE;
 		registry.getExtensionToFactoryMap().put("uml", new UMLResourceFactoryImpl());
 		
-		
+		 // configure the fake "oclenv:" resource factory
+        Map<String, Object> protMap = Resource.Factory.Registry.INSTANCE.getProtocolToFactoryMap();
+        
+        try {
+            protMap.put("oclenv", Class.forName("org.eclipse.emf.ocl.parser.EnvironmentResource$Factory").newInstance()); //$NON-NLS-1$ //$NON-NLS-2$
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 		_resourceSet.setResourceFactoryRegistry(registry);
 	}
 	
@@ -86,12 +93,16 @@ public class UML2Util {
         return profile;
     }
 	
+	public void addConstraint2Stereotype(Constraint c, Stereotype s){
+		ExpressionInOCL rule = (ExpressionInOCL) c.getSpecification();
+		rule.getBodyExpression();
+		s.getOwnedRules().add(c);
+	}
+	
 	public Stereotype createStereotype(Profile profile, String name, boolean isAbstract) {
-	
+	    
 		Stereotype stereotype = profile.createOwnedStereotype(name, isAbstract);
-	
 	    out.println("Stereotype '" + stereotype.getQualifiedName() + "' created.");
-	
 	    return stereotype;
 	}
 	
