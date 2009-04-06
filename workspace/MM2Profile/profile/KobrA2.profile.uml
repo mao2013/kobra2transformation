@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_xKx0MCKDEd6EDN96nIJOzA" name="KobrA2">
+  <eAnnotations xmi:id="_xKx0MSKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_xKx0MiKDEd6EDN96nIJOzA" name="KobrA2" nsURI="http:///schemas/KobrA2/_xKgHYCKDEd6EDN96nIJOzA/0" nsPrefix="KobrA2">
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKx0MyKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureTypesPrimitiveType" eSuperTypes="_xKx0NiKDEd6EDN96nIJOzA">
+        <eAnnotations xmi:id="_xKx0NCKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xKybZiKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKx0NiKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureTypesDataType">
+        <eAnnotations xmi:id="_xKx0NyKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xKybaSKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKx0OCKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureTypesDataType">
+        <eAnnotations xmi:id="_xKx0OSKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xKybaiKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKx0OiKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureTypesEnumeration" eSuperTypes="_xKx0OCKDEd6EDN96nIJOzA">
+        <eAnnotations xmi:id="_xKx0OyKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xKybbCKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKx0PSKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureTypesEnumerationLiteral">
+        <eAnnotations xmi:id="_xKx0PiKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xKybbiKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKx0PyKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureTypesString" eSuperTypes="_xKx0MyKDEd6EDN96nIJOzA">
+        <eAnnotations xmi:id="_xKx0QCKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xKybbyKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKx0QiKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureTypesNumeric" eSuperTypes="_xKx0MyKDEd6EDN96nIJOzA">
+        <eAnnotations xmi:id="_xKx0QyKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xKybcSKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKx0RSKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureTypesBoolean" eSuperTypes="_xKx0MyKDEd6EDN96nIJOzA">
+        <eAnnotations xmi:id="_xKx0RiKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xKybcyKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKx0SCKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureTypesInteger" eSuperTypes="_xKx0QiKDEd6EDN96nIJOzA">
+        <eAnnotations xmi:id="_xKx0SSKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xKybdSKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKx0SyKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureTypesUnllimitedNatural" eSuperTypes="_xKx0QiKDEd6EDN96nIJOzA">
+        <eAnnotations xmi:id="_xKx0TCKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xKybdyKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKx0TiKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureTypesReal" eSuperTypes="_xKx0QiKDEd6EDN96nIJOzA">
+        <eAnnotations xmi:id="_xKx0TyKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xKybeSKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKx0USKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureTypesMessageType">
+        <eAnnotations xmi:id="_xKx0UiKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xKybeyKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKx0UyKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureTypesEnumeration">
+        <eAnnotations xmi:id="_xKx0VCKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xKybfCKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKx0VSKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureTypesEnumerationLiteral">
+        <eAnnotations xmi:id="_xKx0ViKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xKybfSKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKx0VyKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureElementsElement">
+        <eAnnotations xmi:id="_xKx0WCKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xK3TwCKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKx0WSKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureElementsStructuralElement" eSuperTypes="_xKx0VyKDEd6EDN96nIJOzA">
+        <eAnnotations xmi:id="_xKx0WiKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xK3TwSKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKx0XCKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureElementsStructuralBehavioralElement" eSuperTypes="_xKx0VyKDEd6EDN96nIJOzA">
+        <eAnnotations xmi:id="_xKx0XSKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xK3TwyKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKx0XyKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureElementsBehavioralElement" eSuperTypes="_xKx0VyKDEd6EDN96nIJOzA">
+        <eAnnotations xmi:id="_xKx0YCKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xK3TxSKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKx0YiKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureElementsTypeElement" eSuperTypes="_xKx0WSKDEd6EDN96nIJOzA">
+        <eAnnotations xmi:id="_xKx0YyKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xK3TxyKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKybQCKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureElementsInstanceElement" eSuperTypes="_xKx0WSKDEd6EDN96nIJOzA">
+        <eAnnotations xmi:id="_xKybQSKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xK3TySKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKybQyKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureElementsLiteral" eSuperTypes="_xKx0XCKDEd6EDN96nIJOzA">
+        <eAnnotations xmi:id="_xKybRCKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xK3TyyKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKybRiKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureElementsParameter" eSuperTypes="_xKx0XCKDEd6EDN96nIJOzA">
+        <eAnnotations xmi:id="_xKybRyKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xK3TzSKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKybSSKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureElementsOperation">
+        <eAnnotations xmi:id="_xKybSiKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xK3TzyKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKybSyKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureElementsComment" eSuperTypes="_xKx0XCKDEd6EDN96nIJOzA">
+        <eAnnotations xmi:id="_xKybTCKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xK3T0CKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKybTiKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureElementsQueryOperation" eSuperTypes="_xKybSSKDEd6EDN96nIJOzA">
+        <eAnnotations xmi:id="_xKybTyKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xK3T0iKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKybUSKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureElementsEffectOperation" eSuperTypes="_xKybSSKDEd6EDN96nIJOzA">
+        <eAnnotations xmi:id="_xKybUiKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xK3T1CKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKybVCKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureElementsConstraintElement" eSuperTypes="_xKx0VyKDEd6EDN96nIJOzA">
+        <eAnnotations xmi:id="_xKybVSKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xK3T1iKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKybVyKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureElementsCommonConstraintElement" eSuperTypes="_xKybVCKDEd6EDN96nIJOzA">
+        <eAnnotations xmi:id="_xKybWCKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xK3T2CKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKybWiKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureElementsBehavioralConstraintElement" eSuperTypes="_xKybVCKDEd6EDN96nIJOzA">
+        <eAnnotations xmi:id="_xKybWyKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xK3T2iKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKybXSKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureElementsStructuralConstraintElement" eSuperTypes="_xKybVCKDEd6EDN96nIJOzA">
+        <eAnnotations xmi:id="_xKybXiKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xK360CKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKybYCKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureElementsActiviityElement" eSuperTypes="_xKx0XyKDEd6EDN96nIJOzA">
+        <eAnnotations xmi:id="_xKybYSKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xK360iKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xKybYyKDEd6EDN96nIJOzA" name="DataKobra2SUMStructureElementsProtocolElement" eSuperTypes="_xKx0XyKDEd6EDN96nIJOzA">
+        <eAnnotations xmi:id="_xKybZCKDEd6EDN96nIJOzA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_xK361CKDEd6EDN96nIJOzA"/>
+      </eClassifiers>
+    </contents>
+  </eAnnotations>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xKybZiKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Types::PrimitiveType">
+    <generalization xmi:id="_xKybZyKDEd6EDN96nIJOzA" general="_xKybZiKDEd6EDN96nIJOzA"/>
+    <generalization xmi:id="_xKybaCKDEd6EDN96nIJOzA" general="_xKybaSKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xKybaSKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Types::DataType"/>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xKybaiKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Types::DataType">
+    <generalization xmi:id="_xKybayKDEd6EDN96nIJOzA" general="_xKybaiKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xKybbCKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Types::Enumeration">
+    <generalization xmi:id="_xKybbSKDEd6EDN96nIJOzA" general="_xKybaiKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xKybbiKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Types::EnumerationLiteral"/>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xKybbyKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Types::String">
+    <generalization xmi:id="_xKybcCKDEd6EDN96nIJOzA" general="_xKybZiKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xKybcSKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Types::Numeric">
+    <generalization xmi:id="_xKybciKDEd6EDN96nIJOzA" general="_xKybZiKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xKybcyKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Types::Boolean">
+    <generalization xmi:id="_xKybdCKDEd6EDN96nIJOzA" general="_xKybZiKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xKybdSKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Types::Integer">
+    <generalization xmi:id="_xKybdiKDEd6EDN96nIJOzA" general="_xKybcSKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xKybdyKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Types::UnllimitedNatural">
+    <generalization xmi:id="_xKybeCKDEd6EDN96nIJOzA" general="_xKybcSKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xKybeSKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Types::Real">
+    <generalization xmi:id="_xKybeiKDEd6EDN96nIJOzA" general="_xKybcSKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xKybeyKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Types::MessageType"/>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xKybfCKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Types::Enumeration"/>
+     <ownedRule href="ocl://oclenv.uml#_hvw3sCKDEd6EDN96nIJOzA"/>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xKybfSKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Types::EnumerationLiteral">
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xK3TwCKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Elements::Element"/>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xK3TwSKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Elements::StructuralElement">
+    <generalization xmi:id="_xK3TwiKDEd6EDN96nIJOzA" general="_xK3TwCKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xK3TwyKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Elements::StructuralBehavioralElement">
+    <generalization xmi:id="_xK3TxCKDEd6EDN96nIJOzA" general="_xK3TwCKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xK3TxSKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Elements::BehavioralElement">
+    <generalization xmi:id="_xK3TxiKDEd6EDN96nIJOzA" general="_xK3TwCKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xK3TxyKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Elements::TypeElement">
+    <generalization xmi:id="_xK3TyCKDEd6EDN96nIJOzA" general="_xK3TwSKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xK3TySKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Elements::InstanceElement">
+    <generalization xmi:id="_xK3TyiKDEd6EDN96nIJOzA" general="_xK3TwSKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xK3TyyKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Elements::Literal">
+    <generalization xmi:id="_xK3TzCKDEd6EDN96nIJOzA" general="_xK3TwyKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xK3TzSKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Elements::Parameter">
+    <generalization xmi:id="_xK3TziKDEd6EDN96nIJOzA" general="_xK3TwyKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xK3TzyKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Elements::Operation"/>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xK3T0CKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Elements::Comment">
+    <generalization xmi:id="_xK3T0SKDEd6EDN96nIJOzA" general="_xK3TwyKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xK3T0iKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Elements::QueryOperation">
+    <generalization xmi:id="_xK3T0yKDEd6EDN96nIJOzA" general="_xK3TzyKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xK3T1CKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Elements::EffectOperation">
+    <generalization xmi:id="_xK3T1SKDEd6EDN96nIJOzA" general="_xK3TzyKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xK3T1iKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Elements::ConstraintElement">
+    <generalization xmi:id="_xK3T1yKDEd6EDN96nIJOzA" general="_xK3TwCKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xK3T2CKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Elements::CommonConstraintElement">
+    <generalization xmi:id="_xK3T2SKDEd6EDN96nIJOzA" general="_xK3T1iKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xK3T2iKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Elements::BehavioralConstraintElement">
+    <generalization xmi:id="_xK3T2yKDEd6EDN96nIJOzA" general="_xK3T1iKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xK360CKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Elements::StructuralConstraintElement">
+    <generalization xmi:id="_xK360SKDEd6EDN96nIJOzA" general="_xK3T1iKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xK360iKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Elements::ActiviityElement">
+    <generalization xmi:id="_xK360yKDEd6EDN96nIJOzA" general="_xK3TxSKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_xK361CKDEd6EDN96nIJOzA" name="Data::Kobra2::SUM::Structure::Elements::ProtocolElement">
+    <generalization xmi:id="_xK361SKDEd6EDN96nIJOzA" general="_xK3TxSKDEd6EDN96nIJOzA"/>
+  </packagedElement>
+</uml:Profile>
