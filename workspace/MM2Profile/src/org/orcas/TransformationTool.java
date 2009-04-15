@@ -19,7 +19,6 @@ import org.eclipse.uml2.uml.Package;
 import org.eclipse.uml2.uml.Profile;
 import org.eclipse.uml2.uml.Property;
 import org.eclipse.uml2.uml.Stereotype;
-import org.eclipse.uml2.uml.StructuredClassifier;
 import org.eclipse.uml2.uml.Type;
 import org.eclipse.uml2.uml.ValueSpecification;
 import org.orcas.ocl.OCLUtil;
@@ -33,7 +32,6 @@ public class TransformationTool {
 
 	private void _init() {
 
-		// _ecoreUtil = new EcoreUtil();
 		_oclUtil = new OCLUtil();
 		_uml2Util = new UML2Util();
 
@@ -44,7 +42,7 @@ public class TransformationTool {
 
 		_inputModelURI = URI.createURI(_inputModelPath);
 		_outputModelURI = URI.createURI(_outputModelPath);
-
+		
 		_profile = _uml2Util.createProfile(_profileName);
 
 		_processedStereotypes = new HashMap<String, Stereotype>();
@@ -57,12 +55,12 @@ public class TransformationTool {
 
 		// process constraints
 		resourceSet = UML2Util.getResourceSet();
-		List<Constraint> constraints = _oclUtil.parseOCL(resourceSet,
-				_inputConstraintsPath);
+		//OCLUtil.configureOCL(resourceSet);
+		List<Constraint> constraints = _oclUtil.parseOCL(resourceSet, _inputConstraintsPath);
 
 		for (Constraint constraint : constraints) {
-			ValueSpecification valueSpecification = constraint
-					.getSpecification();
+			
+			ValueSpecification valueSpecification = constraint.getSpecification();
 
 			if (valueSpecification instanceof ExpressionInOCL) {
 				ExpressionInOCL expressionInOCL = (ExpressionInOCL) valueSpecification;
@@ -78,6 +76,7 @@ public class TransformationTool {
 		_uml2Util.save(_profile, _outputModelURI);
 
 	}
+	
 
 	private void _processResource(EList<Element> elements) {
 
@@ -144,13 +143,10 @@ public class TransformationTool {
 								.getType();
 
 						if (constraint != null && stereotype != null) {
-							OCLUtil.getOCLHelper().getOCL()
-									.validate(constraint);
+							OCLUtil.getOCLHelper().getOCL().validate(constraint);
 							propertyType.getOwnedRules().add(constraint);
-							_constraintMap
-									.put(constraint.getName(), constraint);
-							_uml2Util.addConstraint2Stereotype(constraint,
-									stereotype);
+							_constraintMap.put(constraint.getName(), constraint);
+							_uml2Util.addConstraint2Stereotype(constraint,stereotype);
 
 						}
 					} catch (ParserException e) {
