@@ -42,19 +42,21 @@ public class TransformationTool {
 
 		_inputModelURI = URI.createURI(_inputModelPath);
 		_outputModelURI = URI.createURI(_outputModelPath);
-		
 		_profile = _uml2Util.createProfile(_profileName);
-
 		_processedStereotypes = new HashMap<String, Stereotype>();
 		_constraintMap = new HashMap<String, Constraint>();
 	}
 
 	public void transform() throws Exception {
-
-		Package package_ = _uml2Util.load(_inputModelURI);
+		
 
 		// process constraints
 		resourceSet = UML2Util.getResourceSet();
+		//UML2Util.registerPathmaps(_inputModelURI);
+		//UML2Util.registerExtensions();
+		//UML2Util.registerPackages(resourceSet);
+		
+		Package package_ = _uml2Util.load(_inputModelURI);
 		//OCLUtil.configureOCL(resourceSet);
 		List<Constraint> constraints = _oclUtil.parseOCL(resourceSet, _inputConstraintsPath);
 
@@ -73,11 +75,11 @@ public class TransformationTool {
 
 		_processResource(package_.getOwnedElements());
 		_uml2Util.defineProfile(_profile);
+		//_uml2Util.referenceMetaclass(_profile, "uml");
 		_uml2Util.save(_profile, _outputModelURI);
 
 	}
 	
-
 	private void _processResource(EList<Element> elements) {
 
 		for (Element element : elements) {
