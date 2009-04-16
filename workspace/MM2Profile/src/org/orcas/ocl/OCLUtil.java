@@ -1,9 +1,10 @@
 package org.orcas.ocl;
 
-import java.io.File;
-import java.io.FileInputStream;
+import static java.lang.System.out;
+
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 import java.util.StringTokenizer;
 
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -20,11 +21,14 @@ import org.eclipse.ocl.uml.UMLEnvironmentFactory;
 import org.eclipse.uml2.uml.Classifier;
 import org.eclipse.uml2.uml.Constraint;
 import org.eclipse.uml2.uml.Property;
+import org.eclipse.uml2.uml.Stereotype;
+import org.eclipse.uml2.uml.Type;
 
 public class OCLUtil {
-
-	private static OCL<?, ?, ?, ?, ?, ?, ?, ?, ?, Constraint, ?, ?> ocl;
-	private static OCLHelper<Classifier, ?, ?, Constraint> helper;
+	
+	public OCLUtil(){
+		_debug = false;
+	}
 
 	/**
 	 * Converts an Association to a Constraint in order to allow associations in
@@ -36,22 +40,50 @@ public class OCLUtil {
 	 *         <code>Association</code>
 	 * @throws ParserException
 	 */
-
 	public static void configureOCL(ResourceSet rset) {
 
 		Environment.Registry reg = Environment.Registry.INSTANCE;
 
 		// register prototype environments
-		EcoreEnvironment ecoreEnv = (EcoreEnvironment) EcoreEnvironmentFactory.INSTANCE
-				.createEnvironment();
+		EcoreEnvironment ecoreEnv = (EcoreEnvironment) EcoreEnvironmentFactory.INSTANCE.createEnvironment();
 		reg.registerEnvironment(ecoreEnv);
-		UMLEnvironment umlEnv = new UMLEnvironmentFactory(rset)
-				.createEnvironment();
+		
+		UMLEnvironment umlEnv = new UMLEnvironmentFactory(rset).createEnvironment();
 		reg.registerEnvironment(umlEnv);
 
 		// register their standard library packages
 		ecoreEnv.getOCLStandardLibrary();
 		umlEnv.getOCLStandardLibrary();
+	}
+	
+	public Constraint convertAssociation2Constraint(
+			OCLHelper<Classifier, ?, ?, Constraint> helper2, Property property)
+			throws ParserException {
+
+		Constraint c = null;
+		Classifier owner = (Classifier) property.getType();
+		if (!owner.getName().equals("EnumerationLiteral")) {
+			Classifier ownedEnd = (Classifier) property.getOtherEnd().getType();
+
+			// will represent the invariant body
+			StringBuffer associationInOCL = new StringBuffer();
+			associationInOCL.append("ownedAttribute.association->forAll(self.oclIsKindOf(");
+			associationInOCL.append(ownedEnd.getName().concat("))"));
+			helper2.setContext(owner);
+			c = (Constraint) helper2.createInvariant(associationInOCL
+					.toString());
+			c.setName("associationViaOCL_" + owner.getName() + "_" + ownedEnd.getName());
+			c.setContext(owner);
+			ExpressionInOCL eio = (ExpressionInOCL) c.getSpecification();
+			System.out.println("OCL body: " + eio.getBodyExpression());
+		}
+		return c;
+	}
+	
+	public List<Constraint> evaluateOCL(ResourceSet rset, String oclPath)
+			throws ParserException, IOException {
+		
+		return null;
 	}
 
 	public String makeRuleEMFCompliant(String rule) {
@@ -87,52 +119,52 @@ public class OCLUtil {
 		return constraintHeader.concat(emfCompliantRule.toString());
 	}
 
-	public Constraint convertAssociation2Constraint(
-			OCLHelper<Classifier, ?, ?, Constraint> helper2, Property property)
-			throws ParserException {
-
-		Constraint c = null;
-		Classifier owner = (Classifier) property.getType();
-		if (!owner.getName().equals("EnumerationLiteral")) {
-			Classifier ownedEnd = (Classifier) property.getOtherEnd().getType();
-
-			// will represent the invariant body
-			StringBuffer associationInOCL = new StringBuffer();
-			associationInOCL.append("ownedAttribute.association->forAll(self.oclIsKindOf(");
-			associationInOCL.append(ownedEnd.getName().concat("))"));
-			helper2.setContext(owner);
-			c = (Constraint) helper2.createInvariant(associationInOCL
-					.toString());
-			c.setName("associationViaOCL_" + owner.getName() + "_" + ownedEnd.getName());
-			c.setContext(owner);
-			ExpressionInOCL eio = (ExpressionInOCL) c.getSpecification();
-			System.out.println("OCL body: " + eio.getBodyExpression());
-		}
-		return c;
-	}
-
-	public List<Constraint> parseOCL(ResourceSet rset, String oclPath)
-			throws ParserException, IOException {
+	public List<Constraint> parseOCL(
+			ResourceSet rset, Classifier context, 
+			String constraintName, String constraintBody)  throws ParserException, IOException{
+		
 		UMLEnvironmentFactory umlFactory = new UMLEnvironmentFactory(rset);
-		ocl = OCL.newInstance(umlFactory);
-		ocl.setEvaluationTracingEnabled(true);
-		ocl.setParseTracingEnabled(true);
-		helper = (OCLHelper<Classifier, ?, ?, Constraint>) ocl
-				.createOCLHelper();
-		File file = new File(oclPath);
-		FileInputStream fis = new FileInputStream(file);
-		OCLInput input = new OCLInput(fis);
+		
+		OCL ocl = OCL.newInstance(umlFactory);
+		
+		StringBuilder constraint = new StringBuilder();
+		
+		constraint.append("context ");
+		constraint.append(context.getQualifiedName());
+		constraint.append(" ");	
+		constraint.append(constraintName);
+		constraint.append(": ");	
+		constraint.append(constraintBody);
+		
+		OCLInput input = new OCLInput(constraint.toString());
+		
+		_debug("Parsing " + constraint.toString());
+		
 		List<Constraint> constraints = ocl.parse(input);
-		System.out.println("OCLs parsed.");
+		
+		_debug("... [ OK ]");
+		
 		return constraints;
 	}
-
-	public List<Constraint> evaluateOCL(ResourceSet rset, String oclPath)
-			throws ParserException, IOException {
-		return null;
+	
+	public OCLHelper<Classifier, ?, ?, Constraint> getOCLHelper() {
+		return _helper;
+	}
+	
+	public void transformOCL(
+		Type type,List<Constraint> inputConstraints, Map<String, Stereotype> stereotypes){
+		
+		for (Constraint constraint : inputConstraints) {
+			
+		}
 	}
 
-	public static OCLHelper<Classifier, ?, ?, Constraint> getOCLHelper() {
-		return helper;
+	private void _debug(String msg){
+		if (_debug)
+			out.println(msg);
 	}
+	
+	private boolean _debug;
+	private static OCL<?, ?, ?, ?, ?, ?, ?, ?, ?, Constraint, ?, ?> _ocl;
+	private static OCLHelper<Classifier, ?, ?, Constraint> _helper;
 }
