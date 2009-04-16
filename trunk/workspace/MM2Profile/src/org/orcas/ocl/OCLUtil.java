@@ -98,14 +98,11 @@ public class OCLUtil {
 
 			// will represent the invariant body
 			StringBuffer associationInOCL = new StringBuffer();
-			associationInOCL
-					.append("ownedAttribute.association->forAll(self.oclIsKindOf(");
+			associationInOCL.append("ownedAttribute.association->forAll(self.oclIsKindOf(");
 			associationInOCL.append(ownedEnd.getName().concat("))"));
 			helper2.setContext(owner);
-			c = (Constraint) helper2.createInvariant(associationInOCL
-					.toString());
-			c.setName("associationInProfile_" + owner.getName() + "_"
-					+ ownedEnd.getName());
+			c = (Constraint) helper2.createInvariant(associationInOCL.toString());
+			c.setName("associationInProfile_" + owner.getName() + "_"+ ownedEnd.getName());
 			c.setContext(owner);
 			ExpressionInOCL eio = (ExpressionInOCL) c.getSpecification();
 			System.out.println("OCL body: " + eio.getBodyExpression());
