@@ -103,11 +103,11 @@ public class UML2Util {
 	 */
 	public void addConstraint2Stereotype(Constraint c, Stereotype s) {
 		ExpressionInOCL eio = (ExpressionInOCL) c.getSpecification();
-		String bodyExpression = eio.getBodyExpression().toString(); 
-		eio.getLanguages().add("OCL");
-		eio.getBodies().add(bodyExpression);
+		String bodyExpression = eio.getBodyExpression().toString();
 		Constraint constraint = s.createOwnedRule(c.getName());
 		OpaqueExpression opaqueExpression = (OpaqueExpression) constraint.createSpecification(bodyExpression, null, UMLPackage.Literals.OPAQUE_EXPRESSION);
+		opaqueExpression.getLanguages().add("OCL");
+		opaqueExpression.getBodies().add(bodyExpression);
 		constraint.setSpecification(opaqueExpression);
 		c.createOwnedComment().setBody("Association representation in a profile definition goes via OCL constraints");
 	}
