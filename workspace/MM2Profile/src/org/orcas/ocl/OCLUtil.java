@@ -27,7 +27,7 @@ import org.eclipse.uml2.uml.Type;
 public class OCLUtil {
 	
 	public OCLUtil(){
-		_debug = false;
+		_debug = true;
 	}
 
 	/**
@@ -70,8 +70,7 @@ public class OCLUtil {
 			associationInOCL.append("ownedAttribute.association->forAll(self.oclIsKindOf(");
 			associationInOCL.append(ownedEnd.getName().concat("))"));
 			helper2.setContext(owner);
-			c = (Constraint) helper2.createInvariant(associationInOCL
-					.toString());
+			c = (Constraint) helper2.createInvariant(associationInOCL.toString());
 			c.setName("associationViaOCL_" + owner.getName() + "_" + ownedEnd.getName());
 			c.setContext(owner);
 			ExpressionInOCL eio = (ExpressionInOCL) c.getSpecification();
@@ -126,7 +125,8 @@ public class OCLUtil {
 		UMLEnvironmentFactory umlFactory = new UMLEnvironmentFactory(rset);
 		
 		OCL ocl = OCL.newInstance(umlFactory);
-		
+		_helper = (OCLHelper<Classifier, ?, ?, Constraint>) ocl.createOCLHelper();
+
 		StringBuilder constraint = new StringBuilder();
 		
 		constraint.append("context ");
@@ -142,7 +142,7 @@ public class OCLUtil {
 		
 		List<Constraint> constraints = ocl.parse(input);
 		
-		_debug("... [ OK ]");
+		_debug("[ OK ]");
 		
 		return constraints;
 	}

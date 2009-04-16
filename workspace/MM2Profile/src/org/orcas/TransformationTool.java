@@ -16,6 +16,7 @@ import org.eclipse.uml2.uml.Profile;
 import org.eclipse.uml2.uml.Property;
 import org.eclipse.uml2.uml.Stereotype;
 import org.eclipse.uml2.uml.Type;
+import org.eclipse.uml2.uml.util.UMLUtil;
 import org.orcas.ocl.OCLUtil;
 import org.orcas.uml2.UML2Util;
 
@@ -55,6 +56,10 @@ public class TransformationTool {
 		for (Element element : elements) {
 			if (element instanceof Package) {
 				Package tmp = (Package) element;
+				
+				// Merge dependencies
+				UMLUtil.merge(tmp, null);
+				
 				if (!tmp.getNestedPackages().isEmpty()) {
 					_processResource(tmp.getOwnedElements());
 				} else {
@@ -75,14 +80,14 @@ public class TransformationTool {
 			if (type instanceof Association) {
 				
 				Association association = (Association) type;
-
-				stereotype =
-					_uml2Util.createOrRetrieveStereotype(
-						_profile, association.getOwnedEnds().get(0).getType().getQualifiedName(), false);
 				
-				stereotype = 
-					_uml2Util.createOrRetrieveStereotype(
-						_profile, association.getOwnedEnds().get(1).getType().getName(), false);
+				EList<Property> ownedEnds = association.getOwnedEnds();
+				
+				for (Property property : ownedEnds) {
+					stereotype =
+						_uml2Util.createOrRetrieveStereotype(
+							_profile, property.getType().getQualifiedName(), false);
+				}
 
 			} else if (type instanceof Class) {
 				
