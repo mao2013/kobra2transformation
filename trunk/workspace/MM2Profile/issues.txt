@@ -19,3 +19,18 @@ self.specification returns ValueSpecification that does not have body attribute 
 - MessageType invariant
 
 Message type does not have any attibutes or association what makes the constraint invalid
+
+
+Duvidas
+
+- vai gerar esteriotipos de todo o merge?
+
+- questao da metaclasse no profile ja q eh tudo um metamodelo
+
+- ver exemplo de constraint nesse profile
+
+- exemplo de associacao
+
+      container = self.base_Class.ownedAttribute->
+      select(isComposite).association.endType->
+      select(oclIsKindOf(Container)).oclAsType(Container)->first()
