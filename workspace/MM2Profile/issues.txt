@@ -1,0 +1,21 @@
+- Elements import several things from other pakcages
+- import from types to KobrA2::SUM::StruKobrA2::SUM::Structure::Classes::StructuredClassifier
+- Inv em EnumerationLiteral (pacote structure::types)
+
+-em instances a parte de expression in ocl
+
+
+
+
+
+KobrA2 bugs
+
+KobrA2::SUM::StruKobrA2::SUM::Structure::Types
+
+- EnumerationLiteral invariant
+
+self.specification returns ValueSpecification that does not have body attribute ou association  
+
+- MessageType invariant
+
+Message type does not have any attibutes or association what makes the constraint invalid
