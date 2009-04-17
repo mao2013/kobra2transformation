@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_OUXlkCsAEd6axbyb1tC-4g" name="Data">
+  <eAnnotations xmi:id="_OUXlkSsAEd6axbyb1tC-4g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_OUXlkisAEd6axbyb1tC-4g" name="Data" nsURI="http:///schemas/Data/_OUVwYCsAEd6axbyb1tC-4g/0" nsPrefix="Data"/>
+  </eAnnotations>
+  <packagedElement xmi:type="uml:Profile" xmi:id="_OUXlkysAEd6axbyb1tC-4g" name="Kobra2">
+    <packagedElement xmi:type="uml:Profile" xmi:id="_OUXllCsAEd6axbyb1tC-4g" name="SUM">
+      <packagedElement xmi:type="uml:Profile" xmi:id="_OUXllSsAEd6axbyb1tC-4g" name="Structure">
+        <packagedElement xmi:type="uml:Profile" xmi:id="_OUXllisAEd6axbyb1tC-4g" name="Types">
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXllysAEd6axbyb1tC-4g" name="PrimitiveType">
+            <generalization xmi:id="_OUXlmCsAEd6axbyb1tC-4g" general="_OUXlmSsAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlmSsAEd6axbyb1tC-4g" name="DataType"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlmisAEd6axbyb1tC-4g" name="Enumeration">
+            <generalization xmi:id="_OUXlmysAEd6axbyb1tC-4g" general="_OUXlmSsAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlnCsAEd6axbyb1tC-4g" name="EnumerationLiteral"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlnSsAEd6axbyb1tC-4g" name="String">
+            <generalization xmi:id="_OUXlnisAEd6axbyb1tC-4g" general="_OUXllysAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlnysAEd6axbyb1tC-4g" name="Numeric">
+            <generalization xmi:id="_OUXloCsAEd6axbyb1tC-4g" general="_OUXllysAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXloSsAEd6axbyb1tC-4g" name="Boolean">
+            <generalization xmi:id="_OUXloisAEd6axbyb1tC-4g" general="_OUXllysAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXloysAEd6axbyb1tC-4g" name="Integer">
+            <generalization xmi:id="_OUXlpCsAEd6axbyb1tC-4g" general="_OUXlnysAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlpSsAEd6axbyb1tC-4g" name="UnllimitedNatural">
+            <generalization xmi:id="_OUXlpisAEd6axbyb1tC-4g" general="_OUXlnysAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlpysAEd6axbyb1tC-4g" name="Real">
+            <generalization xmi:id="_OUXlqCsAEd6axbyb1tC-4g" general="_OUXlnysAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlqSsAEd6axbyb1tC-4g" name="MessageType"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Profile" xmi:id="_OUXlqisAEd6axbyb1tC-4g" name="Elements">
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlqysAEd6axbyb1tC-4g" name="Element"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlrCsAEd6axbyb1tC-4g" name="StructuralElement">
+            <generalization xmi:id="_OUXlrSsAEd6axbyb1tC-4g" general="_OUXlqysAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlrisAEd6axbyb1tC-4g" name="StructuralBehavioralElement">
+            <generalization xmi:id="_OUXlrysAEd6axbyb1tC-4g" general="_OUXlqysAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlsCsAEd6axbyb1tC-4g" name="BehavioralElement">
+            <generalization xmi:id="_OUXlsSsAEd6axbyb1tC-4g" general="_OUXlqysAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlsisAEd6axbyb1tC-4g" name="TypeElement">
+            <generalization xmi:id="_OUXlsysAEd6axbyb1tC-4g" general="_OUXlrCsAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXltCsAEd6axbyb1tC-4g" name="InstanceElement">
+            <generalization xmi:id="_OUXltSsAEd6axbyb1tC-4g" general="_OUXlrCsAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXltisAEd6axbyb1tC-4g" name="LiteralElement">
+            <generalization xmi:id="_OUXltysAEd6axbyb1tC-4g" general="_OUXlrisAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXluCsAEd6axbyb1tC-4g" name="Parameter">
+            <generalization xmi:id="_OUXluSsAEd6axbyb1tC-4g" general="_OUXlrisAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXluisAEd6axbyb1tC-4g" name="Operation">
+            <generalization xmi:id="_OUXluysAEd6axbyb1tC-4g" general="_OUXlrisAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB0CsAEd6axbyb1tC-4g" name="Comment">
+            <generalization xmi:id="_OUaB0SsAEd6axbyb1tC-4g" general="_OUXlrisAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB0isAEd6axbyb1tC-4g" name="QueryOperation">
+            <generalization xmi:id="_OUaB0ysAEd6axbyb1tC-4g" general="_OUXluisAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB1CsAEd6axbyb1tC-4g" name="EffectOperation">
+            <generalization xmi:id="_OUaB1SsAEd6axbyb1tC-4g" general="_OUXluisAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB1isAEd6axbyb1tC-4g" name="ConstraintElement">
+            <generalization xmi:id="_OUaB1ysAEd6axbyb1tC-4g" general="_OUXlqysAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB2CsAEd6axbyb1tC-4g" name="CommonConstraintElement">
+            <generalization xmi:id="_OUaB2SsAEd6axbyb1tC-4g" general="_OUaB1isAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB2isAEd6axbyb1tC-4g" name="BehavioralConstraintElement">
+            <generalization xmi:id="_OUaB2ysAEd6axbyb1tC-4g" general="_OUaB1isAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB3CsAEd6axbyb1tC-4g" name="StructuralConstraintElement">
+            <generalization xmi:id="_OUaB3SsAEd6axbyb1tC-4g" general="_OUaB1isAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB3isAEd6axbyb1tC-4g" name="ActivityElement">
+            <generalization xmi:id="_OUaB3ysAEd6axbyb1tC-4g" general="_OUXlsCsAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB4CsAEd6axbyb1tC-4g" name="ProtocolElement">
+            <generalization xmi:id="_OUaB4SsAEd6axbyb1tC-4g" general="_OUXlsCsAEd6axbyb1tC-4g"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Profile" xmi:id="_OUaB4isAEd6axbyb1tC-4g" name="Classes">
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB4ysAEd6axbyb1tC-4g" name="ComponentClass">
+            <generalization xmi:id="_OUaB5CsAEd6axbyb1tC-4g" general="_OUaB5SsAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB5SsAEd6axbyb1tC-4g" name="StructuredClassifier"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB5isAEd6axbyb1tC-4g" name="Property"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB5ysAEd6axbyb1tC-4g" name="GeneralizationSet"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB6CsAEd6axbyb1tC-4g" name="Class">
+            <generalization xmi:id="_OUaB6SsAEd6axbyb1tC-4g" general="_OUaB4ysAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB6isAEd6axbyb1tC-4g" name="AssociationClass">
+            <generalization xmi:id="_OUaB6ysAEd6axbyb1tC-4g" general="_OUaB7SsAEd6axbyb1tC-4g"/>
+            <generalization xmi:id="_OUaB7CsAEd6axbyb1tC-4g" general="_OUaB6CsAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB7SsAEd6axbyb1tC-4g" name="Association"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB7isAEd6axbyb1tC-4g" name="Creates">
+            <generalization xmi:id="_OUaB7ysAEd6axbyb1tC-4g" general="_OUaB7SsAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB8CsAEd6axbyb1tC-4g" name="Acquires">
+            <generalization xmi:id="_OUaB8SsAEd6axbyb1tC-4g" general="_OUaB7SsAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB8isAEd6axbyb1tC-4g" name="Nests">
+            <generalization xmi:id="_OUaB8ysAEd6axbyb1tC-4g" general="_OUaB7SsAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB9CsAEd6axbyb1tC-4g" name="PackageableElement"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB9SsAEd6axbyb1tC-4g" name="Usage"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Profile" xmi:id="_OUaB9isAEd6axbyb1tC-4g" name="Instances">
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB9ysAEd6axbyb1tC-4g" name="Classifier"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB-CsAEd6axbyb1tC-4g" name="Slot"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB-SsAEd6axbyb1tC-4g" name="Link">
+            <generalization xmi:id="_OUaB-isAEd6axbyb1tC-4g" general="_OUaB-ysAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB-ysAEd6axbyb1tC-4g" name="InstanceSpecification"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB_CsAEd6axbyb1tC-4g" name="ComponentObject">
+            <generalization xmi:id="_OUaB_SsAEd6axbyb1tC-4g" general="_OUaB-ysAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB_isAEd6axbyb1tC-4g" name="CreatesLink">
+            <generalization xmi:id="_OUaB_ysAEd6axbyb1tC-4g" general="_OUaB-SsAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaCACsAEd6axbyb1tC-4g" name="Object">
+            <generalization xmi:id="_OUaCASsAEd6axbyb1tC-4g" general="_OUaB_CsAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaCAisAEd6axbyb1tC-4g" name="AcquiresLink">
+            <generalization xmi:id="_OUaCAysAEd6axbyb1tC-4g" general="_OUaB-SsAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaCBCsAEd6axbyb1tC-4g" name="NestsLink">
+            <generalization xmi:id="_OUaCBSsAEd6axbyb1tC-4g" general="_OUaB-SsAEd6axbyb1tC-4g"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaCBisAEd6axbyb1tC-4g" name="ObjectLink">
+            <generalization xmi:id="_OUaCBysAEd6axbyb1tC-4g" general="_OUaB-SsAEd6axbyb1tC-4g"/>
+            <generalization xmi:id="_OUaCCCsAEd6axbyb1tC-4g" general="_OUaCACsAEd6axbyb1tC-4g"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Profile" xmi:id="_OUaCCSsAEd6axbyb1tC-4g" name="Behavior">
+        <packagedElement xmi:type="uml:Profile" xmi:id="_OUaCCisAEd6axbyb1tC-4g" name="ProtocolStateMachine"/>
+        <packagedElement xmi:type="uml:Profile" xmi:id="_OUaCCysAEd6axbyb1tC-4g" name="Actions"/>
+        <packagedElement xmi:type="uml:Profile" xmi:id="_OUaCDCsAEd6axbyb1tC-4g" name="Activities"/>
+        <packagedElement xmi:type="uml:Profile" xmi:id="_OUaCDSsAEd6axbyb1tC-4g" name="Common"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+</uml:Profile>

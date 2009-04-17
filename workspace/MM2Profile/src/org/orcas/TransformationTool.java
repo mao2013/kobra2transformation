@@ -1,5 +1,6 @@
 package org.orcas;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
@@ -16,7 +17,6 @@ import org.eclipse.uml2.uml.Profile;
 import org.eclipse.uml2.uml.Property;
 import org.eclipse.uml2.uml.Stereotype;
 import org.eclipse.uml2.uml.Type;
-import org.eclipse.uml2.uml.util.UMLUtil;
 import org.orcas.ocl.OCLUtil;
 import org.orcas.uml2.UML2Util;
 
@@ -31,34 +31,41 @@ public class TransformationTool {
 		_oclUtil = new OCLUtil();
 		_uml2Util = new UML2Util();
 
-		_profileName = "KobrA2Profile";
 		_inputModelPath = "model/Data.uml";
-		_outputModelPath = "profile/" + _profileName + ".uml";
 
 		_inputModelURI = URI.createURI(_inputModelPath);
-		_outputModelURI = URI.createURI(_outputModelPath);
 
-		_profile = _uml2Util.createProfile(_profileName);
+		_mainMMPackage = _uml2Util.load(_inputModelURI);
+		_mainProfile = _uml2Util.createOrRetrieveProfile(_mainMMPackage.getName());
 	}
 
 	public void transform() throws Exception {
 		
-		Package package_ = _uml2Util.load(_inputModelURI);
-
-		_processResource(package_.getOwnedElements());
-
-		_uml2Util.defineProfile(_profile);
-		_uml2Util.save(_profile, _outputModelURI);
+		_processResource(_mainMMPackage.getOwnedElements());
+		
+		_outputModelPath = "profile/" + _mainProfile.getName() + ".uml" ;
+		_outputModelURI = URI.createURI(_outputModelPath);
+		
+		_uml2Util.defineProfile(_mainProfile);
+		_uml2Util.save(_mainProfile, _outputModelURI);
 	}
 	
 	private void _processResource(EList<Element> elements) throws Exception {
 
 		for (Element element : elements) {
 			if (element instanceof Package) {
+				
 				Package tmp = (Package) element;
 				
+				Package nestingPackage = tmp.getNestingPackage();
+				
+				Profile profileTmp = _uml2Util.createOrRetrieveProfile(tmp.getName());
+				Profile nestingProfile = _uml2Util.createOrRetrieveProfile(nestingPackage.getName());
+
+				nestingProfile.getNestedPackages().add(profileTmp);
+				
 				// Merge dependencies
-				UMLUtil.merge(tmp, null);
+				//UMLUtil.merge(tmp, null);
 				
 				if (!tmp.getNestedPackages().isEmpty()) {
 					_processResource(tmp.getOwnedElements());
@@ -82,17 +89,29 @@ public class TransformationTool {
 				Association association = (Association) type;
 				
 				EList<Property> ownedEnds = association.getOwnedEnds();
-				
-				for (Property property : ownedEnds) {
+							
+				// Create stereotypes 
+				/*for (Property property : ownedEnds) {
 					stereotype =
 						_uml2Util.createOrRetrieveStereotype(
 							_profile, property.getType().getQualifiedName(), false);
 				}
+				
+				Constraint constraint = 
+					_oclUtil.convertAssociation2Constraint(	_oclUtil.getOCLHelper(), property);
+				
+				Classifier propertyType = (Classifier) property.getType();
 
+				if (constraint != null && stereotype != null) {
+					_oclUtil.getOCLHelper().getOCL().validate(constraint);
+					propertyType.getOwnedRules().add(constraint);
+					_uml2Util.addConstraint2Stereotype(constraint,stereotype);
+				}
+				*/
 			} else if (type instanceof Class) {
 				
 				stereotype = 
-					_uml2Util.createOrRetrieveStereotype(_profile, type.getQualifiedName(), false);
+					_uml2Util.createOrRetrieveStereotype(type.getPackage(), type.getName(), false);
 				
 				List<Element> elements = type.getOwnedElements();
 				
@@ -102,17 +121,6 @@ public class TransformationTool {
 					if (element instanceof Property ){
 						
 						Property property = (Property) element;
-						
-						Constraint constraint = 
-							_oclUtil.convertAssociation2Constraint(	_oclUtil.getOCLHelper(), property);
-						
-						Classifier propertyType = (Classifier) property.getType();
-
-						if (constraint != null && stereotype != null) {
-							_oclUtil.getOCLHelper().getOCL().validate(constraint);
-							propertyType.getOwnedRules().add(constraint);
-							_uml2Util.addConstraint2Stereotype(constraint,stereotype);
-						}
 					
 					}
 					// Handle SuperClass Element
@@ -120,17 +128,19 @@ public class TransformationTool {
 
 						Generalization generalizationElement = (Generalization) element;
 						Classifier classifier = generalizationElement.getGeneral();
+						String genericName = classifier.getName();
 						String genericQualifiedName = classifier.getQualifiedName();
 						
 						// Do not create stereotypes from UML metaclasses instead create extensions
 						if (genericQualifiedName != null && genericQualifiedName.contains("UML")) {
+							System.out.println("zzzzzzzzzzzzzz");
 							//_uml2Util.referenceMetaclass(_profile, classifier);
 							//_uml2Util.createExtension( (org.eclipse.uml2.uml.Class) classifier, stereotype, false);
 						}
 						else {
 							
 							Stereotype genericStereotype =
-								_uml2Util.createOrRetrieveStereotype(_profile, genericQualifiedName, false);
+								_uml2Util.createOrRetrieveStereotype(classifier.getPackage(), genericName, false);
 
 							_uml2Util.createGeneralization(stereotype, genericStereotype);
 						}
@@ -160,9 +170,10 @@ public class TransformationTool {
 	public static void main(String[] args) throws Exception {
 		new TransformationTool().transform();
 	}
-
-	private Profile _profile;
-	private String _profileName;
+	
+	private Package _mainMMPackage;
+	private Profile _mainProfile;
+	
 	private OCLUtil _oclUtil;
 	private UML2Util _uml2Util;
 

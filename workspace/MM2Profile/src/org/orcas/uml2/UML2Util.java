@@ -37,7 +37,9 @@ public class UML2Util {
 
 	public UML2Util() {
 		
-		_debug = false;
+		_debug = true;
+		
+		_profiles = new HashMap<String, Profile>();
 		_stereotypes = new HashMap<String, Stereotype>();
 
 		Registry registry = Resource.Factory.Registry.INSTANCE;
@@ -109,13 +111,16 @@ public class UML2Util {
 		return metamodelReference;
 	}
 	
-	public Stereotype createOrRetrieveStereotype(Profile profile, String name, boolean isAbstract) {
+	public Stereotype createOrRetrieveStereotype(org.eclipse.uml2.uml.Package package_, String name, boolean isAbstract) {
 	
 		Stereotype stereotype = null;
 		
+		Profile profile = createOrRetrieveProfile(package_.getName());
+		
 		if (!_stereotypes.containsKey(name)){
 			stereotype = profile.createOwnedStereotype(name, isAbstract);
-			_debug("Stereotype '" + stereotype.getQualifiedName() + "' created.");
+			_stereotypes.put(name, stereotype);
+			_debug("Stereotype '" + stereotype.getName() + "' created in " + profile.getName());
 		} else {
 			stereotype = _stereotypes.get(name);
 			_debug("Stereotype '" + name + "' retrieved.");
@@ -124,24 +129,24 @@ public class UML2Util {
 		return stereotype;
 	}
 
-	public Profile createProfile(String name) {
-
-        Profile profile = UMLFactory.eINSTANCE.createProfile();
-        profile.setName(name);
+	public Profile createOrRetrieveProfile(String name) {
+		
+		Profile profile = null;
+		
+		if (!_profiles.containsKey(name)){
+	        profile = UMLFactory.eINSTANCE.createProfile();
+	        profile.setName(name);
+	        _profiles.put(name, profile);
+	        _debug("Profile '" + name + "' created.");
+		}
+		else {
+			profile = _profiles.get(name);
+	        _debug("Profile '" + profile.getName() + "' retrieved.");
+		}
         
-        _debug("Profile '" + profile.getQualifiedName() + "' created.");
         
         return profile;
     }
-
-	public Stereotype createStereotype(Profile profile, String name, boolean isAbstract) {
-		
-		Stereotype stereotype = profile.createOwnedStereotype(name, isAbstract);
-		
-		_debug("Stereotype '" + stereotype.getQualifiedName() + "' created.");
-		
-	    return stereotype;
-	}
 
 	public void defineProfile(Profile profile) {
 
@@ -165,13 +170,14 @@ public class UML2Util {
 
 	public org.eclipse.uml2.uml.Package load(URI uri) {
 		
+		UMLPackage umlPackage = UMLPackage.eINSTANCE;
+
 		Resource resource = _resourceSet.getResource(uri, true);
 
 		org.eclipse.uml2.uml.Package package_ =
 		   	(org.eclipse.uml2.uml.Package) EcoreUtil.getObjectByType(
 		   		resource.getContents(), UMLPackage.Literals.PACKAGE);
         
-        UMLPackage umlPackage = UMLPackage.eINSTANCE;
         _resourceSet.getPackageRegistry().put(umlPackage.getNsURI(), umlPackage);     
         _resourceSet.getPackageRegistry().put(package_.getQualifiedName(), package_);
         _resourceSet.getResources().add(umlPackage.eResource());
@@ -240,4 +246,5 @@ public class UML2Util {
 	private boolean _debug;
 	private ResourceSet _resourceSet;
 	private HashMap<String, Stereotype> _stereotypes;
+	private HashMap<String, Profile> _profiles;
 }
