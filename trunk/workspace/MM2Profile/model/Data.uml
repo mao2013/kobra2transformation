@@ -1,473 +1,421 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Standard="http://www.eclipse.org/uml2/schemas/Standard/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xsi:schemaLocation="http://www.eclipse.org/uml2/schemas/Standard/1 pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w">
-  <uml:Model xmi:id="_0" name="Data">
-    <packagedElement xmi:type="uml:Package" xmi:id="Kobra2" name="Kobra2">
-      <packagedElement xmi:type="uml:Package" xmi:id="Kobra2-SUM" name="SUM">
-        <packagedElement xmi:type="uml:Package" xmi:id="Kobra2-SUM-Structure" name="Structure">
-          <packageMerge xmi:id="Kobra2-SUM-Structure-_packageMerge.0">
-            <mergedPackage href="Superstructure.uml#_3ADC7B74022D3C9FD9B900CF"/>
-          </packageMerge>
-          <packagedElement xmi:type="uml:Package" xmi:id="Kobra2-SUM-Structure-Types" name="Types">
-            <packageMerge xmi:id="Kobra2-SUM-Structure-Types-_packageMerge.0" mergedPackage="Kobra2-SUM-Structure-Elements"/>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Types-PrimitiveType" name="PrimitiveType" isAbstract="true">
-              <ownedRule xmi:id="Kobra2-SUM-Structure-Types-PrimitiveType-invprimitiveTypeInv" name="primitiveTypeInv" constrainedElement="Kobra2-SUM-Structure-Types-PrimitiveType">
-                <eAnnotations xmi:id="Kobra2-SUM-Structure-Types-PrimitiveType-invprimitiveTypeInv-_http2F2Fwww.eclipse.org2Fuml22F2.1.02FUML" source="http://www.eclipse.org/uml2/2.1.0/UML">
-                  <details xmi:id="Kobra2-SUM-Structure-Types-PrimitiveType-invprimitiveTypeInv-_http2F2Fwww.eclipse.org2Fuml22F2.1.02FUML-_details.0" key="ModelingLevel" value="M1"/>
-                </eAnnotations>
-                <specification xmi:type="uml:OpaqueExpression" xmi:id="Kobra2-SUM-Structure-Types-PrimitiveType-invprimitiveTypeInv-specification" name="specification">
-                  <language>OCL</language>
-                  <body>self.isAbstract</body>
-                </specification>
-              </ownedRule>
-              <generalization xmi:id="Kobra2-SUM-Structure-Types-PrimitiveType-_generalization.0" general="Kobra2-SUM-Structure-Types-DataType"/>
-              <generalization xmi:id="Kobra2-SUM-Structure-Types-PrimitiveType-_generalization.1">
-                <general xmi:type="uml:Class" href="Superstructure.uml#_3ADC7B74022D3CAB1DCD00B2"/>
-              </generalization>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Types-DataType" name="DataType" isAbstract="true">
-              <ownedRule xmi:id="Kobra2-SUM-Structure-Types-DataType-invdataTypeInv" name="dataTypeInv" constrainedElement="Kobra2-SUM-Structure-Types-DataType">
-                <eAnnotations xmi:id="Kobra2-SUM-Structure-Types-DataType-invdataTypeInv-_http2F2Fwww.eclipse.org2Fuml22F2.1.02FUML" source="http://www.eclipse.org/uml2/2.1.0/UML">
-                  <details xmi:id="Kobra2-SUM-Structure-Types-DataType-invdataTypeInv-_http2F2Fwww.eclipse.org2Fuml22F2.1.02FUML-_details.0" key="ModelingLevel" value="M1"/>
-                </eAnnotations>
-                <specification xmi:type="uml:OpaqueExpression" xmi:id="Kobra2-SUM-Structure-Types-DataType-invdataTypeInv-specification" name="specification">
-                  <language>OCL</language>
-                  <body>self.allOwnedElements()->isEmpty()</body>
-                </specification>
-              </ownedRule>
-              <generalization xmi:id="Kobra2-SUM-Structure-Types-DataType-_generalization.0">
-                <general xmi:type="uml:Class" href="Superstructure.uml#_3ADC7B74022D3CAB1D9C03C8"/>
-              </generalization>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Types-Enumeration" name="Enumeration">
-              <generalization xmi:id="Kobra2-SUM-Structure-Types-Enumeration-_generalization.0" general="Kobra2-SUM-Structure-Types-DataType"/>
-              <ownedAttribute xmi:id="Kobra2-SUM-Structure-Types-Enumeration-ownedLiteral" name="ownedLiteral" type="Kobra2-SUM-Structure-Types-EnumerationLiteral" isUnique="false" aggregation="composite" association="Kobra2-SUM-Structure-Types-A_Enumeration_EnumerationLiteral">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Kobra2-SUM-Structure-Types-Enumeration-ownedLiteral-_upperValue" value="1"/>
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Kobra2-SUM-Structure-Types-Enumeration-ownedLiteral-_lowerValue"/>
-              </ownedAttribute>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Types-EnumerationLiteral" name="EnumerationLiteral">
-              <ownedAttribute xmi:id="Kobra2-SUM-Structure-Types-EnumerationLiteral-enumeration" name="enumeration" type="Kobra2-SUM-Structure-Types-Enumeration" isUnique="false" association="Kobra2-SUM-Structure-Types-A_Enumeration_EnumerationLiteral">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Kobra2-SUM-Structure-Types-EnumerationLiteral-enumeration-_upperValue" value="1"/>
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Kobra2-SUM-Structure-Types-EnumerationLiteral-enumeration-_lowerValue" value="1"/>
-              </ownedAttribute>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Types-String" name="String">
-              <generalization xmi:id="Kobra2-SUM-Structure-Types-String-_generalization.0" general="Kobra2-SUM-Structure-Types-PrimitiveType"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Types-Numeric" name="Numeric">
-              <generalization xmi:id="Kobra2-SUM-Structure-Types-Numeric-_generalization.0" general="Kobra2-SUM-Structure-Types-PrimitiveType"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Types-Boolean" name="Boolean">
-              <generalization xmi:id="Kobra2-SUM-Structure-Types-Boolean-_generalization.0" general="Kobra2-SUM-Structure-Types-PrimitiveType"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Types-Integer" name="Integer">
-              <generalization xmi:id="Kobra2-SUM-Structure-Types-Integer-_generalization.0" general="Kobra2-SUM-Structure-Types-Numeric"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Types-UnllimitedNatural" name="UnllimitedNatural">
-              <generalization xmi:id="Kobra2-SUM-Structure-Types-UnllimitedNatural-_generalization.0" general="Kobra2-SUM-Structure-Types-Numeric"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Types-Real" name="Real">
-              <generalization xmi:id="Kobra2-SUM-Structure-Types-Real-_generalization.0" general="Kobra2-SUM-Structure-Types-Numeric"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Types-MessageType" name="MessageType"/>
-            <packagedElement xmi:type="uml:Association" xmi:id="Kobra2-SUM-Structure-Types-A_Enumeration_EnumerationLiteral" name="A_Enumeration_EnumerationLiteral" visibility="private" memberEnd="Kobra2-SUM-Structure-Types-Enumeration-ownedLiteral Kobra2-SUM-Structure-Types-EnumerationLiteral-enumeration"/>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_5-lrkCC0Ed6kMowq1N0R6Q" name="Data">
+  <packagedElement xmi:type="uml:Package" xmi:id="_j6rBECC3Ed6kMowq1N0R6Q" name="Kobra2">
+    <packagedElement xmi:type="uml:Package" xmi:id="_oSCC4CC3Ed6kMowq1N0R6Q" name="SUM">
+      <packagedElement xmi:type="uml:Package" xmi:id="_pt484CC3Ed6kMowq1N0R6Q" name="Structure">
+        <packageMerge xmi:id="_lxBCMCC4Ed6kMowq1N0R6Q">
+          <mergedPackage href="Superstructure.uml#_3ADC7B74022D3C9FD9B900CF"/>
+        </packageMerge>
+        <packagedElement xmi:type="uml:Package" xmi:id="_oTImYCDIEd6kMowq1N0R6Q" name="Types">
+          <packageMerge xmi:id="_wFWlgCDIEd6kMowq1N0R6Q" mergedPackage="_hEd-ECC5Ed6kMowq1N0R6Q"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_jbd3YCDJEd6kMowq1N0R6Q" name="PrimitiveType" isAbstract="true">
+            <ownedRule xmi:id="_qCOe4CMMEd6DXbwGHB8pLQ" name="primitiveTypeInv" constrainedElement="_jbd3YCDJEd6kMowq1N0R6Q">
+              <eAnnotations xmi:id="_tpL-gCMMEd6DXbwGHB8pLQ" source="http://www.eclipse.org/uml2/2.1.0/UML">
+                <details xmi:id="_tpNMoCMMEd6DXbwGHB8pLQ" key="ModelingLevel" value="M1"/>
+              </eAnnotations>
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_qCT-cCMMEd6DXbwGHB8pLQ" name="specification">
+                <language>OCL</language>
+                <body>self.isAbstract</body>
+              </specification>
+            </ownedRule>
+            <generalization xmi:id="_Ni2TYCDLEd6kMowq1N0R6Q" general="_dLLvoCDKEd6kMowq1N0R6Q"/>
+            <generalization xmi:id="_Xg9bkCo9Ed6oW962KC_QGw">
+              <general xmi:type="uml:Class" href="Superstructure.uml#_3ADC7B74022D3CAB1DCD00B2"/>
+            </generalization>
           </packagedElement>
-          <packagedElement xmi:type="uml:Package" xmi:id="Kobra2-SUM-Structure-Elements" name="Elements">
-            <packageImport xmi:id="Kobra2-SUM-Structure-Elements-_packageImport.0" importedPackage="Kobra2-SUM-Structure-Types"/>
-            <packageImport xmi:id="Kobra2-SUM-Structure-Elements-_packageImport.1" importedPackage="Kobra2-SUM-Structure-Classes"/>
-            <packageImport xmi:id="Kobra2-SUM-Structure-Elements-_packageImport.2" importedPackage="Kobra2-SUM-Structure-Instances"/>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Elements-Element" name="Element" isAbstract="true">
-              <ownedRule xmi:id="Kobra2-SUM-Structure-Elements-Element-invelementInv" name="elementInv" constrainedElement="Kobra2-SUM-Structure-Elements-Element">
-                <eAnnotations xmi:id="Kobra2-SUM-Structure-Elements-Element-invelementInv-_http2F2Fwww.eclipse.org2Fuml22F2.1.02FUML" source="http://www.eclipse.org/uml2/2.1.0/UML">
-                  <details xmi:id="Kobra2-SUM-Structure-Elements-Element-invelementInv-_http2F2Fwww.eclipse.org2Fuml22F2.1.02FUML-_details.0" key="ModelingLevel" value="M1"/>
-                </eAnnotations>
-                <specification xmi:type="uml:OpaqueExpression" xmi:id="Kobra2-SUM-Structure-Elements-Element-invelementInv-specification" name="specification">
-                  <language>OCL</language>
-                  <body>self.oclIsKindOf(StructuralElement) or&#xA;self.oclIsKindOf(StructuralBehavioralElement) or&#xA;self.oclIsKindOf(ConstraintElement) or&#xA;self.oclIsKindOf(BehavioralElement)</body>
-                </specification>
-              </ownedRule>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Elements-StructuralElement" name="StructuralElement" isAbstract="true">
-              <ownedRule xmi:id="Kobra2-SUM-Structure-Elements-StructuralElement-invstructuralElementInv" name="structuralElementInv" constrainedElement="Kobra2-SUM-Structure-Elements-StructuralElement">
-                <eAnnotations xmi:id="Kobra2-SUM-Structure-Elements-StructuralElement-invstructuralElementInv-_http2F2Fwww.eclipse.org2Fuml22F2.1.02FUML" source="http://www.eclipse.org/uml2/2.1.0/UML">
-                  <details xmi:id="Kobra2-SUM-Structure-Elements-StructuralElement-invstructuralElementInv-_http2F2Fwww.eclipse.org2Fuml22F2.1.02FUML-_details.0" key="ModelingLevel" value="M1"/>
-                </eAnnotations>
-                <specification xmi:type="uml:OpaqueExpression" xmi:id="Kobra2-SUM-Structure-Elements-StructuralElement-invstructuralElementInv-specification" name="specification">
-                  <language>OCL</language>
-                  <body>self.oclIsKindOf(TypeElement) or&#xA;self.oclIsKindOf(InstanceElement)</body>
-                </specification>
-              </ownedRule>
-              <generalization xmi:id="Kobra2-SUM-Structure-Elements-StructuralElement-_generalization.0" general="Kobra2-SUM-Structure-Elements-Element"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Elements-StructuralBehavioralElement" name="StructuralBehavioralElement">
-              <ownedRule xmi:id="Kobra2-SUM-Structure-Elements-StructuralBehavioralElement-invstructuralBehavioralElement" name="structuralBehavioralElement" constrainedElement="Kobra2-SUM-Structure-Elements-StructuralBehavioralElement">
-                <eAnnotations xmi:id="Kobra2-SUM-Structure-Elements-StructuralBehavioralElement-invstructuralBehavioralElement-_http2F2Fwww.eclipse.org2Fuml22F2.1.02FUML" source="http://www.eclipse.org/uml2/2.1.0/UML">
-                  <details xmi:id="Kobra2-SUM-Structure-Elements-StructuralBehavioralElement-invstructuralBehavioralElement-_http2F2Fwww.eclipse.org2Fuml22F2.1.02FUML-_details.0" key="ModelingLevel" value="M1"/>
-                </eAnnotations>
-                <specification xmi:type="uml:OpaqueExpression" xmi:id="Kobra2-SUM-Structure-Elements-StructuralBehavioralElement-invstructuralBehavioralElement-specification" name="specification">
-                  <language>OCL</language>
-                  <body>self.oclIsKindOf(LiteralElement) or&#xA;self.oclIsKindOf(QueryOperation) or&#xA;self.oclIsKindOf(EffectOperation) or&#xA;self.oclIsKindOf(Parameter) or&#xA;self.oclIsKindOf(Comment)</body>
-                </specification>
-              </ownedRule>
-              <generalization xmi:id="Kobra2-SUM-Structure-Elements-StructuralBehavioralElement-_generalization.0" general="Kobra2-SUM-Structure-Elements-Element"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Elements-BehavioralElement" name="BehavioralElement" isAbstract="true">
-              <ownedRule xmi:id="Kobra2-SUM-Structure-Elements-BehavioralElement-invbehavioralElementInv" name="behavioralElementInv" constrainedElement="Kobra2-SUM-Structure-Elements-BehavioralElement">
-                <eAnnotations xmi:id="Kobra2-SUM-Structure-Elements-BehavioralElement-invbehavioralElementInv-_http2F2Fwww.eclipse.org2Fuml22F2.1.02FUML" source="http://www.eclipse.org/uml2/2.1.0/UML">
-                  <details xmi:id="Kobra2-SUM-Structure-Elements-BehavioralElement-invbehavioralElementInv-_http2F2Fwww.eclipse.org2Fuml22F2.1.02FUML-_details.0" key="ModelingLevel" value="M1"/>
-                </eAnnotations>
-                <specification xmi:type="uml:OpaqueExpression" xmi:id="Kobra2-SUM-Structure-Elements-BehavioralElement-invbehavioralElementInv-specification" name="specification">
-                  <language>OCL</language>
-                  <body>self.oclIsKindOf(ActivityElement) or&#xA;self.oclIsKindOf(ProtocolElement)</body>
-                </specification>
-              </ownedRule>
-              <generalization xmi:id="Kobra2-SUM-Structure-Elements-BehavioralElement-_generalization.0" general="Kobra2-SUM-Structure-Elements-Element"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Elements-TypeElement" name="TypeElement" isAbstract="true">
-              <generalization xmi:id="Kobra2-SUM-Structure-Elements-TypeElement-_generalization.0" general="Kobra2-SUM-Structure-Elements-StructuralElement"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Elements-InstanceElement" name="InstanceElement" isAbstract="true">
-              <ownedRule xmi:id="Kobra2-SUM-Structure-Elements-InstanceElement-invinstanceElementInv" name="instanceElementInv" constrainedElement="Kobra2-SUM-Structure-Elements-InstanceElement">
-                <eAnnotations xmi:id="Kobra2-SUM-Structure-Elements-InstanceElement-invinstanceElementInv-_http2F2Fwww.eclipse.org2Fuml22F2.1.02FUML" source="http://www.eclipse.org/uml2/2.1.0/UML">
-                  <details xmi:id="Kobra2-SUM-Structure-Elements-InstanceElement-invinstanceElementInv-_http2F2Fwww.eclipse.org2Fuml22F2.1.02FUML-_details.0" key="ModelingLevel" value="M1"/>
-                </eAnnotations>
-                <specification xmi:type="uml:OpaqueExpression" xmi:id="Kobra2-SUM-Structure-Elements-InstanceElement-invinstanceElementInv-specification" name="specification">
-                  <language>OCL</language>
-                  <body>self.oclIsKindOf(ComponentObject) or&#xA;self.oclIsKindOf(Slot) or&#xA;self.oclIsKindOf(Link)</body>
-                </specification>
-              </ownedRule>
-              <generalization xmi:id="Kobra2-SUM-Structure-Elements-InstanceElement-_generalization.0" general="Kobra2-SUM-Structure-Elements-StructuralElement"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Elements-LiteralElement" name="LiteralElement" isAbstract="true">
-              <generalization xmi:id="Kobra2-SUM-Structure-Elements-LiteralElement-_generalization.0" general="Kobra2-SUM-Structure-Elements-StructuralBehavioralElement"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Elements-Parameter" name="Parameter">
-              <generalization xmi:id="Kobra2-SUM-Structure-Elements-Parameter-_generalization.0" general="Kobra2-SUM-Structure-Elements-StructuralBehavioralElement"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Elements-Operation" name="Operation">
-              <generalization xmi:id="Kobra2-SUM-Structure-Elements-Operation-_generalization.0" general="Kobra2-SUM-Structure-Elements-StructuralBehavioralElement"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Elements-Comment" name="Comment">
-              <generalization xmi:id="Kobra2-SUM-Structure-Elements-Comment-_generalization.0" general="Kobra2-SUM-Structure-Elements-StructuralBehavioralElement"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Elements-QueryOperation" name="QueryOperation">
-              <generalization xmi:id="Kobra2-SUM-Structure-Elements-QueryOperation-_generalization.0" general="Kobra2-SUM-Structure-Elements-Operation"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Elements-EffectOperation" name="EffectOperation">
-              <generalization xmi:id="Kobra2-SUM-Structure-Elements-EffectOperation-_generalization.0" general="Kobra2-SUM-Structure-Elements-Operation"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Elements-ConstraintElement" name="ConstraintElement">
-              <ownedRule xmi:id="Kobra2-SUM-Structure-Elements-ConstraintElement-invconstraintElement" name="constraintElement" constrainedElement="Kobra2-SUM-Structure-Elements-ConstraintElement">
-                <eAnnotations xmi:id="Kobra2-SUM-Structure-Elements-ConstraintElement-invconstraintElement-_http2F2Fwww.eclipse.org2Fuml22F2.1.02FUML" source="http://www.eclipse.org/uml2/2.1.0/UML">
-                  <details xmi:id="Kobra2-SUM-Structure-Elements-ConstraintElement-invconstraintElement-_http2F2Fwww.eclipse.org2Fuml22F2.1.02FUML-_details.0" key="ModelingLevel" value="M1"/>
-                </eAnnotations>
-                <specification xmi:type="uml:OpaqueExpression" xmi:id="Kobra2-SUM-Structure-Elements-ConstraintElement-invconstraintElement-specification" name="specification">
-                  <language>OCL</language>
-                  <body>self.oclIsKindOf(CommonConstraintElement) or&#xA;self.oclIsKindOf(BehavioralConstraintElement) or&#xA;self.oclIsKindOf(StructuralConstraintElement)</body>
-                </specification>
-              </ownedRule>
-              <generalization xmi:id="Kobra2-SUM-Structure-Elements-ConstraintElement-_generalization.0" general="Kobra2-SUM-Structure-Elements-Element"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Elements-CommonConstraintElement" name="CommonConstraintElement">
-              <generalization xmi:id="Kobra2-SUM-Structure-Elements-CommonConstraintElement-_generalization.0" general="Kobra2-SUM-Structure-Elements-ConstraintElement"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Elements-BehavioralConstraintElement" name="BehavioralConstraintElement">
-              <generalization xmi:id="Kobra2-SUM-Structure-Elements-BehavioralConstraintElement-_generalization.0" general="Kobra2-SUM-Structure-Elements-ConstraintElement"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Elements-StructuralConstraintElement" name="StructuralConstraintElement">
-              <generalization xmi:id="Kobra2-SUM-Structure-Elements-StructuralConstraintElement-_generalization.0" general="Kobra2-SUM-Structure-Elements-ConstraintElement"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Elements-ActivityElement" name="ActivityElement" isAbstract="true">
-              <generalization xmi:id="Kobra2-SUM-Structure-Elements-ActivityElement-_generalization.0" general="Kobra2-SUM-Structure-Elements-BehavioralElement"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Elements-ProtocolElement" name="ProtocolElement" isAbstract="true">
-              <generalization xmi:id="Kobra2-SUM-Structure-Elements-ProtocolElement-_generalization.0" general="Kobra2-SUM-Structure-Elements-BehavioralElement"/>
-            </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_dLLvoCDKEd6kMowq1N0R6Q" name="DataType" isAbstract="true">
+            <ownedRule xmi:id="_Zng5cCIbEd661qQzYav7aw" name="dataTypeInv" constrainedElement="_dLLvoCDKEd6kMowq1N0R6Q">
+              <eAnnotations xmi:id="_50nTECIbEd661qQzYav7aw" source="http://www.eclipse.org/uml2/2.1.0/UML">
+                <details xmi:id="_50ohMCIbEd661qQzYav7aw" key="ModelingLevel" value="M1"/>
+              </eAnnotations>
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_Zn1CgCIbEd661qQzYav7aw" name="specification">
+                <language>OCL</language>
+                <body>self.allOwnedElements()->isEmpty()</body>
+              </specification>
+            </ownedRule>
+            <generalization xmi:id="_gk3FACo9Ed6oW962KC_QGw">
+              <general xmi:type="uml:Class" href="Superstructure.uml#_3ADC7B74022D3CAB1D9C03C8"/>
+            </generalization>
           </packagedElement>
-          <packagedElement xmi:type="uml:Package" xmi:id="Kobra2-SUM-Structure-Classes" name="Classes">
-            <packageMerge xmi:id="Kobra2-SUM-Structure-Classes-_packageMerge.0">
-              <mergedPackage href="Superstructure.uml#_3ADC7B74022D3CF19F41017F"/>
-            </packageMerge>
-            <packageMerge xmi:id="Kobra2-SUM-Structure-Classes-_packageMerge.1">
-              <mergedPackage href="Superstructure.uml#_3ADC7B74022D3ADF556A0044"/>
-            </packageMerge>
-            <packageMerge xmi:id="Kobra2-SUM-Structure-Classes-_packageMerge.2">
-              <mergedPackage href="Superstructure.uml#_3ADC7B74022D3BAF182F0290"/>
-            </packageMerge>
-            <packageMerge xmi:id="Kobra2-SUM-Structure-Classes-_packageMerge.3">
-              <mergedPackage href="Superstructure.uml#_3ADC7B74022D3CFC224902BF"/>
-            </packageMerge>
-            <packageMerge xmi:id="Kobra2-SUM-Structure-Classes-_packageMerge.4" mergedPackage="Kobra2-SUM-Structure-Types"/>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Classes-ComponentClass" name="ComponentClass">
-              <generalization xmi:id="Kobra2-SUM-Structure-Classes-ComponentClass-_generalization.0" general="Kobra2-SUM-Structure-Classes-StructuredClassifier"/>
-              <generalization xmi:id="Kobra2-SUM-Structure-Classes-ComponentClass-_generalization.1">
-                <general xmi:type="uml:Class" href="Superstructure.uml#_3ADC7B74022D3E0251CD020F"/>
-              </generalization>
-              <ownedAttribute xmi:id="Kobra2-SUM-Structure-Classes-ComponentClass-ownedAttribute" name="ownedAttribute" type="Kobra2-SUM-Structure-Classes-Property" isUnique="false" aggregation="composite" association="Kobra2-SUM-Structure-Classes-A_Property_ComponentClass">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Kobra2-SUM-Structure-Classes-ComponentClass-ownedAttribute-_upperValue" value="1"/>
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Kobra2-SUM-Structure-Classes-ComponentClass-ownedAttribute-_lowerValue"/>
-              </ownedAttribute>
-              <ownedAttribute xmi:id="Kobra2-SUM-Structure-Classes-ComponentClass-packageableElement" name="packageableElement" type="Kobra2-SUM-Structure-Classes-PackageableElement" isUnique="false" aggregation="composite" association="Kobra2-SUM-Structure-Classes-A_ComponentClass_PackageableElement">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Kobra2-SUM-Structure-Classes-ComponentClass-packageableElement-_upperValue" value="1"/>
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Kobra2-SUM-Structure-Classes-ComponentClass-packageableElement-_lowerValue"/>
-              </ownedAttribute>
-              <ownedAttribute xmi:id="Kobra2-SUM-Structure-Classes-ComponentClass-superClass" name="superClass" type="Kobra2-SUM-Structure-Classes-ComponentClass" isUnique="false" isDerived="true" association="Kobra2-SUM-Structure-Classes-A_ComponentClass_ComponentClass">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Kobra2-SUM-Structure-Classes-ComponentClass-superClass-_upperValue" value="*"/>
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Kobra2-SUM-Structure-Classes-ComponentClass-superClass-_lowerValue"/>
-              </ownedAttribute>
-              <ownedAttribute xmi:id="Kobra2-SUM-Structure-Classes-ComponentClass-ownedOperation" name="ownedOperation" type="Kobra2-SUM-Structure-Classes-AssociationClass-Operation" isUnique="false" association="Kobra2-SUM-Structure-Classes-A_ComponentClass_Operation">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Kobra2-SUM-Structure-Classes-ComponentClass-ownedOperation-_upperValue" value="*"/>
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Kobra2-SUM-Structure-Classes-ComponentClass-ownedOperation-_lowerValue"/>
-              </ownedAttribute>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Classes-StructuredClassifier" name="StructuredClassifier">
-              <ownedRule xmi:id="Kobra2-SUM-Structure-Classes-StructuredClassifier-invstructuredClassifierInv" name="structuredClassifierInv" constrainedElement="Kobra2-SUM-Structure-Classes-StructuredClassifier">
-                <eAnnotations xmi:id="Kobra2-SUM-Structure-Classes-StructuredClassifier-invstructuredClassifierInv-_http2F2Fwww.eclipse.org2Fuml22F2.1.02FUML" source="http://www.eclipse.org/uml2/2.1.0/UML">
-                  <details xmi:id="Kobra2-SUM-Structure-Classes-StructuredClassifier-invstructuredClassifierInv-_http2F2Fwww.eclipse.org2Fuml22F2.1.02FUML-_details.0" key="ModelingLevel" value="M1"/>
-                </eAnnotations>
-                <specification xmi:type="uml:OpaqueExpression" xmi:id="Kobra2-SUM-Structure-Classes-StructuredClassifier-invstructuredClassifierInv-specification" name="specification">
-                  <language>OCL</language>
-                  <body>oclIsKindOf(ComponentClass) or oclIsKindOf(Data::Kobra2::SUM::Structure::Types::DataType)</body>
-                </specification>
-              </ownedRule>
-              <generalization xmi:id="Kobra2-SUM-Structure-Classes-StructuredClassifier-_generalization.0">
-                <general xmi:type="uml:Class" href="Superstructure.uml#_3ADC7B74022D3CAAECE80199"/>
-              </generalization>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Classes-Property" name="Property"/>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Classes-GeneralizationSet" name="GeneralizationSet"/>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Classes-Class" name="Class">
-              <generalization xmi:id="Kobra2-SUM-Structure-Classes-Class-_generalization.0" general="Kobra2-SUM-Structure-Classes-ComponentClass"/>
-              <ownedAttribute xmi:id="Kobra2-SUM-Structure-Classes-Class-superClass" name="superClass" type="Kobra2-SUM-Structure-Classes-Class" isUnique="false" isDerived="true">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Kobra2-SUM-Structure-Classes-Class-superClass-_upperValue" value="*"/>
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Kobra2-SUM-Structure-Classes-Class-superClass-_lowerValue"/>
-              </ownedAttribute>
-              <ownedAttribute xmi:id="Kobra2-SUM-Structure-Classes-Class-superClass.1" name="superClass" type="Kobra2-SUM-Structure-Classes-Class" isUnique="false" isDerived="true" association="Kobra2-SUM-Structure-Classes-A_Class_Class">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Kobra2-SUM-Structure-Classes-Class-superClass.1-_upperValue" value="*"/>
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Kobra2-SUM-Structure-Classes-Class-superClass.1-_lowerValue"/>
-              </ownedAttribute>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Classes-AssociationClass" name="AssociationClass">
-              <generalization xmi:id="Kobra2-SUM-Structure-Classes-AssociationClass-_generalization.0" general="Kobra2-SUM-Structure-Classes-Association"/>
-              <generalization xmi:id="Kobra2-SUM-Structure-Classes-AssociationClass-_generalization.1" general="Kobra2-SUM-Structure-Classes-Class"/>
-              <nestedClassifier xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Classes-AssociationClass-Operation" name="Operation"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Classes-Association" name="Association"/>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Classes-Creates" name="Creates">
-              <generalization xmi:id="Kobra2-SUM-Structure-Classes-Creates-_generalization.0" general="Kobra2-SUM-Structure-Classes-Association"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Classes-Acquires" name="Acquires">
-              <generalization xmi:id="Kobra2-SUM-Structure-Classes-Acquires-_generalization.0" general="Kobra2-SUM-Structure-Classes-Association"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Classes-Nests" name="Nests">
-              <generalization xmi:id="Kobra2-SUM-Structure-Classes-Nests-_generalization.0" general="Kobra2-SUM-Structure-Classes-Association"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Classes-PackageableElement" name="PackageableElement"/>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Classes-Parameter" name="Parameter"/>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Classes-Usage" name="Usage">
-              <ownedAttribute xmi:id="Kobra2-SUM-Structure-Classes-Usage-operation" name="operation" type="Kobra2-SUM-Structure-Classes-AssociationClass-Operation" isUnique="false" association="Kobra2-SUM-Structure-Classes-A_Usage_Operation">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Kobra2-SUM-Structure-Classes-Usage-operation-_upperValue" value="*"/>
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Kobra2-SUM-Structure-Classes-Usage-operation-_lowerValue" value="1"/>
-              </ownedAttribute>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="Kobra2-SUM-Structure-Classes-A_Property_ComponentClass" name="A_Property_ComponentClass" visibility="private" memberEnd="Kobra2-SUM-Structure-Classes-A_Property_ComponentClass-componentClass Kobra2-SUM-Structure-Classes-ComponentClass-ownedAttribute">
-              <ownedEnd xmi:id="Kobra2-SUM-Structure-Classes-A_Property_ComponentClass-componentClass" name="componentClass" type="Kobra2-SUM-Structure-Classes-ComponentClass" isUnique="false" association="Kobra2-SUM-Structure-Classes-A_Property_ComponentClass">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Kobra2-SUM-Structure-Classes-A_Property_ComponentClass-componentClass-_upperValue" value="1"/>
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Kobra2-SUM-Structure-Classes-A_Property_ComponentClass-componentClass-_lowerValue"/>
-              </ownedEnd>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="Kobra2-SUM-Structure-Classes-A_ComponentClass_GeneralizationSet" name="A_ComponentClass_GeneralizationSet" visibility="private" memberEnd="Kobra2-SUM-Structure-Classes-A_ComponentClass_GeneralizationSet-powerTypeExtent Kobra2-SUM-Structure-Classes-A_ComponentClass_GeneralizationSet-powerType">
-              <ownedEnd xmi:id="Kobra2-SUM-Structure-Classes-A_ComponentClass_GeneralizationSet-powerTypeExtent" name="powerTypeExtent" type="Kobra2-SUM-Structure-Classes-GeneralizationSet" isUnique="false" association="Kobra2-SUM-Structure-Classes-A_ComponentClass_GeneralizationSet">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Kobra2-SUM-Structure-Classes-A_ComponentClass_GeneralizationSet-powerTypeExtent-_upperValue" value="*"/>
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Kobra2-SUM-Structure-Classes-A_ComponentClass_GeneralizationSet-powerTypeExtent-_lowerValue"/>
-              </ownedEnd>
-              <ownedEnd xmi:id="Kobra2-SUM-Structure-Classes-A_ComponentClass_GeneralizationSet-powerType" name="powerType" type="Kobra2-SUM-Structure-Classes-ComponentClass" isUnique="false" association="Kobra2-SUM-Structure-Classes-A_ComponentClass_GeneralizationSet">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Kobra2-SUM-Structure-Classes-A_ComponentClass_GeneralizationSet-powerType-_upperValue" value="1"/>
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Kobra2-SUM-Structure-Classes-A_ComponentClass_GeneralizationSet-powerType-_lowerValue"/>
-              </ownedEnd>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="Kobra2-SUM-Structure-Classes-A_ComponentClass_PackageableElement" name="A_ComponentClass_PackageableElement" visibility="private" memberEnd="Kobra2-SUM-Structure-Classes-ComponentClass-packageableElement Kobra2-SUM-Structure-Classes-A_ComponentClass_PackageableElement-componentClass">
-              <ownedEnd xmi:id="Kobra2-SUM-Structure-Classes-A_ComponentClass_PackageableElement-componentClass" name="componentClass" type="Kobra2-SUM-Structure-Classes-ComponentClass" isUnique="false" association="Kobra2-SUM-Structure-Classes-A_ComponentClass_PackageableElement">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Kobra2-SUM-Structure-Classes-A_ComponentClass_PackageableElement-componentClass-_upperValue" value="*"/>
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Kobra2-SUM-Structure-Classes-A_ComponentClass_PackageableElement-componentClass-_lowerValue"/>
-              </ownedEnd>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="Kobra2-SUM-Structure-Classes-A_ComponentClass_ComponentClass" name="A_ComponentClass_ComponentClass" visibility="private" memberEnd="Kobra2-SUM-Structure-Classes-ComponentClass-superClass Kobra2-SUM-Structure-Classes-A_ComponentClass_ComponentClass-componentClass">
-              <ownedEnd xmi:id="Kobra2-SUM-Structure-Classes-A_ComponentClass_ComponentClass-componentClass" name="componentClass" type="Kobra2-SUM-Structure-Classes-ComponentClass" isUnique="false" association="Kobra2-SUM-Structure-Classes-A_ComponentClass_ComponentClass">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Kobra2-SUM-Structure-Classes-A_ComponentClass_ComponentClass-componentClass-_upperValue" value="*"/>
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Kobra2-SUM-Structure-Classes-A_ComponentClass_ComponentClass-componentClass-_lowerValue"/>
-              </ownedEnd>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="Kobra2-SUM-Structure-Classes-A_ComponentClass_Operation" name="A_ComponentClass_Operation" visibility="private" memberEnd="Kobra2-SUM-Structure-Classes-ComponentClass-ownedOperation Kobra2-SUM-Structure-Classes-A_ComponentClass_Operation-componentClass">
-              <ownedEnd xmi:id="Kobra2-SUM-Structure-Classes-A_ComponentClass_Operation-componentClass" name="componentClass" type="Kobra2-SUM-Structure-Classes-ComponentClass" isUnique="false" association="Kobra2-SUM-Structure-Classes-A_ComponentClass_Operation">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Kobra2-SUM-Structure-Classes-A_ComponentClass_Operation-componentClass-_upperValue" value="1"/>
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Kobra2-SUM-Structure-Classes-A_ComponentClass_Operation-componentClass-_lowerValue"/>
-              </ownedEnd>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="Kobra2-SUM-Structure-Classes-A_Usage_Operation" name="A_Usage_Operation" visibility="private" memberEnd="Kobra2-SUM-Structure-Classes-Usage-operation Kobra2-SUM-Structure-Classes-A_Usage_Operation-usage">
-              <ownedEnd xmi:id="Kobra2-SUM-Structure-Classes-A_Usage_Operation-usage" name="usage" type="Kobra2-SUM-Structure-Classes-Usage" isUnique="false" association="Kobra2-SUM-Structure-Classes-A_Usage_Operation">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Kobra2-SUM-Structure-Classes-A_Usage_Operation-usage-_upperValue" value="*"/>
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Kobra2-SUM-Structure-Classes-A_Usage_Operation-usage-_lowerValue"/>
-              </ownedEnd>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="Kobra2-SUM-Structure-Classes-A_Operation_Usage" name="A_Operation_Usage" visibility="private" memberEnd="Kobra2-SUM-Structure-Classes-A_Operation_Usage-usage Kobra2-SUM-Structure-Classes-A_Operation_Usage-operation">
-              <ownedEnd xmi:id="Kobra2-SUM-Structure-Classes-A_Operation_Usage-operation" name="operation" type="Kobra2-SUM-Structure-Classes-AssociationClass-Operation" isUnique="false" association="Kobra2-SUM-Structure-Classes-A_Operation_Usage">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Kobra2-SUM-Structure-Classes-A_Operation_Usage-operation-_upperValue" value="*"/>
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Kobra2-SUM-Structure-Classes-A_Operation_Usage-operation-_lowerValue"/>
-              </ownedEnd>
-              <ownedEnd xmi:id="Kobra2-SUM-Structure-Classes-A_Operation_Usage-usage" name="usage" type="Kobra2-SUM-Structure-Classes-Usage" isUnique="false" association="Kobra2-SUM-Structure-Classes-A_Operation_Usage">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Kobra2-SUM-Structure-Classes-A_Operation_Usage-usage-_upperValue" value="*"/>
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Kobra2-SUM-Structure-Classes-A_Operation_Usage-usage-_lowerValue" value="1"/>
-              </ownedEnd>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="Kobra2-SUM-Structure-Classes-A_Class_Class" name="A_Class_Class" visibility="private" memberEnd="Kobra2-SUM-Structure-Classes-Class-superClass.1 Kobra2-SUM-Structure-Classes-A_Class_Class-class">
-              <ownedEnd xmi:id="Kobra2-SUM-Structure-Classes-A_Class_Class-class" name="class" type="Kobra2-SUM-Structure-Classes-Class" isUnique="false" association="Kobra2-SUM-Structure-Classes-A_Class_Class">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Kobra2-SUM-Structure-Classes-A_Class_Class-class-_upperValue" value="*"/>
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Kobra2-SUM-Structure-Classes-A_Class_Class-class-_lowerValue"/>
-              </ownedEnd>
-            </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_i7_3sCDKEd6kMowq1N0R6Q" name="Enumeration">
+            <generalization xmi:id="_OL0X4CDLEd6kMowq1N0R6Q" general="_dLLvoCDKEd6kMowq1N0R6Q"/>
+            <ownedAttribute xmi:id="_Kq8SICDLEd6kMowq1N0R6Q" name="ownedLiteral" type="_k4DUsCDKEd6kMowq1N0R6Q" isUnique="false" aggregation="composite" association="_Kq0WUCDLEd6kMowq1N0R6Q">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Kq_8gCDLEd6kMowq1N0R6Q" value="1"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Kq_VcCDLEd6kMowq1N0R6Q"/>
+            </ownedAttribute>
           </packagedElement>
-          <packagedElement xmi:type="uml:Package" xmi:id="Kobra2-SUM-Structure-Instances" name="Instances">
-            <packageMerge xmi:id="Kobra2-SUM-Structure-Instances-_packageMerge.0" mergedPackage="Kobra2-SUM-Structure-Classes"/>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Instances-Classifier" name="Classifier" isAbstract="true"/>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Instances-Slot" name="Slot">
-              <ownedAttribute xmi:id="Kobra2-SUM-Structure-Instances-Slot-owningInstance" name="owningInstance" type="Kobra2-SUM-Structure-Instances-InstanceSpecification" isUnique="false" association="Kobra2-SUM-Structure-Instances-A_InstanceSpecification_Slot">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Kobra2-SUM-Structure-Instances-Slot-owningInstance-_upperValue" value="1"/>
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Kobra2-SUM-Structure-Instances-Slot-owningInstance-_lowerValue" value="1"/>
-              </ownedAttribute>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Instances-Link" name="Link">
-              <generalization xmi:id="Kobra2-SUM-Structure-Instances-Link-_generalization.0" general="Kobra2-SUM-Structure-Instances-InstanceSpecification"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Instances-ComponentObject" name="ComponentObject">
-              <generalization xmi:id="Kobra2-SUM-Structure-Instances-ComponentObject-_generalization.0" general="Kobra2-SUM-Structure-Instances-InstanceSpecification"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Instances-CreatesLink" name="CreatesLink">
-              <generalization xmi:id="Kobra2-SUM-Structure-Instances-CreatesLink-_generalization.0" general="Kobra2-SUM-Structure-Instances-Link"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Instances-InstanceSpecification" name="InstanceSpecification" isAbstract="true">
-              <ownedAttribute xmi:id="Kobra2-SUM-Structure-Instances-InstanceSpecification-slot" name="slot" type="Kobra2-SUM-Structure-Instances-Slot" isUnique="false" aggregation="composite" association="Kobra2-SUM-Structure-Instances-A_InstanceSpecification_Slot">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Kobra2-SUM-Structure-Instances-InstanceSpecification-slot-_upperValue" value="*"/>
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Kobra2-SUM-Structure-Instances-InstanceSpecification-slot-_lowerValue"/>
-              </ownedAttribute>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Instances-Object" name="Object">
-              <generalization xmi:id="Kobra2-SUM-Structure-Instances-Object-_generalization.0" general="Kobra2-SUM-Structure-Instances-ComponentObject"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Instances-AcquiresLink" name="AcquiresLink">
-              <generalization xmi:id="Kobra2-SUM-Structure-Instances-AcquiresLink-_generalization.0" general="Kobra2-SUM-Structure-Instances-Link"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Instances-NestsLink" name="NestsLink">
-              <generalization xmi:id="Kobra2-SUM-Structure-Instances-NestsLink-_generalization.0" general="Kobra2-SUM-Structure-Instances-Link"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Structure-Instances-ObjectLink" name="ObjectLink">
-              <generalization xmi:id="Kobra2-SUM-Structure-Instances-ObjectLink-_generalization.0" general="Kobra2-SUM-Structure-Instances-Link"/>
-              <generalization xmi:id="Kobra2-SUM-Structure-Instances-ObjectLink-_generalization.1" general="Kobra2-SUM-Structure-Instances-Object"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="Kobra2-SUM-Structure-Instances-A_InstanceSpecification_Classifier" name="A_InstanceSpecification_Classifier" visibility="private" memberEnd="Kobra2-SUM-Structure-Instances-A_InstanceSpecification_Classifier-classifier Kobra2-SUM-Structure-Instances-A_InstanceSpecification_Classifier-instanceSpecification">
-              <ownedEnd xmi:id="Kobra2-SUM-Structure-Instances-A_InstanceSpecification_Classifier-instanceSpecification" name="instanceSpecification" type="Kobra2-SUM-Structure-Instances-InstanceSpecification" isUnique="false" association="Kobra2-SUM-Structure-Instances-A_InstanceSpecification_Classifier">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Kobra2-SUM-Structure-Instances-A_InstanceSpecification_Classifier-instanceSpecification-_upperValue" value="*"/>
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Kobra2-SUM-Structure-Instances-A_InstanceSpecification_Classifier-instanceSpecification-_lowerValue"/>
-              </ownedEnd>
-              <ownedEnd xmi:id="Kobra2-SUM-Structure-Instances-A_InstanceSpecification_Classifier-classifier" name="classifier" type="Kobra2-SUM-Structure-Instances-Classifier" isUnique="false" association="Kobra2-SUM-Structure-Instances-A_InstanceSpecification_Classifier">
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="Kobra2-SUM-Structure-Instances-A_InstanceSpecification_Classifier-classifier-_upperValue" value="1"/>
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="Kobra2-SUM-Structure-Instances-A_InstanceSpecification_Classifier-classifier-_lowerValue" value="1"/>
-              </ownedEnd>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="Kobra2-SUM-Structure-Instances-A_InstanceSpecification_Slot" name="A_InstanceSpecification_Slot" visibility="private" memberEnd="Kobra2-SUM-Structure-Instances-InstanceSpecification-slot Kobra2-SUM-Structure-Instances-Slot-owningInstance"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_k4DUsCDKEd6kMowq1N0R6Q" name="EnumerationLiteral">
+            <ownedAttribute xmi:id="_KrAjkCDLEd6kMowq1N0R6Q" name="enumeration" type="_i7_3sCDKEd6kMowq1N0R6Q" isUnique="false" association="_Kq0WUCDLEd6kMowq1N0R6Q">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KrDm4CDLEd6kMowq1N0R6Q" value="1"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KrEN8CDLEd6kMowq1N0R6Q" value="1"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ohNzwCDKEd6kMowq1N0R6Q" name="String">
+            <generalization xmi:id="_ywufQCDLEd6kMowq1N0R6Q" general="_jbd3YCDJEd6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_pAHWQCDKEd6kMowq1N0R6Q" name="Numeric">
+            <generalization xmi:id="_zoChwCDLEd6kMowq1N0R6Q" general="_jbd3YCDJEd6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_phiBQCDKEd6kMowq1N0R6Q" name="Boolean">
+            <generalization xmi:id="_00BzwCDLEd6kMowq1N0R6Q" general="_jbd3YCDJEd6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_6hwBACDKEd6kMowq1N0R6Q" name="Integer">
+            <generalization xmi:id="_1hbFQCDLEd6kMowq1N0R6Q" general="_pAHWQCDKEd6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_7FUBECDKEd6kMowq1N0R6Q" name="UnllimitedNatural">
+            <generalization xmi:id="_2CiOQCDLEd6kMowq1N0R6Q" general="_pAHWQCDKEd6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_7vHzECDKEd6kMowq1N0R6Q" name="Real">
+            <ownedRule xmi:id="_iCmOYCImEd661qQzYav7aw" name="Constraint" constrainedElement="_7vHzECDKEd6kMowq1N0R6Q">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_iCp4wCImEd661qQzYav7aw" name="specification" body="">
+                <language>OCL</language>
+              </specification>
+            </ownedRule>
+            <generalization xmi:id="_4rsB0CDLEd6kMowq1N0R6Q" general="_pAHWQCDKEd6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_8LbUkCDKEd6kMowq1N0R6Q" name="MessageType">
+            <ownedRule xmi:id="_lAVx4CImEd661qQzYav7aw" name="Constraint" constrainedElement="_8LbUkCDKEd6kMowq1N0R6Q">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_lAY1MCImEd661qQzYav7aw" name="specification" body="">
+                <language>OCL</language>
+              </specification>
+            </ownedRule>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_Kq0WUCDLEd6kMowq1N0R6Q" name="A_Enumeration_EnumerationLiteral" memberEnd="_Kq8SICDLEd6kMowq1N0R6Q _KrAjkCDLEd6kMowq1N0R6Q"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_hEd-ECC5Ed6kMowq1N0R6Q" name="Elements">
+          <packageImport xmi:id="_XUzoICiLEd6kXvNKnkz2WA" importedPackage="_oTImYCDIEd6kMowq1N0R6Q"/>
+          <packageImport xmi:id="_YCkGACiLEd6kXvNKnkz2WA" importedPackage="_y-WBICMTEd6DXbwGHB8pLQ"/>
+          <packageImport xmi:id="_Zhx2ACiLEd6kXvNKnkz2WA" importedPackage="_HRDywCMcEd6DXbwGHB8pLQ"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="__X7VgCC5Ed6kMowq1N0R6Q" name="Element" isAbstract="true">
+            <ownedRule xmi:id="_4ZZ8sCJEEd661qQzYav7aw" name="elementInv" constrainedElement="__X7VgCC5Ed6kMowq1N0R6Q">
+              <eAnnotations xmi:id="_072bQCJFEd661qQzYav7aw" source="http://www.eclipse.org/uml2/2.1.0/UML">
+                <details xmi:id="_073CUCJFEd661qQzYav7aw" key="ModelingLevel" value="M1"/>
+              </eAnnotations>
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_4ZgDUCJEEd661qQzYav7aw" name="specification">
+                <language>OCL</language>
+                <body>self.oclIsKindOf(StructuralElement) or&#xA;self.oclIsKindOf(StructuralBehavioralElement) or&#xA;self.oclIsKindOf(ConstraintElement) or&#xA;self.oclIsKindOf(BehavioralElement)</body>
+              </specification>
+            </ownedRule>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_QmOioCC8Ed6kMowq1N0R6Q" name="StructuralElement" isAbstract="true">
+            <ownedRule xmi:id="_PjxKMCiKEd6kXvNKnkz2WA" name="structuralElementInv" constrainedElement="_QmOioCC8Ed6kMowq1N0R6Q">
+              <eAnnotations xmi:id="_YM2f4CiKEd6kXvNKnkz2WA" source="http://www.eclipse.org/uml2/2.1.0/UML">
+                <details xmi:id="_YM4VECiKEd6kXvNKnkz2WA" key="ModelingLevel" value="M1"/>
+              </eAnnotations>
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_Pj4e8CiKEd6kXvNKnkz2WA" name="specification">
+                <language>OCL</language>
+                <body>self.oclIsKindOf(TypeElement) or&#xA;self.oclIsKindOf(InstanceElement)</body>
+              </specification>
+            </ownedRule>
+            <generalization xmi:id="_VA9MECC9Ed6kMowq1N0R6Q" general="__X7VgCC5Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_SsC_oCC8Ed6kMowq1N0R6Q" name="StructuralBehavioralElement">
+            <ownedRule xmi:id="_8BGJ4CiLEd6kXvNKnkz2WA" name="structuralBehavioralElement" constrainedElement="_SsC_oCC8Ed6kMowq1N0R6Q">
+              <eAnnotations xmi:id="_bHidcCiMEd6kXvNKnkz2WA" source="http://www.eclipse.org/uml2/2.1.0/UML">
+                <details xmi:id="_bHjrkCiMEd6kXvNKnkz2WA" key="ModelingLevel" value="M1"/>
+              </eAnnotations>
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_8BM3kCiLEd6kXvNKnkz2WA" name="specification">
+                <language>OCL</language>
+                <body>self.oclIsKindOf(LiteralElement) or&#xA;self.oclIsKindOf(QueryOperation) or&#xA;self.oclIsKindOf(EffectOperation) or&#xA;self.oclIsKindOf(Parameter) or&#xA;self.oclIsKindOf(Comment)</body>
+              </specification>
+            </ownedRule>
+            <generalization xmi:id="_V7F5ECC9Ed6kMowq1N0R6Q" general="__X7VgCC5Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_TI4soCC8Ed6kMowq1N0R6Q" name="BehavioralElement" isAbstract="true">
+            <ownedRule xmi:id="_7V1w8CiMEd6kXvNKnkz2WA" name="behavioralElementInv" constrainedElement="_TI4soCC8Ed6kMowq1N0R6Q">
+              <eAnnotations xmi:id="_Dg8xMCiNEd6kXvNKnkz2WA" source="http://www.eclipse.org/uml2/2.1.0/UML">
+                <details xmi:id="_Dg-mYCiNEd6kXvNKnkz2WA" key="ModelingLevel" value="M1"/>
+              </eAnnotations>
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_7V7QgCiMEd6kXvNKnkz2WA" name="specification">
+                <language>OCL</language>
+                <body>self.oclIsKindOf(ActivityElement) or&#xA;self.oclIsKindOf(ProtocolElement)</body>
+              </specification>
+            </ownedRule>
+            <generalization xmi:id="_Wbq2kCC9Ed6kMowq1N0R6Q" general="__X7VgCC5Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DiEd4CC-Ed6kMowq1N0R6Q" name="TypeElement" isAbstract="true">
+            <generalization xmi:id="_o6GVMCDHEd6kMowq1N0R6Q" general="_QmOioCC8Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_EFeF4CC-Ed6kMowq1N0R6Q" name="InstanceElement" isAbstract="true">
+            <ownedRule xmi:id="_nDKXYCiLEd6kXvNKnkz2WA" name="instanceElementInv" constrainedElement="_EFeF4CC-Ed6kMowq1N0R6Q">
+              <eAnnotations xmi:id="_zPhmkCiLEd6kXvNKnkz2WA" source="http://www.eclipse.org/uml2/2.1.0/UML">
+                <details xmi:id="_zPi0sCiLEd6kXvNKnkz2WA" key="ModelingLevel" value="M1"/>
+              </eAnnotations>
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_nDRFECiLEd6kXvNKnkz2WA" name="specification">
+                <language>OCL</language>
+                <body>self.oclIsKindOf(ComponentObject) or&#xA;self.oclIsKindOf(Slot) or&#xA;self.oclIsKindOf(Link)</body>
+              </specification>
+            </ownedRule>
+            <generalization xmi:id="_n0leoCDHEd6kMowq1N0R6Q" general="_QmOioCC8Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_J9-xYCC-Ed6kMowq1N0R6Q" name="LiteralElement" isAbstract="true">
+            <generalization xmi:id="_zbEZkCDHEd6kMowq1N0R6Q" general="_SsC_oCC8Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_LzBAYCC-Ed6kMowq1N0R6Q" name="Parameter">
+            <generalization xmi:id="_0hkHkCDHEd6kMowq1N0R6Q" general="_SsC_oCC8Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_OaQIYCC-Ed6kMowq1N0R6Q" name="Operation">
+            <generalization xmi:id="_Fvzq4CiMEd6kXvNKnkz2WA" general="_SsC_oCC8Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_QHbb4CC-Ed6kMowq1N0R6Q" name="Comment">
+            <generalization xmi:id="_1TiXECDHEd6kMowq1N0R6Q" general="_SsC_oCC8Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_TrYq0CC-Ed6kMowq1N0R6Q" name="QueryOperation">
+            <generalization xmi:id="_wwfCoCDHEd6kMowq1N0R6Q" general="_OaQIYCC-Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_WVSsUCC-Ed6kMowq1N0R6Q" name="EffectOperation">
+            <generalization xmi:id="_yL4poCDHEd6kMowq1N0R6Q" general="_OaQIYCC-Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_xMRV0CC-Ed6kMowq1N0R6Q" name="ConstraintElement">
+            <ownedRule xmi:id="_sfSzcCiMEd6kXvNKnkz2WA" name="constraintElement" constrainedElement="_xMRV0CC-Ed6kMowq1N0R6Q">
+              <eAnnotations xmi:id="_2IlB4CiMEd6kXvNKnkz2WA" source="http://www.eclipse.org/uml2/2.1.0/UML">
+                <details xmi:id="_2Im3ECiMEd6kXvNKnkz2WA" key="ModelingLevel" value="M1"/>
+              </eAnnotations>
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_sfZhICiMEd6kXvNKnkz2WA" name="specification">
+                <language>OCL</language>
+                <body>self.oclIsKindOf(CommonConstraintElement) or&#xA;self.oclIsKindOf(BehavioralConstraintElement) or&#xA;self.oclIsKindOf(StructuralConstraintElement)</body>
+              </specification>
+            </ownedRule>
+            <generalization xmi:id="_ARUIsCDHEd6kMowq1N0R6Q" general="__X7VgCC5Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_1TPyQCC-Ed6kMowq1N0R6Q" name="CommonConstraintElement">
+            <generalization xmi:id="_RAVDsCDHEd6kMowq1N0R6Q" general="_xMRV0CC-Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_4UzewCC-Ed6kMowq1N0R6Q" name="BehavioralConstraintElement">
+            <generalization xmi:id="_IkxzsCDHEd6kMowq1N0R6Q" general="_xMRV0CC-Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_7dTgwCC-Ed6kMowq1N0R6Q" name="StructuralConstraintElement">
+            <generalization xmi:id="_SF-dICDHEd6kMowq1N0R6Q" general="_xMRV0CC-Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DMRogCDIEd6kMowq1N0R6Q" name="ActivityElement" isAbstract="true">
+            <generalization xmi:id="_N1zzACDIEd6kMowq1N0R6Q" general="_TI4soCC8Ed6kMowq1N0R6Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DkxBACDIEd6kMowq1N0R6Q" name="ProtocolElement" isAbstract="true">
+            <generalization xmi:id="_Ok4fgCDIEd6kMowq1N0R6Q" general="_TI4soCC8Ed6kMowq1N0R6Q"/>
           </packagedElement>
         </packagedElement>
-        <packagedElement xmi:type="uml:Package" xmi:id="Kobra2-SUM-Behavior" name="Behavior">
-          <packagedElement xmi:type="uml:Package" xmi:id="Kobra2-SUM-Behavior-ProtocolStateMachine" name="ProtocolStateMachine">
-            <packageMerge xmi:id="Kobra2-SUM-Behavior-ProtocolStateMachine-_packageMerge.0" mergedPackage="Kobra2-SUM-Behavior-Common"/>
-            <packageMerge xmi:id="Kobra2-SUM-Behavior-ProtocolStateMachine-_packageMerge.1">
-              <mergedPackage href="Superstructure.uml#_3ADC7B74022D3D0266EE027C"/>
-            </packageMerge>
+        <packagedElement xmi:type="uml:Package" xmi:id="_y-WBICMTEd6DXbwGHB8pLQ" name="Classes">
+          <packageMerge xmi:id="_ZMBdICMUEd6DXbwGHB8pLQ">
+            <mergedPackage href="Superstructure.uml#_3ADC7B74022D3CF19F41017F"/>
+          </packageMerge>
+          <packageMerge xmi:id="_gzasUCMUEd6DXbwGHB8pLQ">
+            <mergedPackage href="Superstructure.uml#_3ADC7B74022D3ADF556A0044"/>
+          </packageMerge>
+          <packageMerge xmi:id="_g9LFQCMUEd6DXbwGHB8pLQ">
+            <mergedPackage href="Superstructure.uml#_3ADC7B74022D3BAF182F0290"/>
+          </packageMerge>
+          <packageMerge xmi:id="_hF3uQCMUEd6DXbwGHB8pLQ">
+            <mergedPackage href="Superstructure.uml#_3ADC7B74022D3CFC224902BF"/>
+          </packageMerge>
+          <packageMerge xmi:id="_h2rpQCYLEd6TVYmtelLWWg" mergedPackage="_oTImYCDIEd6kMowq1N0R6Q"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_cJnaMCMVEd6DXbwGHB8pLQ" name="ComponentClass">
+            <generalization xmi:id="_v_nUQCMVEd6DXbwGHB8pLQ" general="_nHv7sCMVEd6DXbwGHB8pLQ"/>
+            <generalization xmi:id="_2AAJYCMVEd6DXbwGHB8pLQ">
+              <general xmi:type="uml:Class" href="Superstructure.uml#_3ADC7B74022D3E0251CD020F"/>
+            </generalization>
+            <ownedAttribute xmi:id="_DmlB4SMYEd6DXbwGHB8pLQ" name="ownedAttribute" type="_TIbRECMWEd6DXbwGHB8pLQ" isUnique="false" aggregation="composite" association="_DmW_cCMYEd6DXbwGHB8pLQ">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Dmp6YCMYEd6DXbwGHB8pLQ" value="1"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Dmp6YSMYEd6DXbwGHB8pLQ"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_9fMiACMZEd6DXbwGHB8pLQ" name="packageableElement" type="_HeyfACMXEd6DXbwGHB8pLQ" isUnique="false" aggregation="composite" association="_9e_tsCMZEd6DXbwGHB8pLQ">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9fRagCMZEd6DXbwGHB8pLQ" value="1"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9fQzcCMZEd6DXbwGHB8pLQ"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ejBvUCMaEd6DXbwGHB8pLQ" name="superClass" type="_cJnaMCMVEd6DXbwGHB8pLQ" isUnique="false" isDerived="true" association="_ei2JICMaEd6DXbwGHB8pLQ">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ejH18CMaEd6DXbwGHB8pLQ" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ejHO4CMaEd6DXbwGHB8pLQ"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_8C_NQCMaEd6DXbwGHB8pLQ" name="ownedOperation" type="_L8gngCMXEd6DXbwGHB8pLQ" isUnique="false" association="_8CznECMaEd6DXbwGHB8pLQ">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8DGiACMaEd6DXbwGHB8pLQ" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8DF68CMaEd6DXbwGHB8pLQ"/>
+            </ownedAttribute>
           </packagedElement>
-          <packagedElement xmi:type="uml:Package" xmi:id="Kobra2-SUM-Behavior-Actions" name="Actions">
-            <packageMerge xmi:id="Kobra2-SUM-Behavior-Actions-_packageMerge.0">
-              <mergedPackage href="Superstructure.uml#_3ADC7B74022D3DF127D50109"/>
-            </packageMerge>
+          <packagedElement xmi:type="uml:Class" xmi:id="_nHv7sCMVEd6DXbwGHB8pLQ" name="StructuredClassifier">
+            <ownedRule xmi:id="_azVXwCYKEd6TVYmtelLWWg" name="inv structuredClassifierInv" constrainedElement="_nHv7sCMVEd6DXbwGHB8pLQ">
+              <eAnnotations xmi:id="_tdU8QCYLEd6TVYmtelLWWg" source="http://www.eclipse.org/uml2/2.1.0/UML">
+                <details xmi:id="_tdWxcCYLEd6TVYmtelLWWg" key="ModelingLevel" value="M1"/>
+              </eAnnotations>
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_azcsgCYKEd6TVYmtelLWWg" name="specification">
+                <language>OCL</language>
+                <body>oclIsKindOf(ComponentClass) or oclIsKindOf(Data::Kobra2::SUM::Structure::Types::DataType)</body>
+              </specification>
+            </ownedRule>
+            <generalization xmi:id="_GjkpYCMWEd6DXbwGHB8pLQ">
+              <general xmi:type="uml:Class" href="Superstructure.uml#_3ADC7B74022D3CAAECE80199"/>
+            </generalization>
           </packagedElement>
-          <packagedElement xmi:type="uml:Package" xmi:id="Kobra2-SUM-Behavior-Activities" name="Activities">
-            <packageMerge xmi:id="Kobra2-SUM-Behavior-Activities-_packageMerge.0" mergedPackage="Kobra2-SUM-Behavior-Common"/>
-            <packageMerge xmi:id="Kobra2-SUM-Behavior-Activities-_packageMerge.1" mergedPackage="Kobra2-SUM-Behavior-Actions"/>
-            <packageMerge xmi:id="Kobra2-SUM-Behavior-Activities-_packageMerge.2">
-              <mergedPackage href="Superstructure.uml#_3ADC7B74022D3DF125060148"/>
-            </packageMerge>
-            <packageMerge xmi:id="Kobra2-SUM-Behavior-Activities-_packageMerge.3">
-              <mergedPackage href="Superstructure.uml#_3ADC7B74022D3DF3B10302DE"/>
-            </packageMerge>
+          <packagedElement xmi:type="uml:Class" xmi:id="_TIbRECMWEd6DXbwGHB8pLQ" name="Property"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_agm_kCMWEd6DXbwGHB8pLQ" name="GeneralizationSet"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_dVbQkCMWEd6DXbwGHB8pLQ" name="Class">
+            <generalization xmi:id="_z0KSACMXEd6DXbwGHB8pLQ" general="_cJnaMCMVEd6DXbwGHB8pLQ"/>
+            <ownedAttribute xmi:id="_hwRj4CMZEd6DXbwGHB8pLQ" name="superClass" type="_dVbQkCMWEd6DXbwGHB8pLQ" isUnique="false" isDerived="true">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hwV1USMZEd6DXbwGHB8pLQ" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hwV1UCMZEd6DXbwGHB8pLQ"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_Ckmi4CYKEd6TVYmtelLWWg" name="superClass" type="_dVbQkCMWEd6DXbwGHB8pLQ" isUnique="false" isDerived="true" association="_CkGMkCYKEd6TVYmtelLWWg">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ck1MYCYKEd6TVYmtelLWWg" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ck0lUCYKEd6TVYmtelLWWg"/>
+            </ownedAttribute>
           </packagedElement>
-          <packagedElement xmi:type="uml:Package" xmi:id="Kobra2-SUM-Behavior-Common" name="Common">
-            <packageMerge xmi:id="Kobra2-SUM-Behavior-Common-_packageMerge.0">
-              <mergedPackage href="Superstructure.uml#_3ADC7B74022D335C122001A4"/>
-            </packageMerge>
-            <packagedElement xmi:type="uml:Class" xmi:id="Kobra2-SUM-Behavior-Common-Operation" name="Operation"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_gx6lkCMWEd6DXbwGHB8pLQ" name="AssociationClass">
+            <generalization xmi:id="_s8GOACMXEd6DXbwGHB8pLQ" general="_jbcMkCMWEd6DXbwGHB8pLQ"/>
+            <generalization xmi:id="_y5y7gCMXEd6DXbwGHB8pLQ" general="_dVbQkCMWEd6DXbwGHB8pLQ"/>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_L8gngCMXEd6DXbwGHB8pLQ" name="Operation"/>
           </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_jbcMkCMWEd6DXbwGHB8pLQ" name="Association"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_myvfkCMWEd6DXbwGHB8pLQ" name="Creates">
+            <generalization xmi:id="_wFvfgCMXEd6DXbwGHB8pLQ" general="_jbcMkCMWEd6DXbwGHB8pLQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_nSZ3ECMWEd6DXbwGHB8pLQ" name="Acquires">
+            <generalization xmi:id="_vJ7XgCMXEd6DXbwGHB8pLQ" general="_jbcMkCMWEd6DXbwGHB8pLQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_n95EECMWEd6DXbwGHB8pLQ" name="Nests">
+            <generalization xmi:id="_w1lBACMXEd6DXbwGHB8pLQ" general="_jbcMkCMWEd6DXbwGHB8pLQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_HeyfACMXEd6DXbwGHB8pLQ" name="PackageableElement"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_Ojq3ACMXEd6DXbwGHB8pLQ" name="Parameter"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_RKERgCMXEd6DXbwGHB8pLQ" name="Usage">
+            <ownedAttribute xmi:id="_gKr0MCMbEd6DXbwGHB8pLQ" name="operation" type="_L8gngCMXEd6DXbwGHB8pLQ" isUnique="false" association="_gKfm8CMbEd6DXbwGHB8pLQ">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gKwFoCMbEd6DXbwGHB8pLQ" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gKvekCMbEd6DXbwGHB8pLQ" value="1"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_DmW_cCMYEd6DXbwGHB8pLQ" name="A_Property_ComponentClass" memberEnd="_DmhXgCMYEd6DXbwGHB8pLQ _DmlB4SMYEd6DXbwGHB8pLQ">
+            <ownedEnd xmi:id="_DmhXgCMYEd6DXbwGHB8pLQ" name="componentClass" type="_cJnaMCMVEd6DXbwGHB8pLQ" isUnique="false" association="_DmW_cCMYEd6DXbwGHB8pLQ">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DmlB4CMYEd6DXbwGHB8pLQ" value="1"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Dmka0CMYEd6DXbwGHB8pLQ"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_0Tfc4CMYEd6DXbwGHB8pLQ" name="A_ComponentClass_GeneralizationSet" memberEnd="_0TqcACMYEd6DXbwGHB8pLQ _0Tv7kSMYEd6DXbwGHB8pLQ">
+            <ownedEnd xmi:id="_0TqcACMYEd6DXbwGHB8pLQ" name="powerTypeExtent" type="_agm_kCMWEd6DXbwGHB8pLQ" isUnique="false" association="_0Tfc4CMYEd6DXbwGHB8pLQ">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0Tv7kCMYEd6DXbwGHB8pLQ" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0TvUgCMYEd6DXbwGHB8pLQ"/>
+            </ownedEnd>
+            <ownedEnd xmi:id="_0Tv7kSMYEd6DXbwGHB8pLQ" name="powerType" type="_cJnaMCMVEd6DXbwGHB8pLQ" isUnique="false" association="_0Tfc4CMYEd6DXbwGHB8pLQ">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0T2CMCMYEd6DXbwGHB8pLQ" value="1"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0T2pQCMYEd6DXbwGHB8pLQ"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_9e_tsCMZEd6DXbwGHB8pLQ" name="A_ComponentClass_PackageableElement" memberEnd="_9fMiACMZEd6DXbwGHB8pLQ _9fSBkCMZEd6DXbwGHB8pLQ">
+            <ownedEnd xmi:id="_9fSBkCMZEd6DXbwGHB8pLQ" name="componentClass" type="_cJnaMCMVEd6DXbwGHB8pLQ" isUnique="false" association="_9e_tsCMZEd6DXbwGHB8pLQ">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9fWTACMZEd6DXbwGHB8pLQ" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9fW6ECMZEd6DXbwGHB8pLQ"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_ei2JICMaEd6DXbwGHB8pLQ" name="A_ComponentClass_ComponentClass" memberEnd="_ejBvUCMaEd6DXbwGHB8pLQ _ejIdACMaEd6DXbwGHB8pLQ">
+            <ownedEnd xmi:id="_ejIdACMaEd6DXbwGHB8pLQ" name="componentClass" type="_cJnaMCMVEd6DXbwGHB8pLQ" isUnique="false" association="_ei2JICMaEd6DXbwGHB8pLQ">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ejMucCMaEd6DXbwGHB8pLQ" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ejNVgCMaEd6DXbwGHB8pLQ"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_8CznECMaEd6DXbwGHB8pLQ" name="A_ComponentClass_Operation" memberEnd="_8C_NQCMaEd6DXbwGHB8pLQ _8DGiASMaEd6DXbwGHB8pLQ">
+            <ownedEnd xmi:id="_8DGiASMaEd6DXbwGHB8pLQ" name="componentClass" type="_cJnaMCMVEd6DXbwGHB8pLQ" isUnique="false" association="_8CznECMaEd6DXbwGHB8pLQ">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8DLagCMaEd6DXbwGHB8pLQ" value="1"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8DMBkCMaEd6DXbwGHB8pLQ"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_gKfm8CMbEd6DXbwGHB8pLQ" name="A_Usage_Operation" memberEnd="_gKr0MCMbEd6DXbwGHB8pLQ _gKwssCMbEd6DXbwGHB8pLQ">
+            <ownedEnd xmi:id="_gKwssCMbEd6DXbwGHB8pLQ" name="usage" type="_RKERgCMXEd6DXbwGHB8pLQ" isUnique="false" association="_gKfm8CMbEd6DXbwGHB8pLQ">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gK1lMCMbEd6DXbwGHB8pLQ" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gK1lMSMbEd6DXbwGHB8pLQ"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_hoQlcCMbEd6DXbwGHB8pLQ" name="A_Operation_Usage" memberEnd="_hof2ACMbEd6DXbwGHB8pLQ _homjsCMbEd6DXbwGHB8pLQ">
+            <ownedEnd xmi:id="_homjsCMbEd6DXbwGHB8pLQ" name="operation" type="_L8gngCMXEd6DXbwGHB8pLQ" isUnique="false" association="_hoQlcCMbEd6DXbwGHB8pLQ">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hosqUCMbEd6DXbwGHB8pLQ" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hotRYCMbEd6DXbwGHB8pLQ"/>
+            </ownedEnd>
+            <ownedEnd xmi:id="_hof2ACMbEd6DXbwGHB8pLQ" name="usage" type="_RKERgCMXEd6DXbwGHB8pLQ" isUnique="false" association="_hoQlcCMbEd6DXbwGHB8pLQ">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hol8oCMbEd6DXbwGHB8pLQ" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_holVkCMbEd6DXbwGHB8pLQ" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_CkGMkCYKEd6TVYmtelLWWg" name="A_Class_Class" memberEnd="_Ckmi4CYKEd6TVYmtelLWWg _Ck1zcCYKEd6TVYmtelLWWg">
+            <ownedEnd xmi:id="_Ck1zcCYKEd6TVYmtelLWWg" name="class" type="_dVbQkCMWEd6DXbwGHB8pLQ" isUnique="false" association="_CkGMkCYKEd6TVYmtelLWWg">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ck9IMCYKEd6TVYmtelLWWg" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ck-WUCYKEd6TVYmtelLWWg"/>
+            </ownedEnd>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_HRDywCMcEd6DXbwGHB8pLQ" name="Instances">
+          <packageMerge xmi:id="_U4f40CMcEd6DXbwGHB8pLQ" mergedPackage="_y-WBICMTEd6DXbwGHB8pLQ"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_f2AIMCMcEd6DXbwGHB8pLQ" name="Classifier" isAbstract="true"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_hsfIsCMcEd6DXbwGHB8pLQ" name="Slot">
+            <ownedAttribute xmi:id="__UGRUCMdEd6DXbwGHB8pLQ" name="owningInstance" type="_odzEcCMcEd6DXbwGHB8pLQ" isUnique="false" association="__T1yoCMdEd6DXbwGHB8pLQ">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__UNmECMdEd6DXbwGHB8pLQ" value="1"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__UONICMdEd6DXbwGHB8pLQ" value="1"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_iM6VMCMcEd6DXbwGHB8pLQ" name="Link">
+            <generalization xmi:id="_0gPGICMdEd6DXbwGHB8pLQ" general="_odzEcCMcEd6DXbwGHB8pLQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_nCvbsCMcEd6DXbwGHB8pLQ" name="ComponentObject">
+            <generalization xmi:id="_06eLECMdEd6DXbwGHB8pLQ" general="_odzEcCMcEd6DXbwGHB8pLQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_nqG9sCMcEd6DXbwGHB8pLQ" name="CreatesLink">
+            <generalization xmi:id="_3pMbICMdEd6DXbwGHB8pLQ" general="_iM6VMCMcEd6DXbwGHB8pLQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_odzEcCMcEd6DXbwGHB8pLQ" name="InstanceSpecification" isAbstract="true">
+            <ownedAttribute xmi:id="__UAKsCMdEd6DXbwGHB8pLQ" name="slot" type="_hsfIsCMcEd6DXbwGHB8pLQ" isUnique="false" aggregation="composite" association="__T1yoCMdEd6DXbwGHB8pLQ">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__UFDMCMdEd6DXbwGHB8pLQ" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__UEcICMdEd6DXbwGHB8pLQ"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_pSoasCMcEd6DXbwGHB8pLQ" name="Object">
+            <generalization xmi:id="_45EuoCMdEd6DXbwGHB8pLQ" general="_nCvbsCMcEd6DXbwGHB8pLQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_p1MVMCMcEd6DXbwGHB8pLQ" name="AcquiresLink">
+            <generalization xmi:id="_2OBdoCMdEd6DXbwGHB8pLQ" general="_iM6VMCMcEd6DXbwGHB8pLQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_qWiHsCMcEd6DXbwGHB8pLQ" name="NestsLink">
+            <generalization xmi:id="_2uvlECMdEd6DXbwGHB8pLQ" general="_iM6VMCMcEd6DXbwGHB8pLQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_q43YsCMcEd6DXbwGHB8pLQ" name="ObjectLink">
+            <generalization xmi:id="_62CxoCMdEd6DXbwGHB8pLQ" general="_iM6VMCMcEd6DXbwGHB8pLQ"/>
+            <generalization xmi:id="_7cREICMdEd6DXbwGHB8pLQ" general="_pSoasCMcEd6DXbwGHB8pLQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_vUvRoCMdEd6DXbwGHB8pLQ" name="A_InstanceSpecification_Classifier" memberEnd="_vU30gCMdEd6DXbwGHB8pLQ _vU8tACMdEd6DXbwGHB8pLQ">
+            <ownedEnd xmi:id="_vU8tACMdEd6DXbwGHB8pLQ" name="instanceSpecification" type="_odzEcCMcEd6DXbwGHB8pLQ" isUnique="false" association="_vUvRoCMdEd6DXbwGHB8pLQ">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vVCzoCMdEd6DXbwGHB8pLQ" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vVDasCMdEd6DXbwGHB8pLQ"/>
+            </ownedEnd>
+            <ownedEnd xmi:id="_vU30gCMdEd6DXbwGHB8pLQ" name="classifier" type="_f2AIMCMcEd6DXbwGHB8pLQ" isUnique="false" association="_vUvRoCMdEd6DXbwGHB8pLQ">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yVaNUCMdEd6DXbwGHB8pLQ" value="1"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yVXxECMdEd6DXbwGHB8pLQ" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="__T1yoCMdEd6DXbwGHB8pLQ" name="A_InstanceSpecification_Slot" memberEnd="__UAKsCMdEd6DXbwGHB8pLQ __UGRUCMdEd6DXbwGHB8pLQ"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_becuICroEd6M4NDkcrzZeA" name="Behavior">
+        <packagedElement xmi:type="uml:Package" xmi:id="_v-g44CroEd6M4NDkcrzZeA" name="ProtocolStateMachine">
+          <packageMerge xmi:id="_JUdNcCrpEd6M4NDkcrzZeA" mergedPackage="_-yit4CroEd6M4NDkcrzZeA"/>
+          <packageMerge xmi:id="_1GKdQCrqEd6M4NDkcrzZeA">
+            <mergedPackage href="Superstructure.uml#_3ADC7B74022D3D0266EE027C"/>
+          </packageMerge>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_y0jR4CroEd6M4NDkcrzZeA" name="Actions">
+          <packageMerge xmi:id="_NIH24CrqEd6M4NDkcrzZeA">
+            <mergedPackage href="Superstructure.uml#_3ADC7B74022D3DF127D50109"/>
+          </packageMerge>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_7D-KYCroEd6M4NDkcrzZeA" name="Activities">
+          <packageMerge xmi:id="_LUyGcCrpEd6M4NDkcrzZeA" mergedPackage="_-yit4CroEd6M4NDkcrzZeA"/>
+          <packageMerge xmi:id="_L-5acCrpEd6M4NDkcrzZeA" mergedPackage="_y0jR4CroEd6M4NDkcrzZeA"/>
+          <packageMerge xmi:id="_YiPw0CrqEd6M4NDkcrzZeA">
+            <mergedPackage href="Superstructure.uml#_3ADC7B74022D3DF125060148"/>
+          </packageMerge>
+          <packageMerge xmi:id="_Zdf4ICrqEd6M4NDkcrzZeA">
+            <mergedPackage href="Superstructure.uml#_3ADC7B74022D3DF3B10302DE"/>
+          </packageMerge>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_-yit4CroEd6M4NDkcrzZeA" name="Common">
+          <packageMerge xmi:id="_ImbNUCrqEd6M4NDkcrzZeA">
+            <mergedPackage href="Superstructure.uml#_3ADC7B74022D335C122001A4"/>
+          </packageMerge>
+          <packagedElement xmi:type="uml:Class" xmi:id="_rg1-QCrpEd6M4NDkcrzZeA" name="Operation"/>
         </packagedElement>
       </packagedElement>
     </packagedElement>
-    <profileApplication xmi:id="_profileApplication.0">
-      <eAnnotations xmi:id="_profileApplication.0-_http2F2Fwww.eclipse.org2Fuml22F2.0.02FUML" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
-      </eAnnotations>
-      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
-    </profileApplication>
-  </uml:Model>
-  <Standard:Metamodel xmi:id="_GRiFoCsCEd6AWvhQ-oyd7Q" base_Model="_0"/>
-  <Standard:Metaclass xmi:id="_GRjTwCsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Types-PrimitiveType"/>
-  <Standard:Metaclass xmi:id="_GRj60CsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Types-DataType"/>
-  <Standard:Metaclass xmi:id="_GRkh4CsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Types-Enumeration"/>
-  <Standard:Metaclass xmi:id="_GRkh4SsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Types-EnumerationLiteral"/>
-  <Standard:Metaclass xmi:id="_GRlI8CsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Types-String"/>
-  <Standard:Metaclass xmi:id="_GRlwACsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Types-Numeric"/>
-  <Standard:Metaclass xmi:id="_GRlwASsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Types-Boolean"/>
-  <Standard:Metaclass xmi:id="_GRlwAisCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Types-Integer"/>
-  <Standard:Metaclass xmi:id="_GRmXECsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Types-UnllimitedNatural"/>
-  <Standard:Metaclass xmi:id="_GRmXESsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Types-Real"/>
-  <Standard:Metaclass xmi:id="_GRmXEisCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Types-MessageType"/>
-  <Standard:Metaclass xmi:id="_GRmXEysCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Elements-Element"/>
-  <Standard:Metaclass xmi:id="_GRm-ICsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Elements-StructuralElement"/>
-  <Standard:Metaclass xmi:id="_GRm-ISsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Elements-StructuralBehavioralElement"/>
-  <Standard:Metaclass xmi:id="_GRm-IisCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Elements-BehavioralElement"/>
-  <Standard:Metaclass xmi:id="_GRnlMCsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Elements-TypeElement"/>
-  <Standard:Metaclass xmi:id="_GRnlMSsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Elements-InstanceElement"/>
-  <Standard:Metaclass xmi:id="_GRpaYCsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Elements-LiteralElement"/>
-  <Standard:Metaclass xmi:id="_GRpaYSsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Elements-Parameter"/>
-  <Standard:Metaclass xmi:id="_GRpaYisCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Elements-Operation"/>
-  <Standard:Metaclass xmi:id="_GRqBcCsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Elements-Comment"/>
-  <Standard:Metaclass xmi:id="_GRqBcSsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Elements-QueryOperation"/>
-  <Standard:Metaclass xmi:id="_GRqBcisCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Elements-EffectOperation"/>
-  <Standard:Metaclass xmi:id="_GRqogCsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Elements-ConstraintElement"/>
-  <Standard:Metaclass xmi:id="_GRqogSsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Elements-CommonConstraintElement"/>
-  <Standard:Metaclass xmi:id="_GRqogisCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Elements-BehavioralConstraintElement"/>
-  <Standard:Metaclass xmi:id="_GRqogysCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Elements-StructuralConstraintElement"/>
-  <Standard:Metaclass xmi:id="_GRqohCsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Elements-ActivityElement"/>
-  <Standard:Metaclass xmi:id="_GRqohSsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Elements-ProtocolElement"/>
-  <Standard:Metaclass xmi:id="_GRrPkCsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Classes-ComponentClass"/>
-  <Standard:Metaclass xmi:id="_GRrPkSsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Classes-StructuredClassifier"/>
-  <Standard:Metaclass xmi:id="_GRr2oCsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Classes-Property"/>
-  <Standard:Metaclass xmi:id="_GRr2oSsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Classes-GeneralizationSet"/>
-  <Standard:Metaclass xmi:id="_GRr2oisCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Classes-Class"/>
-  <Standard:Metaclass xmi:id="_GRr2oysCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Classes-AssociationClass"/>
-  <Standard:Metaclass xmi:id="_GRr2pCsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Classes-AssociationClass-Operation"/>
-  <Standard:Metaclass xmi:id="_GRsdsCsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Classes-Association"/>
-  <Standard:Metaclass xmi:id="_GRsdsSsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Classes-Creates"/>
-  <Standard:Metaclass xmi:id="_GRsdsisCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Classes-Acquires"/>
-  <Standard:Metaclass xmi:id="_GRsdsysCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Classes-Nests"/>
-  <Standard:Metaclass xmi:id="_GRsdtCsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Classes-PackageableElement"/>
-  <Standard:Metaclass xmi:id="_GRsdtSsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Classes-Parameter"/>
-  <Standard:Metaclass xmi:id="_GRsdtisCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Classes-Usage"/>
-  <Standard:Metaclass xmi:id="_GRtr0CsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Instances-Classifier"/>
-  <Standard:Metaclass xmi:id="_GRtr0SsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Instances-Slot"/>
-  <Standard:Metaclass xmi:id="_GRtr0isCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Instances-Link"/>
-  <Standard:Metaclass xmi:id="_GRuS4CsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Instances-ComponentObject"/>
-  <Standard:Metaclass xmi:id="_GRuS4SsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Instances-CreatesLink"/>
-  <Standard:Metaclass xmi:id="_GRuS4isCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Instances-InstanceSpecification"/>
-  <Standard:Metaclass xmi:id="_GRu58CsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Instances-Object"/>
-  <Standard:Metaclass xmi:id="_GRu58SsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Instances-AcquiresLink"/>
-  <Standard:Metaclass xmi:id="_GRu58isCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Instances-NestsLink"/>
-  <Standard:Metaclass xmi:id="_GRvhACsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Structure-Instances-ObjectLink"/>
-  <Standard:Metaclass xmi:id="_GRvhASsCEd6AWvhQ-oyd7Q" base_Class="Kobra2-SUM-Behavior-Common-Operation"/>
-</xmi:XMI>
+  </packagedElement>
+</uml:Model>
