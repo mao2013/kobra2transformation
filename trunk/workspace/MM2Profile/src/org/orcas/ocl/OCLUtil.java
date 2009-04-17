@@ -27,7 +27,7 @@ import org.eclipse.uml2.uml.Type;
 public class OCLUtil {
 	
 	public OCLUtil(){
-		_debug = true;
+		_debug = false;
 	}
 
 	/**

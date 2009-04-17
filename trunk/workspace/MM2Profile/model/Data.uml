@@ -387,6 +387,35 @@
           <packagedElement xmi:type="uml:Association" xmi:id="__T1yoCMdEd6DXbwGHB8pLQ" name="A_InstanceSpecification_Slot" memberEnd="__UAKsCMdEd6DXbwGHB8pLQ __UGRUCMdEd6DXbwGHB8pLQ"/>
         </packagedElement>
       </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_becuICroEd6M4NDkcrzZeA" name="Behavior">
+        <packagedElement xmi:type="uml:Package" xmi:id="_v-g44CroEd6M4NDkcrzZeA" name="ProtocolStateMachine">
+          <packageMerge xmi:id="_JUdNcCrpEd6M4NDkcrzZeA" mergedPackage="_-yit4CroEd6M4NDkcrzZeA"/>
+          <packageMerge xmi:id="_1GKdQCrqEd6M4NDkcrzZeA">
+            <mergedPackage href="Superstructure.uml#_3ADC7B74022D3D0266EE027C"/>
+          </packageMerge>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_y0jR4CroEd6M4NDkcrzZeA" name="Actions">
+          <packageMerge xmi:id="_NIH24CrqEd6M4NDkcrzZeA">
+            <mergedPackage href="Superstructure.uml#_3ADC7B74022D3DF127D50109"/>
+          </packageMerge>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_7D-KYCroEd6M4NDkcrzZeA" name="Activities">
+          <packageMerge xmi:id="_LUyGcCrpEd6M4NDkcrzZeA" mergedPackage="_-yit4CroEd6M4NDkcrzZeA"/>
+          <packageMerge xmi:id="_L-5acCrpEd6M4NDkcrzZeA" mergedPackage="_y0jR4CroEd6M4NDkcrzZeA"/>
+          <packageMerge xmi:id="_YiPw0CrqEd6M4NDkcrzZeA">
+            <mergedPackage href="Superstructure.uml#_3ADC7B74022D3DF125060148"/>
+          </packageMerge>
+          <packageMerge xmi:id="_Zdf4ICrqEd6M4NDkcrzZeA">
+            <mergedPackage href="Superstructure.uml#_3ADC7B74022D3DF3B10302DE"/>
+          </packageMerge>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_-yit4CroEd6M4NDkcrzZeA" name="Common">
+          <packageMerge xmi:id="_ImbNUCrqEd6M4NDkcrzZeA">
+            <mergedPackage href="Superstructure.uml#_3ADC7B74022D335C122001A4"/>
+          </packageMerge>
+          <packagedElement xmi:type="uml:Class" xmi:id="_rg1-QCrpEd6M4NDkcrzZeA" name="Operation"/>
+        </packagedElement>
+      </packagedElement>
     </packagedElement>
   </packagedElement>
 </uml:Model>
