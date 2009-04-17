@@ -37,7 +37,7 @@ public class UML2Util {
 
 	public UML2Util() {
 		
-		_debug = true;
+		_debug = false;
 		
 		_profiles = new HashMap<String, Profile>();
 		_stereotypes = new HashMap<String, Stereotype>();
@@ -90,11 +90,15 @@ public class UML2Util {
 	
 	public Generalization createGeneralization(
 		Classifier specificClassifier, Classifier generalClassifier) {
-
-		Generalization generalization = specificClassifier.createGeneralization(generalClassifier);
 		
-		_debug("Generalization " + specificClassifier.getQualifiedName() + 
-				" ->> " + generalClassifier.getQualifiedName() + " created.");
+		Generalization generalization = specificClassifier.getGeneralization(generalClassifier);
+		
+		if ( generalization == null){
+			generalization = specificClassifier.createGeneralization(generalClassifier);
+			
+			_debug("Generalization " + specificClassifier.getQualifiedName() + 
+					" ->> " + generalClassifier.getQualifiedName() + " created.");
+		}
 		
 		return generalization;
 	}
@@ -113,37 +117,30 @@ public class UML2Util {
 	
 	public Stereotype createOrRetrieveStereotype(org.eclipse.uml2.uml.Package package_, String name, boolean isAbstract) {
 	
-		Stereotype stereotype = null;
 		
 		Profile profile = createOrRetrieveProfile(package_.getName());
+
+		Stereotype stereotype = _stereotypes.get(name);
 		
-		if (!_stereotypes.containsKey(name)){
+		if (stereotype == null){
 			stereotype = profile.createOwnedStereotype(name, isAbstract);
 			_stereotypes.put(name, stereotype);
 			_debug("Stereotype '" + stereotype.getName() + "' created in " + profile.getName());
-		} else {
-			stereotype = _stereotypes.get(name);
-			_debug("Stereotype '" + name + "' retrieved.");
-		}
+		} 
 		
 		return stereotype;
 	}
 
 	public Profile createOrRetrieveProfile(String name) {
 		
-		Profile profile = null;
+		Profile profile = _profiles.get(name);
 		
-		if (!_profiles.containsKey(name)){
+		if (profile == null){
 	        profile = UMLFactory.eINSTANCE.createProfile();
 	        profile.setName(name);
 	        _profiles.put(name, profile);
 	        _debug("Profile '" + name + "' created.");
-		}
-		else {
-			profile = _profiles.get(name);
-	        _debug("Profile '" + profile.getName() + "' retrieved.");
-		}
-        
+		}        
         
         return profile;
     }

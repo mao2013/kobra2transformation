@@ -17,6 +17,8 @@ import org.eclipse.uml2.uml.Profile;
 import org.eclipse.uml2.uml.Property;
 import org.eclipse.uml2.uml.Stereotype;
 import org.eclipse.uml2.uml.Type;
+import org.eclipse.uml2.uml.UMLPackage;
+import org.eclipse.uml2.uml.util.UMLUtil;
 import org.orcas.ocl.OCLUtil;
 import org.orcas.uml2.UML2Util;
 
@@ -65,7 +67,7 @@ public class TransformationTool {
 				nestingProfile.getNestedPackages().add(profileTmp);
 				
 				// Merge dependencies
-				//UMLUtil.merge(tmp, null);
+				UMLUtil.merge(tmp, null);
 				
 				if (!tmp.getNestedPackages().isEmpty()) {
 					_processResource(tmp.getOwnedElements());
@@ -131,14 +133,9 @@ public class TransformationTool {
 						String genericName = classifier.getName();
 						String genericQualifiedName = classifier.getQualifiedName();
 						
-						// Do not create stereotypes from UML metaclasses instead create extensions
-						if (genericQualifiedName != null && genericQualifiedName.contains("UML")) {
-							System.out.println("zzzzzzzzzzzzzz");
-							//_uml2Util.referenceMetaclass(_profile, classifier);
-							//_uml2Util.createExtension( (org.eclipse.uml2.uml.Class) classifier, stereotype, false);
-						}
-						else {
-							
+						// Do not create stereotypes from UML generalizations instead create extensions
+						if (!genericQualifiedName.contains("UML")) {
+														
 							Stereotype genericStereotype =
 								_uml2Util.createOrRetrieveStereotype(classifier.getPackage(), genericName, false);
 
@@ -155,10 +152,10 @@ public class TransformationTool {
 						EList<String> bodies = opaqueExpression.getBodies();
 						
 						for (String body : bodies) {
-							List<Constraint> constraints = 
-								_oclUtil.parseOCL(_uml2Util.getResourceSet(), (Classifier) type, constraint.getName(), body);
+							//List<Constraint> constraints = 
+							//	_oclUtil.parseInvariantOCL(_uml2Util.getResourceSet(), (Classifier) type, constraint.getName(), body);
 							
-							_oclUtil.transformOCL((Classifier) type, constraints, _uml2Util.getStereotypes());
+							//_oclUtil.transformOCL((Classifier) type, constraints, _uml2Util.getStereotypes());
 							
 						}
 					}
