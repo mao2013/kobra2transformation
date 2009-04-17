@@ -3,6 +3,7 @@ package org.orcas.ocl;
 import static java.lang.System.out;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
@@ -27,7 +28,7 @@ import org.eclipse.uml2.uml.Type;
 public class OCLUtil {
 	
 	public OCLUtil(){
-		_debug = false;
+		_debug = true;
 	}
 
 	/**
@@ -118,9 +119,9 @@ public class OCLUtil {
 		return constraintHeader.concat(emfCompliantRule.toString());
 	}
 
-	public List<Constraint> parseOCL(
+	public List<Constraint> parseInvariantOCL(
 			ResourceSet rset, Classifier context, 
-			String constraintName, String constraintBody)  throws ParserException, IOException{
+			String constraintName, String constraintBody)  throws IOException{
 		
 		UMLEnvironmentFactory umlFactory = new UMLEnvironmentFactory(rset);
 		
@@ -131,7 +132,7 @@ public class OCLUtil {
 		
 		constraint.append("context ");
 		constraint.append(context.getQualifiedName());
-		constraint.append(" ");	
+		constraint.append(" inv ");	
 		constraint.append(constraintName);
 		constraint.append(": ");	
 		constraint.append(constraintBody);
@@ -140,10 +141,15 @@ public class OCLUtil {
 		
 		_debug("Parsing " + constraint.toString());
 		
-		List<Constraint> constraints = ocl.parse(input);
+		List<Constraint> constraints = new ArrayList<Constraint>();
 		
-		_debug("[ OK ]");
-		
+		try{
+			constraints = ocl.parse(input);
+			_debug("Parsed.");
+		} catch (Exception e) {
+			_debug("Cant parse.");
+		}
+
 		return constraints;
 	}
 	

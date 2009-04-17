@@ -1,154 +1,660 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Profile xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_OUXlkCsAEd6axbyb1tC-4g" name="Data">
-  <eAnnotations xmi:id="_OUXlkSsAEd6axbyb1tC-4g" source="http://www.eclipse.org/uml2/2.0.0/UML">
-    <contents xmi:type="ecore:EPackage" xmi:id="_OUXlkisAEd6axbyb1tC-4g" name="Data" nsURI="http:///schemas/Data/_OUVwYCsAEd6axbyb1tC-4g/0" nsPrefix="Data"/>
+<uml:Profile xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_EPh_YCsHEd6-u6JH3rE2og" name="Data">
+  <eAnnotations xmi:id="_EPh_YSsHEd6-u6JH3rE2og" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_EPh_YisHEd6-u6JH3rE2og" name="Data" nsURI="http:///schemas/Data/_EPaDkCsHEd6-u6JH3rE2og/0" nsPrefix="Data"/>
   </eAnnotations>
-  <packagedElement xmi:type="uml:Profile" xmi:id="_OUXlkysAEd6axbyb1tC-4g" name="Kobra2">
-    <packagedElement xmi:type="uml:Profile" xmi:id="_OUXllCsAEd6axbyb1tC-4g" name="SUM">
-      <packagedElement xmi:type="uml:Profile" xmi:id="_OUXllSsAEd6axbyb1tC-4g" name="Structure">
-        <packagedElement xmi:type="uml:Profile" xmi:id="_OUXllisAEd6axbyb1tC-4g" name="Types">
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXllysAEd6axbyb1tC-4g" name="PrimitiveType">
-            <generalization xmi:id="_OUXlmCsAEd6axbyb1tC-4g" general="_OUXlmSsAEd6axbyb1tC-4g"/>
+  <packagedElement xmi:type="uml:Profile" xmi:id="_EPh_YysHEd6-u6JH3rE2og" name="Kobra2">
+    <packagedElement xmi:type="uml:Profile" xmi:id="_EPh_ZCsHEd6-u6JH3rE2og" name="SUM">
+      <packagedElement xmi:type="uml:Profile" xmi:id="_EPh_ZSsHEd6-u6JH3rE2og" name="Structure">
+        <packagedElement xmi:type="uml:Profile" xmi:id="_EPh_ZisHEd6-u6JH3rE2og" name="Types">
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_ZysHEd6-u6JH3rE2og" name="PrimitiveType">
+            <generalization xmi:id="_EPh_aCsHEd6-u6JH3rE2og" general="_EPh_aisHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPh_aSsHEd6-u6JH3rE2og" general="_EPh_ZysHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlmSsAEd6axbyb1tC-4g" name="DataType"/>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlmisAEd6axbyb1tC-4g" name="Enumeration">
-            <generalization xmi:id="_OUXlmysAEd6axbyb1tC-4g" general="_OUXlmSsAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_aisHEd6-u6JH3rE2og" name="DataType">
+            <generalization xmi:id="_EPh_aysHEd6-u6JH3rE2og" general="_EPh_5CsHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPh_bCsHEd6-u6JH3rE2og" general="_EPh_aisHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlnCsAEd6axbyb1tC-4g" name="EnumerationLiteral"/>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlnSsAEd6axbyb1tC-4g" name="String">
-            <generalization xmi:id="_OUXlnisAEd6axbyb1tC-4g" general="_OUXllysAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_bSsHEd6-u6JH3rE2og" name="Enumeration">
+            <generalization xmi:id="_EPh_bisHEd6-u6JH3rE2og" general="_EPh_aisHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlnysAEd6axbyb1tC-4g" name="Numeric">
-            <generalization xmi:id="_OUXloCsAEd6axbyb1tC-4g" general="_OUXllysAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_bysHEd6-u6JH3rE2og" name="EnumerationLiteral">
+            <generalization xmi:id="_EPh_cCsHEd6-u6JH3rE2og" general="_EPh_2SsHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXloSsAEd6axbyb1tC-4g" name="Boolean">
-            <generalization xmi:id="_OUXloisAEd6axbyb1tC-4g" general="_OUXllysAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_cSsHEd6-u6JH3rE2og" name="String">
+            <generalization xmi:id="_EPh_cisHEd6-u6JH3rE2og" general="_EPh_ZysHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXloysAEd6axbyb1tC-4g" name="Integer">
-            <generalization xmi:id="_OUXlpCsAEd6axbyb1tC-4g" general="_OUXlnysAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_cysHEd6-u6JH3rE2og" name="Numeric">
+            <generalization xmi:id="_EPh_dCsHEd6-u6JH3rE2og" general="_EPh_ZysHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlpSsAEd6axbyb1tC-4g" name="UnllimitedNatural">
-            <generalization xmi:id="_OUXlpisAEd6axbyb1tC-4g" general="_OUXlnysAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_dSsHEd6-u6JH3rE2og" name="Boolean">
+            <generalization xmi:id="_EPh_disHEd6-u6JH3rE2og" general="_EPh_ZysHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlpysAEd6axbyb1tC-4g" name="Real">
-            <generalization xmi:id="_OUXlqCsAEd6axbyb1tC-4g" general="_OUXlnysAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_dysHEd6-u6JH3rE2og" name="Integer">
+            <generalization xmi:id="_EPh_eCsHEd6-u6JH3rE2og" general="_EPh_cysHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlqSsAEd6axbyb1tC-4g" name="MessageType"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_eSsHEd6-u6JH3rE2og" name="UnllimitedNatural">
+            <generalization xmi:id="_EPh_eisHEd6-u6JH3rE2og" general="_EPh_cysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_eysHEd6-u6JH3rE2og" name="Real">
+            <generalization xmi:id="_EPh_fCsHEd6-u6JH3rE2og" general="_EPh_cysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_fSsHEd6-u6JH3rE2og" name="MessageType"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_fisHEd6-u6JH3rE2og" name="Element"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_fysHEd6-u6JH3rE2og" name="StructuralElement">
+            <generalization xmi:id="_EPh_gCsHEd6-u6JH3rE2og" general="_EPh_fisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_gSsHEd6-u6JH3rE2og" name="StructuralBehavioralElement">
+            <generalization xmi:id="_EPh_gisHEd6-u6JH3rE2og" general="_EPh_fisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_gysHEd6-u6JH3rE2og" name="BehavioralElement">
+            <generalization xmi:id="_EPh_hCsHEd6-u6JH3rE2og" general="_EPh_fisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_hSsHEd6-u6JH3rE2og" name="TypeElement">
+            <generalization xmi:id="_EPh_hisHEd6-u6JH3rE2og" general="_EPh_fysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_hysHEd6-u6JH3rE2og" name="InstanceElement">
+            <generalization xmi:id="_EPh_iCsHEd6-u6JH3rE2og" general="_EPh_fysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_iSsHEd6-u6JH3rE2og" name="LiteralElement">
+            <generalization xmi:id="_EPh_iisHEd6-u6JH3rE2og" general="_EPh_gSsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_iysHEd6-u6JH3rE2og" name="Parameter">
+            <generalization xmi:id="_EPh_jCsHEd6-u6JH3rE2og" general="_EPh_gSsHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPh_jSsHEd6-u6JH3rE2og" general="_EPh_zSsHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPh_jisHEd6-u6JH3rE2og" general="_EPh_yysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_jysHEd6-u6JH3rE2og" name="Operation">
+            <generalization xmi:id="_EPh_kCsHEd6-u6JH3rE2og" general="_EPh_gSsHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPh_kSsHEd6-u6JH3rE2og" general="_EPiAFisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_kisHEd6-u6JH3rE2og" name="Comment">
+            <generalization xmi:id="_EPh_kysHEd6-u6JH3rE2og" general="_EPh_gSsHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPh_lCsHEd6-u6JH3rE2og" general="_EPh_fisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_lSsHEd6-u6JH3rE2og" name="QueryOperation">
+            <generalization xmi:id="_EPh_lisHEd6-u6JH3rE2og" general="_EPh_jysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_lysHEd6-u6JH3rE2og" name="EffectOperation">
+            <generalization xmi:id="_EPh_mCsHEd6-u6JH3rE2og" general="_EPh_jysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_mSsHEd6-u6JH3rE2og" name="ConstraintElement">
+            <generalization xmi:id="_EPh_misHEd6-u6JH3rE2og" general="_EPh_fisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_mysHEd6-u6JH3rE2og" name="CommonConstraintElement">
+            <generalization xmi:id="_EPh_nCsHEd6-u6JH3rE2og" general="_EPh_mSsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_nSsHEd6-u6JH3rE2og" name="BehavioralConstraintElement">
+            <generalization xmi:id="_EPh_nisHEd6-u6JH3rE2og" general="_EPh_mSsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_nysHEd6-u6JH3rE2og" name="StructuralConstraintElement">
+            <generalization xmi:id="_EPh_oCsHEd6-u6JH3rE2og" general="_EPh_mSsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_oSsHEd6-u6JH3rE2og" name="ActivityElement">
+            <generalization xmi:id="_EPh_oisHEd6-u6JH3rE2og" general="_EPh_gysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_oysHEd6-u6JH3rE2og" name="ProtocolElement">
+            <generalization xmi:id="_EPh_pCsHEd6-u6JH3rE2og" general="_EPh_gysHEd6-u6JH3rE2og"/>
+          </packagedElement>
         </packagedElement>
-        <packagedElement xmi:type="uml:Profile" xmi:id="_OUXlqisAEd6axbyb1tC-4g" name="Elements">
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlqysAEd6axbyb1tC-4g" name="Element"/>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlrCsAEd6axbyb1tC-4g" name="StructuralElement">
-            <generalization xmi:id="_OUXlrSsAEd6axbyb1tC-4g" general="_OUXlqysAEd6axbyb1tC-4g"/>
+        <packagedElement xmi:type="uml:Profile" xmi:id="_EPh_pSsHEd6-u6JH3rE2og" name="Elements"/>
+        <packagedElement xmi:type="uml:Profile" xmi:id="_EPh_pisHEd6-u6JH3rE2og" name="Classes">
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_pysHEd6-u6JH3rE2og" name="ComponentClass">
+            <generalization xmi:id="_EPh_qCsHEd6-u6JH3rE2og" general="_EPh_qSsHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlrisAEd6axbyb1tC-4g" name="StructuralBehavioralElement">
-            <generalization xmi:id="_OUXlrysAEd6axbyb1tC-4g" general="_OUXlqysAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_qSsHEd6-u6JH3rE2og" name="StructuredClassifier">
+            <generalization xmi:id="_EPh_qisHEd6-u6JH3rE2og" general="_EPh_5CsHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlsCsAEd6axbyb1tC-4g" name="BehavioralElement">
-            <generalization xmi:id="_OUXlsSsAEd6axbyb1tC-4g" general="_OUXlqysAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_qysHEd6-u6JH3rE2og" name="Creates">
+            <generalization xmi:id="_EPh_rCsHEd6-u6JH3rE2og" general="_EPh_rSsHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXlsisAEd6axbyb1tC-4g" name="TypeElement">
-            <generalization xmi:id="_OUXlsysAEd6axbyb1tC-4g" general="_OUXlrCsAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_rSsHEd6-u6JH3rE2og" name="Association">
+            <generalization xmi:id="_EPh_risHEd6-u6JH3rE2og" general="_EPh_tisHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPh_rysHEd6-u6JH3rE2og" general="_EPh_5CsHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXltCsAEd6axbyb1tC-4g" name="InstanceElement">
-            <generalization xmi:id="_OUXltSsAEd6axbyb1tC-4g" general="_OUXlrCsAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_sCsHEd6-u6JH3rE2og" name="Acquires">
+            <generalization xmi:id="_EPh_sSsHEd6-u6JH3rE2og" general="_EPh_rSsHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXltisAEd6axbyb1tC-4g" name="LiteralElement">
-            <generalization xmi:id="_OUXltysAEd6axbyb1tC-4g" general="_OUXlrisAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_sisHEd6-u6JH3rE2og" name="Nests">
+            <generalization xmi:id="_EPh_sysHEd6-u6JH3rE2og" general="_EPh_rSsHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXluCsAEd6axbyb1tC-4g" name="Parameter">
-            <generalization xmi:id="_OUXluSsAEd6axbyb1tC-4g" general="_OUXlrisAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_tCsHEd6-u6JH3rE2og" name="DirectedRelationship">
+            <generalization xmi:id="_EPh_tSsHEd6-u6JH3rE2og" general="_EPh_tisHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUXluisAEd6axbyb1tC-4g" name="Operation">
-            <generalization xmi:id="_OUXluysAEd6axbyb1tC-4g" general="_OUXlrisAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_tisHEd6-u6JH3rE2og" name="Relationship">
+            <generalization xmi:id="_EPh_tysHEd6-u6JH3rE2og" general="_EPh_fisHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB0CsAEd6axbyb1tC-4g" name="Comment">
-            <generalization xmi:id="_OUaB0SsAEd6axbyb1tC-4g" general="_OUXlrisAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_uCsHEd6-u6JH3rE2og" name="LiteralSpecification">
+            <generalization xmi:id="_EPh_uSsHEd6-u6JH3rE2og" general="_EPh_uisHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB0isAEd6axbyb1tC-4g" name="QueryOperation">
-            <generalization xmi:id="_OUaB0ysAEd6axbyb1tC-4g" general="_OUXluisAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_uisHEd6-u6JH3rE2og" name="ValueSpecification">
+            <generalization xmi:id="_EPh_uysHEd6-u6JH3rE2og" general="_EPh_zSsHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPh_vCsHEd6-u6JH3rE2og" general="_EPh_xysHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB1CsAEd6axbyb1tC-4g" name="EffectOperation">
-            <generalization xmi:id="_OUaB1SsAEd6axbyb1tC-4g" general="_OUXluisAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_vSsHEd6-u6JH3rE2og" name="LiteralInteger">
+            <generalization xmi:id="_EPh_visHEd6-u6JH3rE2og" general="_EPh_uCsHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB1isAEd6axbyb1tC-4g" name="ConstraintElement">
-            <generalization xmi:id="_OUaB1ysAEd6axbyb1tC-4g" general="_OUXlqysAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_vysHEd6-u6JH3rE2og" name="LiteralString">
+            <generalization xmi:id="_EPh_wCsHEd6-u6JH3rE2og" general="_EPh_uCsHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB2CsAEd6axbyb1tC-4g" name="CommonConstraintElement">
-            <generalization xmi:id="_OUaB2SsAEd6axbyb1tC-4g" general="_OUaB1isAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_wSsHEd6-u6JH3rE2og" name="LiteralBoolean">
+            <generalization xmi:id="_EPh_wisHEd6-u6JH3rE2og" general="_EPh_uCsHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB2isAEd6axbyb1tC-4g" name="BehavioralConstraintElement">
-            <generalization xmi:id="_OUaB2ysAEd6axbyb1tC-4g" general="_OUaB1isAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_wysHEd6-u6JH3rE2og" name="LiteralNull">
+            <generalization xmi:id="_EPh_xCsHEd6-u6JH3rE2og" general="_EPh_uCsHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB3CsAEd6axbyb1tC-4g" name="StructuralConstraintElement">
-            <generalization xmi:id="_OUaB3SsAEd6axbyb1tC-4g" general="_OUaB1isAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_xSsHEd6-u6JH3rE2og" name="Constraint">
+            <generalization xmi:id="_EPh_xisHEd6-u6JH3rE2og" general="_EPh_xysHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB3isAEd6axbyb1tC-4g" name="ActivityElement">
-            <generalization xmi:id="_OUaB3ysAEd6axbyb1tC-4g" general="_OUXlsCsAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_xysHEd6-u6JH3rE2og" name="PackageableElement">
+            <generalization xmi:id="_EPh_yCsHEd6-u6JH3rE2og" general="_EPh_zysHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB4CsAEd6axbyb1tC-4g" name="ProtocolElement">
-            <generalization xmi:id="_OUaB4SsAEd6axbyb1tC-4g" general="_OUXlsCsAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_ySsHEd6-u6JH3rE2og" name="ElementImport">
+            <generalization xmi:id="_EPh_yisHEd6-u6JH3rE2og" general="_EPh_tCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_yysHEd6-u6JH3rE2og" name="MultiplicityElement">
+            <generalization xmi:id="_EPh_zCsHEd6-u6JH3rE2og" general="_EPh_fisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_zSsHEd6-u6JH3rE2og" name="TypedElement">
+            <generalization xmi:id="_EPh_zisHEd6-u6JH3rE2og" general="_EPh_zysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_zysHEd6-u6JH3rE2og" name="NamedElement">
+            <generalization xmi:id="_EPh_0CsHEd6-u6JH3rE2og" general="_EPh_fisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_0SsHEd6-u6JH3rE2og" name="Feature">
+            <generalization xmi:id="_EPh_0isHEd6-u6JH3rE2og" general="_EPh_0ysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_0ysHEd6-u6JH3rE2og" name="RedefinableElement">
+            <generalization xmi:id="_EPh_1CsHEd6-u6JH3rE2og" general="_EPh_zysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_1SsHEd6-u6JH3rE2og" name="StructuralFeature">
+            <generalization xmi:id="_EPh_1isHEd6-u6JH3rE2og" general="_EPh_0SsHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPh_1ysHEd6-u6JH3rE2og" general="_EPh_zSsHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPh_2CsHEd6-u6JH3rE2og" general="_EPh_yysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_2SsHEd6-u6JH3rE2og" name="InstanceSpecification">
+            <generalization xmi:id="_EPh_2isHEd6-u6JH3rE2og" general="_EPh_xysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_2ysHEd6-u6JH3rE2og" name="Slot">
+            <generalization xmi:id="_EPh_3CsHEd6-u6JH3rE2og" general="_EPh_fisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_3SsHEd6-u6JH3rE2og" name="Package">
+            <generalization xmi:id="_EPh_3isHEd6-u6JH3rE2og" general="_EPh_xysHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPh_3ysHEd6-u6JH3rE2og" general="_EPh_4CsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_4CsHEd6-u6JH3rE2og" name="Namespace">
+            <generalization xmi:id="_EPh_4SsHEd6-u6JH3rE2og" general="_EPh_zysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_4isHEd6-u6JH3rE2og" name="PackageImport">
+            <generalization xmi:id="_EPh_4ysHEd6-u6JH3rE2og" general="_EPh_tCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_5CsHEd6-u6JH3rE2og" name="Classifier">
+            <generalization xmi:id="_EPh_5SsHEd6-u6JH3rE2og" general="_EPh_0ysHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPh_5isHEd6-u6JH3rE2og" general="_EPh_7ysHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPh_5ysHEd6-u6JH3rE2og" general="_EPh_zysHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPh_6CsHEd6-u6JH3rE2og" general="_EPh_4CsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_6SsHEd6-u6JH3rE2og" name="PackageMerge">
+            <generalization xmi:id="_EPh_6isHEd6-u6JH3rE2og" general="_EPh_tCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_6ysHEd6-u6JH3rE2og" name="InstanceValue">
+            <generalization xmi:id="_EPh_7CsHEd6-u6JH3rE2og" general="_EPh_uisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_7SsHEd6-u6JH3rE2og" name="LiteralUnlimitedNatural">
+            <generalization xmi:id="_EPh_7isHEd6-u6JH3rE2og" general="_EPh_uCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_7ysHEd6-u6JH3rE2og" name="Type">
+            <generalization xmi:id="_EPh_8CsHEd6-u6JH3rE2og" general="_EPh_xysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_8SsHEd6-u6JH3rE2og" name="Expression">
+            <generalization xmi:id="_EPh_8isHEd6-u6JH3rE2og" general="_EPh_uisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_8ysHEd6-u6JH3rE2og" name="GeneralizationSet">
+            <generalization xmi:id="_EPh_9CsHEd6-u6JH3rE2og" general="_EPh_xysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_9SsHEd6-u6JH3rE2og" name="Generalization">
+            <generalization xmi:id="_EPh_9isHEd6-u6JH3rE2og" general="_EPh_tCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_9ysHEd6-u6JH3rE2og" name="Usage">
+            <generalization xmi:id="_EPh_-CsHEd6-u6JH3rE2og" general="_EPh_-SsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh_-SsHEd6-u6JH3rE2og" name="Dependency">
+            <generalization xmi:id="_EPh_-isHEd6-u6JH3rE2og" general="_EPh_tCsHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPh_-ysHEd6-u6JH3rE2og" general="_EPh_xysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh__CsHEd6-u6JH3rE2og" name="Abstraction">
+            <generalization xmi:id="_EPh__SsHEd6-u6JH3rE2og" general="_EPh_-SsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPh__isHEd6-u6JH3rE2og" name="Realization">
+            <generalization xmi:id="_EPh__ysHEd6-u6JH3rE2og" general="_EPh__CsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPiAACsHEd6-u6JH3rE2og" name="Substitution">
+            <generalization xmi:id="_EPiAASsHEd6-u6JH3rE2og" general="_EPh__isHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPiAAisHEd6-u6JH3rE2og" name="AssociationClass">
+            <generalization xmi:id="_EPiAAysHEd6-u6JH3rE2og" general="_EPh_rSsHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPiABCsHEd6-u6JH3rE2og" general="_EPiABSsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPiABSsHEd6-u6JH3rE2og" name="Class">
+            <generalization xmi:id="_EPiABisHEd6-u6JH3rE2og" general="_EPh_pysHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPiABysHEd6-u6JH3rE2og" general="_EPh_5CsHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPiACCsHEd6-u6JH3rE2og" general="_EPimcCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPiACSsHEd6-u6JH3rE2og" name="Property">
+            <generalization xmi:id="_EPiACisHEd6-u6JH3rE2og" general="_EPh_1SsHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPiACysHEd6-u6JH3rE2og" general="_EPimpisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPiADCsHEd6-u6JH3rE2og" name="Behavior">
+            <generalization xmi:id="_EPiADSsHEd6-u6JH3rE2og" general="_EPiABSsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPiADisHEd6-u6JH3rE2og" name="OpaqueExpression">
+            <generalization xmi:id="_EPiADysHEd6-u6JH3rE2og" general="_EPh_uisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPiAECsHEd6-u6JH3rE2og" name="OpaqueBehavior">
+            <generalization xmi:id="_EPiAESsHEd6-u6JH3rE2og" general="_EPiADCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPiAEisHEd6-u6JH3rE2og" name="FunctionBehavior">
+            <generalization xmi:id="_EPiAEysHEd6-u6JH3rE2og" general="_EPiAECsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPiAFCsHEd6-u6JH3rE2og" name="InterfaceRealization">
+            <generalization xmi:id="_EPiAFSsHEd6-u6JH3rE2og" general="_EPh__isHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPiAFisHEd6-u6JH3rE2og" name="BehavioralFeature">
+            <generalization xmi:id="_EPiAFysHEd6-u6JH3rE2og" general="_EPh_0SsHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPiAGCsHEd6-u6JH3rE2og" general="_EPh_4CsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPiAGSsHEd6-u6JH3rE2og" name="CallEvent">
+            <generalization xmi:id="_EPiAGisHEd6-u6JH3rE2og" general="_EPiAGysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPiAGysHEd6-u6JH3rE2og" name="MessageEvent">
+            <generalization xmi:id="_EPiAHCsHEd6-u6JH3rE2og" general="_EPiAHysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPiAHSsHEd6-u6JH3rE2og" name="ChangeEvent">
+            <generalization xmi:id="_EPiAHisHEd6-u6JH3rE2og" general="_EPiAHysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPiAHysHEd6-u6JH3rE2og" name="Event">
+            <generalization xmi:id="_EPiAICsHEd6-u6JH3rE2og" general="_EPh_xysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimcCsHEd6-u6JH3rE2og" name="BehavioredClassifier">
+            <generalization xmi:id="_EPimcSsHEd6-u6JH3rE2og" general="_EPh_zysHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPimcisHEd6-u6JH3rE2og" general="_EPh_5CsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimcysHEd6-u6JH3rE2og" name="Trigger">
+            <generalization xmi:id="_EPimdCsHEd6-u6JH3rE2og" general="_EPh_zysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimdSsHEd6-u6JH3rE2og" name="Interface">
+            <generalization xmi:id="_EPimdisHEd6-u6JH3rE2og" general="_EPh_5CsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimdysHEd6-u6JH3rE2og" name="Reception">
+            <generalization xmi:id="_EPimeCsHEd6-u6JH3rE2og" general="_EPiAFisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimeSsHEd6-u6JH3rE2og" name="Signal">
+            <generalization xmi:id="_EPimeisHEd6-u6JH3rE2og" general="_EPh_5CsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimeysHEd6-u6JH3rE2og" name="SignalEvent">
+            <generalization xmi:id="_EPimfCsHEd6-u6JH3rE2og" general="_EPiAGysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimfSsHEd6-u6JH3rE2og" name="TimeEvent">
+            <generalization xmi:id="_EPimfisHEd6-u6JH3rE2og" general="_EPiAHysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimfysHEd6-u6JH3rE2og" name="AnyReceiveEvent">
+            <generalization xmi:id="_EPimgCsHEd6-u6JH3rE2og" general="_EPiAGysHEd6-u6JH3rE2og"/>
           </packagedElement>
         </packagedElement>
-        <packagedElement xmi:type="uml:Profile" xmi:id="_OUaB4isAEd6axbyb1tC-4g" name="Classes">
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB4ysAEd6axbyb1tC-4g" name="ComponentClass">
-            <generalization xmi:id="_OUaB5CsAEd6axbyb1tC-4g" general="_OUaB5SsAEd6axbyb1tC-4g"/>
+        <packagedElement xmi:type="uml:Profile" xmi:id="_EPimgSsHEd6-u6JH3rE2og" name="Instances">
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimgisHEd6-u6JH3rE2og" name="Link">
+            <generalization xmi:id="_EPimgysHEd6-u6JH3rE2og" general="_EPh_2SsHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB5SsAEd6axbyb1tC-4g" name="StructuredClassifier"/>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB5isAEd6axbyb1tC-4g" name="Property"/>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB5ysAEd6axbyb1tC-4g" name="GeneralizationSet"/>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB6CsAEd6axbyb1tC-4g" name="Class">
-            <generalization xmi:id="_OUaB6SsAEd6axbyb1tC-4g" general="_OUaB4ysAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimhCsHEd6-u6JH3rE2og" name="ComponentObject">
+            <generalization xmi:id="_EPimhSsHEd6-u6JH3rE2og" general="_EPh_2SsHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB6isAEd6axbyb1tC-4g" name="AssociationClass">
-            <generalization xmi:id="_OUaB6ysAEd6axbyb1tC-4g" general="_OUaB7SsAEd6axbyb1tC-4g"/>
-            <generalization xmi:id="_OUaB7CsAEd6axbyb1tC-4g" general="_OUaB6CsAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimhisHEd6-u6JH3rE2og" name="CreatesLink">
+            <generalization xmi:id="_EPimhysHEd6-u6JH3rE2og" general="_EPimgisHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB7SsAEd6axbyb1tC-4g" name="Association"/>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB7isAEd6axbyb1tC-4g" name="Creates">
-            <generalization xmi:id="_OUaB7ysAEd6axbyb1tC-4g" general="_OUaB7SsAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimiCsHEd6-u6JH3rE2og" name="Object">
+            <generalization xmi:id="_EPimiSsHEd6-u6JH3rE2og" general="_EPimhCsHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB8CsAEd6axbyb1tC-4g" name="Acquires">
-            <generalization xmi:id="_OUaB8SsAEd6axbyb1tC-4g" general="_OUaB7SsAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimiisHEd6-u6JH3rE2og" name="AcquiresLink">
+            <generalization xmi:id="_EPimiysHEd6-u6JH3rE2og" general="_EPimgisHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB8isAEd6axbyb1tC-4g" name="Nests">
-            <generalization xmi:id="_OUaB8ysAEd6axbyb1tC-4g" general="_OUaB7SsAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimjCsHEd6-u6JH3rE2og" name="NestsLink">
+            <generalization xmi:id="_EPimjSsHEd6-u6JH3rE2og" general="_EPimgisHEd6-u6JH3rE2og"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB9CsAEd6axbyb1tC-4g" name="PackageableElement"/>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB9SsAEd6axbyb1tC-4g" name="Usage"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Profile" xmi:id="_OUaB9isAEd6axbyb1tC-4g" name="Instances">
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB9ysAEd6axbyb1tC-4g" name="Classifier"/>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB-CsAEd6axbyb1tC-4g" name="Slot"/>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB-SsAEd6axbyb1tC-4g" name="Link">
-            <generalization xmi:id="_OUaB-isAEd6axbyb1tC-4g" general="_OUaB-ysAEd6axbyb1tC-4g"/>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB-ysAEd6axbyb1tC-4g" name="InstanceSpecification"/>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB_CsAEd6axbyb1tC-4g" name="ComponentObject">
-            <generalization xmi:id="_OUaB_SsAEd6axbyb1tC-4g" general="_OUaB-ysAEd6axbyb1tC-4g"/>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaB_isAEd6axbyb1tC-4g" name="CreatesLink">
-            <generalization xmi:id="_OUaB_ysAEd6axbyb1tC-4g" general="_OUaB-SsAEd6axbyb1tC-4g"/>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaCACsAEd6axbyb1tC-4g" name="Object">
-            <generalization xmi:id="_OUaCASsAEd6axbyb1tC-4g" general="_OUaB_CsAEd6axbyb1tC-4g"/>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaCAisAEd6axbyb1tC-4g" name="AcquiresLink">
-            <generalization xmi:id="_OUaCAysAEd6axbyb1tC-4g" general="_OUaB-SsAEd6axbyb1tC-4g"/>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaCBCsAEd6axbyb1tC-4g" name="NestsLink">
-            <generalization xmi:id="_OUaCBSsAEd6axbyb1tC-4g" general="_OUaB-SsAEd6axbyb1tC-4g"/>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Stereotype" xmi:id="_OUaCBisAEd6axbyb1tC-4g" name="ObjectLink">
-            <generalization xmi:id="_OUaCBysAEd6axbyb1tC-4g" general="_OUaB-SsAEd6axbyb1tC-4g"/>
-            <generalization xmi:id="_OUaCCCsAEd6axbyb1tC-4g" general="_OUaCACsAEd6axbyb1tC-4g"/>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimjisHEd6-u6JH3rE2og" name="ObjectLink">
+            <generalization xmi:id="_EPimjysHEd6-u6JH3rE2og" general="_EPimgisHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPimkCsHEd6-u6JH3rE2og" general="_EPimiCsHEd6-u6JH3rE2og"/>
           </packagedElement>
         </packagedElement>
       </packagedElement>
-      <packagedElement xmi:type="uml:Profile" xmi:id="_OUaCCSsAEd6axbyb1tC-4g" name="Behavior">
-        <packagedElement xmi:type="uml:Profile" xmi:id="_OUaCCisAEd6axbyb1tC-4g" name="ProtocolStateMachine"/>
-        <packagedElement xmi:type="uml:Profile" xmi:id="_OUaCCysAEd6axbyb1tC-4g" name="Actions"/>
-        <packagedElement xmi:type="uml:Profile" xmi:id="_OUaCDCsAEd6axbyb1tC-4g" name="Activities"/>
-        <packagedElement xmi:type="uml:Profile" xmi:id="_OUaCDSsAEd6axbyb1tC-4g" name="Common"/>
+      <packagedElement xmi:type="uml:Profile" xmi:id="_EPimkSsHEd6-u6JH3rE2og" name="Behavior">
+        <packagedElement xmi:type="uml:Profile" xmi:id="_EPimkisHEd6-u6JH3rE2og" name="ProtocolStateMachine">
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimkysHEd6-u6JH3rE2og" name="StateMachine">
+            <generalization xmi:id="_EPimlCsHEd6-u6JH3rE2og" general="_EPiADCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimlSsHEd6-u6JH3rE2og" name="Transition">
+            <generalization xmi:id="_EPimlisHEd6-u6JH3rE2og" general="_EPh_0ysHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPimlysHEd6-u6JH3rE2og" general="_EPh_4CsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimmCsHEd6-u6JH3rE2og" name="Vertex">
+            <generalization xmi:id="_EPimmSsHEd6-u6JH3rE2og" general="_EPh_zysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimmisHEd6-u6JH3rE2og" name="Pseudostate">
+            <generalization xmi:id="_EPimmysHEd6-u6JH3rE2og" general="_EPimmCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimnCsHEd6-u6JH3rE2og" name="FinalState">
+            <generalization xmi:id="_EPimnSsHEd6-u6JH3rE2og" general="_EPimnisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimnisHEd6-u6JH3rE2og" name="State">
+            <generalization xmi:id="_EPimnysHEd6-u6JH3rE2og" general="_EPimmCsHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPimoCsHEd6-u6JH3rE2og" general="_EPh_0ysHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPimoSsHEd6-u6JH3rE2og" general="_EPh_4CsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimoisHEd6-u6JH3rE2og" name="ConnectionPointReference">
+            <generalization xmi:id="_EPimoysHEd6-u6JH3rE2og" general="_EPimmCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimpCsHEd6-u6JH3rE2og" name="Connector">
+            <generalization xmi:id="_EPimpSsHEd6-u6JH3rE2og" general="_EPh_0SsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimpisHEd6-u6JH3rE2og" name="ConnectableElement">
+            <generalization xmi:id="_EPimpysHEd6-u6JH3rE2og" general="_EPh_zSsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimqCsHEd6-u6JH3rE2og" name="EncapsulatedClassifier">
+            <generalization xmi:id="_EPimqSsHEd6-u6JH3rE2og" general="_EPh_qSsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimqisHEd6-u6JH3rE2og" name="ConnectorEnd">
+            <generalization xmi:id="_EPimqysHEd6-u6JH3rE2og" general="_EPh_yysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimrCsHEd6-u6JH3rE2og" name="ProtocolConformance">
+            <generalization xmi:id="_EPimrSsHEd6-u6JH3rE2og" general="_EPh_tCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimrisHEd6-u6JH3rE2og" name="Port">
+            <generalization xmi:id="_EPimrysHEd6-u6JH3rE2og" general="_EPiACSsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimsCsHEd6-u6JH3rE2og" name="ProtocolTransition">
+            <generalization xmi:id="_EPimsSsHEd6-u6JH3rE2og" general="_EPimlSsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimsisHEd6-u6JH3rE2og" name="ProtocolStateMachine">
+            <generalization xmi:id="_EPimsysHEd6-u6JH3rE2og" general="_EPimkysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimtCsHEd6-u6JH3rE2og" name="Region">
+            <generalization xmi:id="_EPimtSsHEd6-u6JH3rE2og" general="_EPh_0ysHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPimtisHEd6-u6JH3rE2og" general="_EPh_4CsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Profile" xmi:id="_EPimtysHEd6-u6JH3rE2og" name="Actions">
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimuCsHEd6-u6JH3rE2og" name="CreateObjectAction">
+            <generalization xmi:id="_EPimuSsHEd6-u6JH3rE2og" general="_EPinDysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimuisHEd6-u6JH3rE2og" name="DestroyObjectAction">
+            <generalization xmi:id="_EPimuysHEd6-u6JH3rE2og" general="_EPinDysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimvCsHEd6-u6JH3rE2og" name="TestIdentityAction">
+            <generalization xmi:id="_EPimvSsHEd6-u6JH3rE2og" general="_EPinDysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimvisHEd6-u6JH3rE2og" name="ReadSelfAction">
+            <generalization xmi:id="_EPimvysHEd6-u6JH3rE2og" general="_EPinDysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimwCsHEd6-u6JH3rE2og" name="StructuralFeatureAction">
+            <generalization xmi:id="_EPimwSsHEd6-u6JH3rE2og" general="_EPinDysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimwisHEd6-u6JH3rE2og" name="ReadStructuralFeatureAction">
+            <generalization xmi:id="_EPimwysHEd6-u6JH3rE2og" general="_EPimwCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimxCsHEd6-u6JH3rE2og" name="WriteStructuralFeatureAction">
+            <generalization xmi:id="_EPimxSsHEd6-u6JH3rE2og" general="_EPimwCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimxisHEd6-u6JH3rE2og" name="ClearStructuralFeatureAction">
+            <generalization xmi:id="_EPimxysHEd6-u6JH3rE2og" general="_EPimwCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimyCsHEd6-u6JH3rE2og" name="RemoveStructuralFeatureValueAction">
+            <generalization xmi:id="_EPimySsHEd6-u6JH3rE2og" general="_EPimxCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimyisHEd6-u6JH3rE2og" name="AddStructuralFeatureValueAction">
+            <generalization xmi:id="_EPimyysHEd6-u6JH3rE2og" general="_EPimxCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimzCsHEd6-u6JH3rE2og" name="LinkAction">
+            <generalization xmi:id="_EPimzSsHEd6-u6JH3rE2og" general="_EPinDysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPimzisHEd6-u6JH3rE2og" name="ReadLinkAction">
+            <generalization xmi:id="_EPimzysHEd6-u6JH3rE2og" general="_EPimzCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPim0CsHEd6-u6JH3rE2og" name="LinkEndCreationData">
+            <generalization xmi:id="_EPim0SsHEd6-u6JH3rE2og" general="_EPim0isHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPim0isHEd6-u6JH3rE2og" name="LinkEndData">
+            <generalization xmi:id="_EPim0ysHEd6-u6JH3rE2og" general="_EPh_fisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPim1CsHEd6-u6JH3rE2og" name="CreateLinkAction">
+            <generalization xmi:id="_EPim1SsHEd6-u6JH3rE2og" general="_EPim1isHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPim1isHEd6-u6JH3rE2og" name="WriteLinkAction">
+            <generalization xmi:id="_EPim1ysHEd6-u6JH3rE2og" general="_EPimzCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPim2CsHEd6-u6JH3rE2og" name="DestroyLinkAction">
+            <generalization xmi:id="_EPim2SsHEd6-u6JH3rE2og" general="_EPim1isHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPim2isHEd6-u6JH3rE2og" name="ClearAssociationAction">
+            <generalization xmi:id="_EPim2ysHEd6-u6JH3rE2og" general="_EPinDysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPim3CsHEd6-u6JH3rE2og" name="BroadcastSignalAction">
+            <generalization xmi:id="_EPim3SsHEd6-u6JH3rE2og" general="_EPinEysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPim3isHEd6-u6JH3rE2og" name="SendObjectAction">
+            <generalization xmi:id="_EPim3ysHEd6-u6JH3rE2og" general="_EPinEysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPim4CsHEd6-u6JH3rE2og" name="LinkEndDestructionData">
+            <generalization xmi:id="_EPim4SsHEd6-u6JH3rE2og" general="_EPim0isHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPim4isHEd6-u6JH3rE2og" name="ValueSpecificationAction">
+            <generalization xmi:id="_EPim4ysHEd6-u6JH3rE2og" general="_EPinDysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPim5CsHEd6-u6JH3rE2og" name="VariableAction">
+            <generalization xmi:id="_EPim5SsHEd6-u6JH3rE2og" general="_EPinDysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPim5isHEd6-u6JH3rE2og" name="ReadVariableAction">
+            <generalization xmi:id="_EPim5ysHEd6-u6JH3rE2og" general="_EPim5CsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPim6CsHEd6-u6JH3rE2og" name="WriteVariableAction">
+            <generalization xmi:id="_EPim6SsHEd6-u6JH3rE2og" general="_EPim5CsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPim6isHEd6-u6JH3rE2og" name="ClearVariableAction">
+            <generalization xmi:id="_EPim6ysHEd6-u6JH3rE2og" general="_EPim5CsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPim7CsHEd6-u6JH3rE2og" name="AddVariableValueAction">
+            <generalization xmi:id="_EPim7SsHEd6-u6JH3rE2og" general="_EPim6CsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPim7isHEd6-u6JH3rE2og" name="RemoveVariableValueAction">
+            <generalization xmi:id="_EPim7ysHEd6-u6JH3rE2og" general="_EPim6CsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPim8CsHEd6-u6JH3rE2og" name="RaiseExceptionAction">
+            <generalization xmi:id="_EPim8SsHEd6-u6JH3rE2og" general="_EPinDysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPim8isHEd6-u6JH3rE2og" name="ActionInputPin">
+            <generalization xmi:id="_EPim8ysHEd6-u6JH3rE2og" general="_EPinFSsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPim9CsHEd6-u6JH3rE2og" name="ReadExtentAction">
+            <generalization xmi:id="_EPim9SsHEd6-u6JH3rE2og" general="_EPinDysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPim9isHEd6-u6JH3rE2og" name="ReclassifyObjectAction">
+            <generalization xmi:id="_EPim9ysHEd6-u6JH3rE2og" general="_EPinDysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPim-CsHEd6-u6JH3rE2og" name="ReadIsClassifiedObjectAction">
+            <generalization xmi:id="_EPim-SsHEd6-u6JH3rE2og" general="_EPinDysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPim-isHEd6-u6JH3rE2og" name="StartClassifierBehaviorAction">
+            <generalization xmi:id="_EPim-ysHEd6-u6JH3rE2og" general="_EPinDysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPim_CsHEd6-u6JH3rE2og" name="QualifierValue">
+            <generalization xmi:id="_EPim_SsHEd6-u6JH3rE2og" general="_EPh_fisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPim_isHEd6-u6JH3rE2og" name="ReadLinkObjectEndAction">
+            <generalization xmi:id="_EPim_ysHEd6-u6JH3rE2og" general="_EPinDysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinACsHEd6-u6JH3rE2og" name="ReadLinkObjectEndQualifierAction">
+            <generalization xmi:id="_EPinASsHEd6-u6JH3rE2og" general="_EPinDysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinAisHEd6-u6JH3rE2og" name="CreateLinkObjectAction">
+            <generalization xmi:id="_EPinAysHEd6-u6JH3rE2og" general="_EPim1CsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinBCsHEd6-u6JH3rE2og" name="AcceptEventAction">
+            <generalization xmi:id="_EPinBSsHEd6-u6JH3rE2og" general="_EPinDysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinBisHEd6-u6JH3rE2og" name="AcceptCallAction">
+            <generalization xmi:id="_EPinBysHEd6-u6JH3rE2og" general="_EPinBCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinCCsHEd6-u6JH3rE2og" name="ReplyAction">
+            <generalization xmi:id="_EPinCSsHEd6-u6JH3rE2og" general="_EPinDysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinCisHEd6-u6JH3rE2og" name="UnmarshallAction">
+            <generalization xmi:id="_EPinCysHEd6-u6JH3rE2og" general="_EPinDysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinDCsHEd6-u6JH3rE2og" name="ReduceAction">
+            <generalization xmi:id="_EPinDSsHEd6-u6JH3rE2og" general="_EPinDysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Profile" xmi:id="_EPinDisHEd6-u6JH3rE2og" name="Activities">
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinDysHEd6-u6JH3rE2og" name="Action">
+            <generalization xmi:id="_EPinECsHEd6-u6JH3rE2og" general="_EPinIysHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPinESsHEd6-u6JH3rE2og" general="_EPh_zysHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPinEisHEd6-u6JH3rE2og" general="_EPinXCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinEysHEd6-u6JH3rE2og" name="InvocationAction">
+            <generalization xmi:id="_EPinFCsHEd6-u6JH3rE2og" general="_EPinDysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinFSsHEd6-u6JH3rE2og" name="InputPin">
+            <generalization xmi:id="_EPinFisHEd6-u6JH3rE2og" general="_EPinUSsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinFysHEd6-u6JH3rE2og" name="OpaqueAction">
+            <generalization xmi:id="_EPinGCsHEd6-u6JH3rE2og" general="_EPinDysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinGSsHEd6-u6JH3rE2og" name="CallAction">
+            <generalization xmi:id="_EPinGisHEd6-u6JH3rE2og" general="_EPinEysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinGysHEd6-u6JH3rE2og" name="SendSignalAction">
+            <generalization xmi:id="_EPinHCsHEd6-u6JH3rE2og" general="_EPinEysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinHSsHEd6-u6JH3rE2og" name="CallOperationAction">
+            <generalization xmi:id="_EPinHisHEd6-u6JH3rE2og" general="_EPinGSsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinHysHEd6-u6JH3rE2og" name="CallBehaviorAction">
+            <generalization xmi:id="_EPinICsHEd6-u6JH3rE2og" general="_EPinGSsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinISsHEd6-u6JH3rE2og" name="ControlNode">
+            <generalization xmi:id="_EPinIisHEd6-u6JH3rE2og" general="_EPinIysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinIysHEd6-u6JH3rE2og" name="ActivityNode">
+            <generalization xmi:id="_EPinJCsHEd6-u6JH3rE2og" general="_EPh_zysHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPinJSsHEd6-u6JH3rE2og" general="_EPh_0ysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinJisHEd6-u6JH3rE2og" name="ControlFlow">
+            <generalization xmi:id="_EPinJysHEd6-u6JH3rE2og" general="_EPinKCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinKCsHEd6-u6JH3rE2og" name="ActivityEdge">
+            <generalization xmi:id="_EPinKSsHEd6-u6JH3rE2og" general="_EPh_0ysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinKisHEd6-u6JH3rE2og" name="InitialNode">
+            <generalization xmi:id="_EPinKysHEd6-u6JH3rE2og" general="_EPinISsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinLCsHEd6-u6JH3rE2og" name="ActivityParameterNode">
+            <generalization xmi:id="_EPinLSsHEd6-u6JH3rE2og" general="_EPinLisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinLisHEd6-u6JH3rE2og" name="ObjectNode">
+            <generalization xmi:id="_EPinLysHEd6-u6JH3rE2og" general="_EPinIysHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPinMCsHEd6-u6JH3rE2og" general="_EPh_zSsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinMSsHEd6-u6JH3rE2og" name="ValuePin">
+            <generalization xmi:id="_EPinMisHEd6-u6JH3rE2og" general="_EPinFSsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinMysHEd6-u6JH3rE2og" name="ForkNode">
+            <generalization xmi:id="_EPinNCsHEd6-u6JH3rE2og" general="_EPinISsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinNSsHEd6-u6JH3rE2og" name="FlowFinalNode">
+            <generalization xmi:id="_EPinNisHEd6-u6JH3rE2og" general="_EPinNysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinNysHEd6-u6JH3rE2og" name="FinalNode">
+            <generalization xmi:id="_EPinOCsHEd6-u6JH3rE2og" general="_EPinISsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinOSsHEd6-u6JH3rE2og" name="CentralBufferNode">
+            <generalization xmi:id="_EPinOisHEd6-u6JH3rE2og" general="_EPinLisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinOysHEd6-u6JH3rE2og" name="ActivityPartition">
+            <generalization xmi:id="_EPinPCsHEd6-u6JH3rE2og" general="_EPh_zysHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPinPSsHEd6-u6JH3rE2og" general="_EPinPisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinPisHEd6-u6JH3rE2og" name="ActivityGroup">
+            <generalization xmi:id="_EPinPysHEd6-u6JH3rE2og" general="_EPh_fisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinQCsHEd6-u6JH3rE2og" name="MergeNode">
+            <generalization xmi:id="_EPinQSsHEd6-u6JH3rE2og" general="_EPinISsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinQisHEd6-u6JH3rE2og" name="DecisionNode">
+            <generalization xmi:id="_EPinQysHEd6-u6JH3rE2og" general="_EPinISsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinRCsHEd6-u6JH3rE2og" name="ActivityFinalNode">
+            <generalization xmi:id="_EPinRSsHEd6-u6JH3rE2og" general="_EPinISsHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPinRisHEd6-u6JH3rE2og" general="_EPinNysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinRysHEd6-u6JH3rE2og" name="JoinNode">
+            <generalization xmi:id="_EPinSCsHEd6-u6JH3rE2og" general="_EPinISsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinSSsHEd6-u6JH3rE2og" name="DataStoreNode">
+            <generalization xmi:id="_EPinSisHEd6-u6JH3rE2og" general="_EPinOSsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinSysHEd6-u6JH3rE2og" name="ObjectFlow">
+            <generalization xmi:id="_EPinTCsHEd6-u6JH3rE2og" general="_EPinKCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinTSsHEd6-u6JH3rE2og" name="ParameterSet">
+            <generalization xmi:id="_EPinTisHEd6-u6JH3rE2og" general="_EPh_zysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinTysHEd6-u6JH3rE2og" name="InterruptibleActivityRegion">
+            <generalization xmi:id="_EPinUCsHEd6-u6JH3rE2og" general="_EPinPisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinUSsHEd6-u6JH3rE2og" name="Pin">
+            <generalization xmi:id="_EPinUisHEd6-u6JH3rE2og" general="_EPh_zSsHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPinUysHEd6-u6JH3rE2og" general="_EPh_yysHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPinVCsHEd6-u6JH3rE2og" general="_EPinLisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinVSsHEd6-u6JH3rE2og" name="Variable">
+            <generalization xmi:id="_EPinVisHEd6-u6JH3rE2og" general="_EPh_zSsHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPinVysHEd6-u6JH3rE2og" general="_EPh_yysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinWCsHEd6-u6JH3rE2og" name="StructuredActivityNode">
+            <generalization xmi:id="_EPinWSsHEd6-u6JH3rE2og" general="_EPinPisHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPinWisHEd6-u6JH3rE2og" general="_EPinXCsHEd6-u6JH3rE2og"/>
+            <generalization xmi:id="_EPinWysHEd6-u6JH3rE2og" general="_EPh_4CsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinXCsHEd6-u6JH3rE2og" name="ExecutableNode">
+            <generalization xmi:id="_EPinXSsHEd6-u6JH3rE2og" general="_EPinIysHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinXisHEd6-u6JH3rE2og" name="ConditionalNode">
+            <generalization xmi:id="_EPinXysHEd6-u6JH3rE2og" general="_EPinWCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinYCsHEd6-u6JH3rE2og" name="LoopNode">
+            <generalization xmi:id="_EPinYSsHEd6-u6JH3rE2og" general="_EPinWCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinYisHEd6-u6JH3rE2og" name="Clause">
+            <generalization xmi:id="_EPinYysHEd6-u6JH3rE2og" general="_EPh_fisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinZCsHEd6-u6JH3rE2og" name="Activity">
+            <generalization xmi:id="_EPinZSsHEd6-u6JH3rE2og" general="_EPiADCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinZisHEd6-u6JH3rE2og" name="SequenceNode">
+            <generalization xmi:id="_EPinZysHEd6-u6JH3rE2og" general="_EPinWCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinaCsHEd6-u6JH3rE2og" name="OutputPin">
+            <generalization xmi:id="_EPinaSsHEd6-u6JH3rE2og" general="_EPinUSsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinaisHEd6-u6JH3rE2og" name="ExpansionNode">
+            <generalization xmi:id="_EPinaysHEd6-u6JH3rE2og" general="_EPinLisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinbCsHEd6-u6JH3rE2og" name="ExpansionRegion">
+            <generalization xmi:id="_EPinbSsHEd6-u6JH3rE2og" general="_EPinWCsHEd6-u6JH3rE2og"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Stereotype" xmi:id="_EPinbisHEd6-u6JH3rE2og" name="ExceptionHandler">
+            <generalization xmi:id="_EPinbysHEd6-u6JH3rE2og" general="_EPh_fisHEd6-u6JH3rE2og"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Profile" xmi:id="_EPincCsHEd6-u6JH3rE2og" name="Common"/>
       </packagedElement>
     </packagedElement>
   </packagedElement>
