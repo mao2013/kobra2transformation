@@ -33,7 +33,7 @@ public class TransformationTool {
 		_oclUtil = new OCLUtil();
 		_uml2Util = new UML2Util();
 
-		_inputModelPath = "model/Data.uml";
+		_inputModelPath = "model/Kobra2-MM.uml";
 
 		_inputModelURI = URI.createURI(_inputModelPath);
 
@@ -63,8 +63,10 @@ public class TransformationTool {
 				
 				Profile profileTmp = _uml2Util.createOrRetrieveProfile(tmp.getName());
 				Profile nestingProfile = _uml2Util.createOrRetrieveProfile(nestingPackage.getName());
-
-				nestingProfile.getNestedPackages().add(profileTmp);
+				
+				if (!nestingProfile.getNestedPackages().contains(profileTmp)){
+					nestingProfile.getNestedPackages().add(profileTmp);
+				}
 				
 				// Merge dependencies
 				UMLUtil.merge(tmp, null);
@@ -134,7 +136,7 @@ public class TransformationTool {
 						String genericQualifiedName = classifier.getQualifiedName();
 						
 						// Do not create stereotypes from UML generalizations instead create extensions
-						if (!genericQualifiedName.contains("UML")) {
+						if (genericQualifiedName != null && !genericQualifiedName.contains("UML")) {
 														
 							Stereotype genericStereotype =
 								_uml2Util.createOrRetrieveStereotype(classifier.getPackage(), genericName, false);
