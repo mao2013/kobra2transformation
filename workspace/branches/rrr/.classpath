@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/net.sourceforge.lpg.lpgjavaruntime_1.1.0.v200803061910.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf_2.4.0.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.ant_2.4.0.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.codegen_2.4.0.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.codegen.ecore_2.4.2.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.codegen.ecore.ui_2.4.1.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.codegen.ui_2.4.0.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.common_2.4.0.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.common.ui_2.4.0.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.converter_2.4.0.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.databinding_1.0.0.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.databinding.edit_1.0.0.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.ecore_2.4.2.v200902171115.jar" sourcepath="/Applications/eclipse-modeling/plugins/org.eclipse.emf.source_2.4.1.v200808251517/src/org.eclipse.emf.ecore_2.4.1.v200808251517/src.zip"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.ecore.change_2.4.0.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.ecore.change.edit_2.4.0.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.ecore.edit_2.4.1.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.ecore.editor_2.4.0.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.ecore.xmi_2.4.1.v200902171115.jar" sourcepath="/Applications/eclipse-modeling/plugins/org.eclipse.emf.source_2.4.1.v200808251517/src/org.eclipse.emf.ecore.xmi_2.4.1.v200808251517/src.zip"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.edit_2.4.2.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.edit.ui_2.4.2.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.exporter_2.4.0.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.importer_2.4.1.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.importer.ecore_2.4.0.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.importer.java_2.4.1.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.importer.rose_2.4.0.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.mapping_2.4.0.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.mapping.ecore_2.4.0.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.mapping.ecore.editor_2.4.0.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.mapping.ecore2ecore_2.4.0.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.mapping.ecore2ecore.editor_2.4.0.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.mapping.ecore2xml_2.4.0.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.mapping.ecore2xml.ui_2.4.0.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.mapping.ui_2.4.0.v200902171115.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.emf.ocl_1.1.101.v200808291106.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.ocl_1.2.3.v200901071407.jar" sourcepath="/Applications/eclipse-modeling/plugins/org.eclipse.ocl.source_1.2.3.v200810101725-3439oA55T5F8H8PAB/src/org.eclipse.ocl_1.2.3.v200901071407/src.zip"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.ocl.ecore_1.2.1.v200807301850.jar" sourcepath="/Applications/eclipse-modeling/plugins/org.eclipse.ocl.source_1.2.3.v200810101725-3439oA55T5F8H8PAB/src/org.eclipse.ocl.ecore_1.2.1.v200807301850/src.zip"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.uml2_2.1.0.v200805131030.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.uml2.codegen.ecore_1.4.0.v200805201126.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.uml2.codegen.ecore.ui_1.4.0.v200805131030.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.uml2.common_1.4.0.v200805131030.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.uml2.common.edit_1.4.0.v200805131030.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.uml2.uml_2.2.2.v200811051031.jar" sourcepath="/Applications/eclipse-modeling/plugins/org.eclipse.uml2.source_2.2.0.v200805201126/src/org.eclipse.uml2.uml_2.2.0.v200805141133/src.zip"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.uml2.uml.ecore.exporter_2.2.0.v200805131030.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.uml2.uml.ecore.importer_2.2.0.v200805131030.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.uml2.uml.edit_2.2.0.v200805131030.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.uml2.uml.editor_2.2.0.v200805131030.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.uml2.uml.resources_2.2.0.v200805131030.jar"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.ocl.uml_1.2.3.v200901071407.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
