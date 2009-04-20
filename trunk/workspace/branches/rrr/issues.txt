@@ -1,0 +1,36 @@
+- Elements import several things from other pakcages
+- import from types to KobrA2::SUM::StruKobrA2::SUM::Structure::Classes::StructuredClassifier
+- Inv em EnumerationLiteral (pacote structure::types)
+
+-em instances a parte de expression in ocl
+
+
+
+
+
+KobrA2 bugs
+
+KobrA2::SUM::StruKobrA2::SUM::Structure::Types
+
+- EnumerationLiteral invariant
+
+self.specification returns ValueSpecification that does not have body attribute ou association  
+
+- MessageType invariant
+
+Message type does not have any attibutes or association what makes the constraint invalid
+
+
+Duvidas
+
+- vai gerar esteriotipos de todo o merge?
+
+- questao da metaclasse no profile ja q eh tudo um metamodelo
+
+- ver exemplo de constraint nesse profile
+
+- exemplo de associacao
+
+      container = self.base_Class.ownedAttribute->
+      select(isComposite).association.endType->
+      select(oclIsKindOf(Container)).oclAsType(Container)->first()
