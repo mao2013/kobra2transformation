@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.mapping.ecore2xml.Ecore2XMLPackage;
 import org.eclipse.emf.mapping.ecore2xml.util.Ecore2XMLResource;
 import org.eclipse.ocl.uml.ExpressionInOCL;
+import org.eclipse.uml2.uml.Class;
 import org.eclipse.uml2.uml.Classifier;
 import org.eclipse.uml2.uml.Constraint;
 import org.eclipse.uml2.uml.Element;
@@ -42,17 +43,21 @@ public class UML2Util {
 
 	public UML2Util() {
 		
-		_debug = false;
+		_debug = true;
 		
 		_profiles = new HashMap<String, Profile>();
 		_stereotypes = new HashMap<String, Stereotype>();
+
+		UMLPackage.eINSTANCE.eClass();
 
 		Registry registry = _createRegistry();
 				
 		_resourceSet = new ResourceSetImpl();
 		_resourceSet.setResourceFactoryRegistry(registry);
+
+		URI umlResourcePluginURI = _findPluginURI();
+		registerPathmaps(umlResourcePluginURI);
 		
-		_umlResourcePluginURI = _findPluginURI();
 
 		/*Map<String, Object> protMap = UMLResource.Factory.Registry.INSTANCE.getProtocolToFactoryMap();
 
@@ -131,14 +136,17 @@ public class UML2Util {
 			stereotype = profile.createOwnedStereotype(name, isAbstract);
 			_stereotypes.put(name, stereotype);
 				
-			org.eclipse.uml2.uml.Class metaclass = getMetaclass(name);
+		//	org.eclipse.uml2.uml.Class metaclass = getMetaclass(name);
 			
-			if (metaclass != null){
-				//referenceMetaclass(profile, metaclass);
+			//if (metaclass != null){
+				
+				Class metaclass = referenceMetaclass(profile, name);
 				
 			//	System.out.println("is meta " +  metaclass.isMetaclass());
-				//createExtension(metaclass, stereotype, false);
-			}
+				if (metaclass != null){
+				createExtension(metaclass, stereotype, false);
+				}
+			//}
 			_debug("Stereotype '" + stereotype.getName() + "' created in " + profile.getName());
 		} 
 		
@@ -182,25 +190,23 @@ public class UML2Util {
 	public org.eclipse.uml2.uml.Package load(URI uri) {
 		
 
-		UMLPackage umlPackage = UMLPackage.eINSTANCE;
-
-		registerPathmaps(_umlResourcePluginURI);
-
+		
+		
 		Resource resource = _resourceSet.getResource(uri, true);
-		Resource umlMetaResource = 
-			_resourceSet.getResource(URI.createURI(_umlResourcePluginURI + "metamodels/UML.metamodel.uml"), true) ;
+		//Resource umlMetaResource = 
+		//	_resourceSet.getResource(URI.createURI(_umlResourcePluginURI + "metamodels/UML.metamodel.uml"), true) ;
 		
 		org.eclipse.uml2.uml.Package package_ =
 		   	(org.eclipse.uml2.uml.Package) EcoreUtil.getObjectByType(
 		   		resource.getContents(), UMLPackage.Literals.PACKAGE);
 		
-		org.eclipse.uml2.uml.Package umlMetaPackage_ =
+	/*	org.eclipse.uml2.uml.Package umlMetaPackage_ =
 		   	(org.eclipse.uml2.uml.Package) EcoreUtil.getObjectByType(
-		   		umlMetaResource.getContents(), UMLPackage.Literals.PACKAGE);
+		   		umlMetaResource.getContents(), UMLPackage.Literals.PACKAGE);*/
 		
 		   
         _resourceSet.getPackageRegistry().put(package_.getQualifiedName(), package_);
-        _resourceSet.getPackageRegistry().put(UMLResource.UML_METAMODEL_URI, umlMetaPackage_);
+      //  _resourceSet.getPackageRegistry().put(UMLResource.UML_METAMODEL_URI, umlMetaPackage_);
 
         return package_;
 	}
@@ -213,11 +219,25 @@ public class UML2Util {
 		return _stereotypes;
 	}
 	
-	public void referenceMetaclass(Profile profile, Classifier metaclass) {
-
-		profile.createMetaclassReference(metaclass);
+	public Class referenceMetaclass(Profile profile, String metaclassName) {
 		
-		_debug("Metaclass '" + metaclass.getQualifiedName() + "' referenced.");
+		Model umlMetamodel = (Model) load(URI.createURI(UMLResource.UML_METAMODEL_URI));
+
+		Class metaclass = null;
+		
+		if (umlMetamodel.getOwnedType(metaclassName) instanceof  Class){
+			
+			metaclass = (Class) umlMetamodel.getOwnedType(metaclassName);
+			
+			if (metaclass != null){
+				profile.createMetaclassReference(metaclass);
+	
+				_debug("Metaclass '" + metaclass.getQualifiedName() + "' referenced.");
+			}
+		
+		}
+		
+		return metaclass;
 	}
 	
 	public void registerPathmaps(URI umlResourcePluginURI) {
@@ -241,6 +261,8 @@ public class UML2Util {
 	}*/
 	
 	public org.eclipse.uml2.uml.Class getMetaclass(String name){
+		
+		
 		
 		org.eclipse.uml2.uml.Package package_ =
 			(Package) _resourceSet.getPackageRegistry().get(UMLResource.UML_METAMODEL_URI);
@@ -304,7 +326,6 @@ public class UML2Util {
 	
 
 	private boolean _debug;
-	private URI _umlResourcePluginURI;
 	private ResourceSet _resourceSet;
 	private HashMap<String, Stereotype> _stereotypes;
 	private HashMap<String, Profile> _profiles;
