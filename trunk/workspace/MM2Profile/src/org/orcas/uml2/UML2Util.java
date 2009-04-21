@@ -3,10 +3,14 @@ package org.orcas.uml2;
 import static java.lang.System.out;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -19,35 +23,63 @@ import org.eclipse.emf.mapping.ecore2xml.util.Ecore2XMLResource;
 import org.eclipse.ocl.uml.ExpressionInOCL;
 import org.eclipse.uml2.uml.Classifier;
 import org.eclipse.uml2.uml.Constraint;
+import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.Extension;
 import org.eclipse.uml2.uml.Generalization;
 import org.eclipse.uml2.uml.Model;
 import org.eclipse.uml2.uml.OpaqueExpression;
+import org.eclipse.uml2.uml.Package;
 import org.eclipse.uml2.uml.PackageImport;
 import org.eclipse.uml2.uml.PrimitiveType;
 import org.eclipse.uml2.uml.Profile;
 import org.eclipse.uml2.uml.Stereotype;
 import org.eclipse.uml2.uml.UMLFactory;
 import org.eclipse.uml2.uml.UMLPackage;
+import org.eclipse.uml2.uml.internal.impl.ClassImpl;
 import org.eclipse.uml2.uml.internal.resource.UMLResourceFactoryImpl;
 import org.eclipse.uml2.uml.resource.UML22UMLResource;
 import org.eclipse.uml2.uml.resource.UMLResource;
+import org.eclipse.uml2.uml.util.UMLUtil;
 
 public class UML2Util {
 
 	public UML2Util() {
 		
-		_debug = false;
+		_debug = true;
 		
 		_profiles = new HashMap<String, Profile>();
 		_stereotypes = new HashMap<String, Stereotype>();
 
 		Registry registry = Resource.Factory.Registry.INSTANCE;
 		registry.getExtensionToFactoryMap().put("uml", new UMLResourceFactoryImpl());
-		
+				
 		_resourceSet = new ResourceSetImpl();
 		_resourceSet.setResourceFactoryRegistry(registry);
-
+		
+		
+		
+		
+		final String profile = "profiles/Standard.profile.uml";
+		URL url = getClass().getClassLoader().getResource(profile);
+		if (url == null)
+		{
+		throw new RuntimeException("Error getting UML2.profile.uml");
+		}
+		String urlString = url.toString();
+		if (!urlString.endsWith(profile))
+		{
+		throw new RuntimeException("Error getting UML2.profile.uml. Got: " +
+		urlString);
+		}
+		urlString = urlString.substring(0, urlString.length() - profile.length());
+		URI uri = URI.createURI(urlString); 
+		
+		registerPathmaps(uri);
+		
+		
+		
+		
+		
 		// configure the fake "oclenv:" resource factory
 		Map<String, Object> protMap = UMLResource.Factory.Registry.INSTANCE.getProtocolToFactoryMap();
 
@@ -125,6 +157,15 @@ public class UML2Util {
 		if (stereotype == null){
 			stereotype = profile.createOwnedStereotype(name, isAbstract);
 			_stereotypes.put(name, stereotype);
+				
+			org.eclipse.uml2.uml.Class metaclass = getMetaclass(name);
+			
+			if (metaclass != null){
+			referenceMetaclass(profile, metaclass);
+			
+		//	System.out.println("is meta " +  metaclass.isMetaclass());
+			createExtension(metaclass, stereotype, false);
+			}
 			_debug("Stereotype '" + stereotype.getName() + "' created in " + profile.getName());
 		} 
 		
@@ -170,15 +211,26 @@ public class UML2Util {
 		UMLPackage umlPackage = UMLPackage.eINSTANCE;
 
 		Resource resource = _resourceSet.getResource(uri, true);
-
+		
+		//Resource umlMetaResource = _resourceSet.getResource( URIConverter.URI_MAP.get(URI.createURI(UMLResource.METAMODELS_PATHMAP)) , true);
+		//Resource stdProfileResource = _resourceSet.getResource( URI.createURI( "metamodels/Standard.profile.uml"), true);
+		
 		org.eclipse.uml2.uml.Package package_ =
 		   	(org.eclipse.uml2.uml.Package) EcoreUtil.getObjectByType(
 		   		resource.getContents(), UMLPackage.Literals.PACKAGE);
+		
+		/*org.eclipse.uml2.uml.Package umlMetamodelPackage_ =
+		   	(org.eclipse.uml2.uml.Package) EcoreUtil.getObjectByType(
+		   		umlMetaResource.getContents(), UMLPackage.Literals.PACKAGE);*/
         
-        _resourceSet.getPackageRegistry().put(umlPackage.getNsURI(), umlPackage);     
+        //_resourceSet.getPackageRegistry().put(UMLResource., umlPackage);     
         _resourceSet.getPackageRegistry().put(package_.getQualifiedName(), package_);
+        //_resourceSet.getPackageRegistry().put(UMLResource.UML_METAMODEL_URI, umlMetamodelPackage_);
+        
         _resourceSet.getResources().add(umlPackage.eResource());
-
+        //_resourceSet.getResources().add(umlMetaResource);
+        //_resourceSet.getResources().add(stdProfileResource);
+        
         return package_;
 	}
 
@@ -223,6 +275,58 @@ public class UML2Util {
         packageRegistry.put(EcorePackage.eNS_URI, EcorePackage.eINSTANCE);
         packageRegistry.put(Ecore2XMLPackage.eNS_URI,Ecore2XMLPackage.eINSTANCE);
         packageRegistry.put(UMLPackage.eNS_URI, UMLPackage.eINSTANCE);
+	}
+	
+	public org.eclipse.uml2.uml.Class getMetaclass(String name){
+		
+		 
+		final String profile = "profiles/Standard.profile.uml";
+		URL url = getClass().getClassLoader().getResource(profile);
+		if (url == null)
+		{
+		throw new RuntimeException("Error getting UML2.profile.uml");
+		}
+		String urlString = url.toString();
+		if (!urlString.endsWith(profile))
+		{
+		throw new RuntimeException("Error getting UML2.profile.uml. Got: " +
+		urlString);
+		}
+		urlString = urlString.substring(0, urlString.length() - profile.length());
+		URI uri = URI.createURI(urlString); 
+		
+		Resource resource = _resourceSet.getResource(URI.createURI(uri + "metamodels/UML.metamodel.uml"), true ) ;
+		
+		
+		org.eclipse.uml2.uml.Package package_ =
+		   	(org.eclipse.uml2.uml.Package) EcoreUtil.getObjectByType(
+		   		resource.getContents(), UMLPackage.Literals.PACKAGE);
+		
+		 //System.out.println(resource);
+		
+		//Package metaPackage = (Package) _resourceSet.getPackageRegistry().get(UMLResource.UML_METAMODEL_URI);
+		
+		EList<Element> elementList = package_.getOwnedElements();
+		
+		for (Element element : elementList) {
+			
+		System.out.println(element.eClass());
+			
+			if (element instanceof ClassImpl){
+				ClassImpl metaclass = 
+					(ClassImpl) element;
+				
+				if (metaclass.getName().equals(name)){
+					
+					System.out.println(metaclass.getAppliedStereotypes());
+					
+					
+					return metaclass;
+				}
+			}
+		}
+		
+		return null;
 	}
 
 	public void save(org.eclipse.uml2.uml.Package package_, URI uri) throws IOException {
