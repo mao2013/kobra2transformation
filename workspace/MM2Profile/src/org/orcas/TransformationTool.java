@@ -1,6 +1,5 @@
 package org.orcas;
 
-import java.util.HashMap;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
@@ -17,7 +16,6 @@ import org.eclipse.uml2.uml.Profile;
 import org.eclipse.uml2.uml.Property;
 import org.eclipse.uml2.uml.Stereotype;
 import org.eclipse.uml2.uml.Type;
-import org.eclipse.uml2.uml.UMLPackage;
 import org.eclipse.uml2.uml.util.UMLUtil;
 import org.orcas.ocl.OCLUtil;
 import org.orcas.uml2.UML2Util;
@@ -33,7 +31,7 @@ public class TransformationTool {
 		_oclUtil = new OCLUtil();
 		_uml2Util = new UML2Util();
 
-		_inputModelPath = "model/Kobra2-MM.uml";
+		_inputModelPath = "model/Data.uml";
 
 		_inputModelURI = URI.createURI(_inputModelPath);
 
@@ -69,7 +67,7 @@ public class TransformationTool {
 				}
 				
 				// Merge dependencies
-				UMLUtil.merge(tmp, null);
+				//UMLUtil.merge(tmp, null);
 				
 				if (!tmp.getNestedPackages().isEmpty()) {
 					_processResource(tmp.getOwnedElements());
