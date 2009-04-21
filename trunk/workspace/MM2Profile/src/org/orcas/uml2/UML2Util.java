@@ -9,8 +9,6 @@ import java.util.Map;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -39,55 +37,30 @@ import org.eclipse.uml2.uml.internal.impl.ClassImpl;
 import org.eclipse.uml2.uml.internal.resource.UMLResourceFactoryImpl;
 import org.eclipse.uml2.uml.resource.UML22UMLResource;
 import org.eclipse.uml2.uml.resource.UMLResource;
-import org.eclipse.uml2.uml.util.UMLUtil;
 
 public class UML2Util {
 
 	public UML2Util() {
 		
-		_debug = true;
+		_debug = false;
 		
 		_profiles = new HashMap<String, Profile>();
 		_stereotypes = new HashMap<String, Stereotype>();
 
-		Registry registry = Resource.Factory.Registry.INSTANCE;
-		registry.getExtensionToFactoryMap().put("uml", new UMLResourceFactoryImpl());
+		Registry registry = _createRegistry();
 				
 		_resourceSet = new ResourceSetImpl();
 		_resourceSet.setResourceFactoryRegistry(registry);
 		
-		
-		
-		
-		final String profile = "profiles/Standard.profile.uml";
-		URL url = getClass().getClassLoader().getResource(profile);
-		if (url == null)
-		{
-		throw new RuntimeException("Error getting UML2.profile.uml");
-		}
-		String urlString = url.toString();
-		if (!urlString.endsWith(profile))
-		{
-		throw new RuntimeException("Error getting UML2.profile.uml. Got: " +
-		urlString);
-		}
-		urlString = urlString.substring(0, urlString.length() - profile.length());
-		URI uri = URI.createURI(urlString); 
-		
-		registerPathmaps(uri);
-		
-		
-		
-		
-		
-		// configure the fake "oclenv:" resource factory
-		Map<String, Object> protMap = UMLResource.Factory.Registry.INSTANCE.getProtocolToFactoryMap();
+		_umlResourcePluginURI = _findPluginURI();
+
+		/*Map<String, Object> protMap = UMLResource.Factory.Registry.INSTANCE.getProtocolToFactoryMap();
 
 		try {
 			protMap.put("oclenv", Class.forName("org.eclipse.ocl.uml.UMLEnvironmentFactory").newInstance()); 
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
+		}*/
 	}
 	
 	/**
@@ -161,10 +134,10 @@ public class UML2Util {
 			org.eclipse.uml2.uml.Class metaclass = getMetaclass(name);
 			
 			if (metaclass != null){
-			referenceMetaclass(profile, metaclass);
-			
-		//	System.out.println("is meta " +  metaclass.isMetaclass());
-			createExtension(metaclass, stereotype, false);
+				//referenceMetaclass(profile, metaclass);
+				
+			//	System.out.println("is meta " +  metaclass.isMetaclass());
+				//createExtension(metaclass, stereotype, false);
 			}
 			_debug("Stereotype '" + stereotype.getName() + "' created in " + profile.getName());
 		} 
@@ -208,29 +181,27 @@ public class UML2Util {
 
 	public org.eclipse.uml2.uml.Package load(URI uri) {
 		
+
 		UMLPackage umlPackage = UMLPackage.eINSTANCE;
 
+		registerPathmaps(_umlResourcePluginURI);
+
 		Resource resource = _resourceSet.getResource(uri, true);
-		
-		//Resource umlMetaResource = _resourceSet.getResource( URIConverter.URI_MAP.get(URI.createURI(UMLResource.METAMODELS_PATHMAP)) , true);
-		//Resource stdProfileResource = _resourceSet.getResource( URI.createURI( "metamodels/Standard.profile.uml"), true);
+		Resource umlMetaResource = 
+			_resourceSet.getResource(URI.createURI(_umlResourcePluginURI + "metamodels/UML.metamodel.uml"), true) ;
 		
 		org.eclipse.uml2.uml.Package package_ =
 		   	(org.eclipse.uml2.uml.Package) EcoreUtil.getObjectByType(
 		   		resource.getContents(), UMLPackage.Literals.PACKAGE);
 		
-		/*org.eclipse.uml2.uml.Package umlMetamodelPackage_ =
+		org.eclipse.uml2.uml.Package umlMetaPackage_ =
 		   	(org.eclipse.uml2.uml.Package) EcoreUtil.getObjectByType(
-		   		umlMetaResource.getContents(), UMLPackage.Literals.PACKAGE);*/
-        
-        //_resourceSet.getPackageRegistry().put(UMLResource., umlPackage);     
+		   		umlMetaResource.getContents(), UMLPackage.Literals.PACKAGE);
+		
+		   
         _resourceSet.getPackageRegistry().put(package_.getQualifiedName(), package_);
-        //_resourceSet.getPackageRegistry().put(UMLResource.UML_METAMODEL_URI, umlMetamodelPackage_);
-        
-        _resourceSet.getResources().add(umlPackage.eResource());
-        //_resourceSet.getResources().add(umlMetaResource);
-        //_resourceSet.getResources().add(stdProfileResource);
-        
+        _resourceSet.getPackageRegistry().put(UMLResource.UML_METAMODEL_URI, umlMetaPackage_);
+
         return package_;
 	}
 
@@ -250,6 +221,7 @@ public class UML2Util {
 	}
 	
 	public void registerPathmaps(URI umlResourcePluginURI) {
+		
 		URIConverter.URI_MAP.put(URI.createURI(UMLResource.LIBRARIES_PATHMAP),
 			umlResourcePluginURI.appendSegment("libraries").appendSegment(""));
 		
@@ -260,72 +232,30 @@ public class UML2Util {
 			umlResourcePluginURI.appendSegment("profiles").appendSegment(""));
 	}
 
-	public void registerExtensions() {
-		Map extensionFactoryMap = 
-			Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap();
-
-		extensionFactoryMap.put(UMLResource.FILE_EXTENSION, UMLResource.Factory.INSTANCE);
-		extensionFactoryMap.put(Ecore2XMLResource.FILE_EXTENSION, Ecore2XMLResource.Factory.INSTANCE);
-		extensionFactoryMap.put(UML22UMLResource.FILE_EXTENSION, UML22UMLResource.Factory.INSTANCE);
-	}
-	
-	public void registerPackages(ResourceSet resourceSet) {
+	/*public void registerPackages(ResourceSet resourceSet) {
         Map packageRegistry = resourceSet.getPackageRegistry();
        
         packageRegistry.put(EcorePackage.eNS_URI, EcorePackage.eINSTANCE);
         packageRegistry.put(Ecore2XMLPackage.eNS_URI,Ecore2XMLPackage.eINSTANCE);
         packageRegistry.put(UMLPackage.eNS_URI, UMLPackage.eINSTANCE);
-	}
+	}*/
 	
 	public org.eclipse.uml2.uml.Class getMetaclass(String name){
 		
-		 
-		final String profile = "profiles/Standard.profile.uml";
-		URL url = getClass().getClassLoader().getResource(profile);
-		if (url == null)
-		{
-		throw new RuntimeException("Error getting UML2.profile.uml");
-		}
-		String urlString = url.toString();
-		if (!urlString.endsWith(profile))
-		{
-		throw new RuntimeException("Error getting UML2.profile.uml. Got: " +
-		urlString);
-		}
-		urlString = urlString.substring(0, urlString.length() - profile.length());
-		URI uri = URI.createURI(urlString); 
-		
-		Resource resource = _resourceSet.getResource(URI.createURI(uri + "metamodels/UML.metamodel.uml"), true ) ;
-		
-		
 		org.eclipse.uml2.uml.Package package_ =
-		   	(org.eclipse.uml2.uml.Package) EcoreUtil.getObjectByType(
-		   		resource.getContents(), UMLPackage.Literals.PACKAGE);
-		
-		 //System.out.println(resource);
-		
-		//Package metaPackage = (Package) _resourceSet.getPackageRegistry().get(UMLResource.UML_METAMODEL_URI);
-		
+			(Package) _resourceSet.getPackageRegistry().get(UMLResource.UML_METAMODEL_URI);
+	
 		EList<Element> elementList = package_.getOwnedElements();
 		
 		for (Element element : elementList) {
-			
-		System.out.println(element.eClass());
-			
 			if (element instanceof ClassImpl){
-				ClassImpl metaclass = 
-					(ClassImpl) element;
+				ClassImpl metaclass = (ClassImpl) element;
 				
 				if (metaclass.getName().equals(name)){
-					
-					System.out.println(metaclass.getAppliedStereotypes());
-					
-					
 					return metaclass;
 				}
 			}
 		}
-		
 		return null;
 	}
 
@@ -339,12 +269,42 @@ public class UML2Util {
         _debug("Done.");
     }
 	
+	
+	public Registry _createRegistry() {
+		
+		Registry registry = Resource.Factory.Registry.INSTANCE;
+		
+		Map extensionFactoryMap = registry.getExtensionToFactoryMap();
+		extensionFactoryMap.put(UMLResource.FILE_EXTENSION, UMLResource.Factory.INSTANCE);
+		
+		return registry;
+	}
+
 	private void _debug(String msg){
 		if (_debug)
 			out.println(msg);
 	}
 
+	private URI _findPluginURI(){
+		
+		final String profile = "profiles/Standard.profile.uml";
+		
+		URL url = getClass().getClassLoader().getResource(profile);
+		
+		String urlString = url.toString();
+		
+		if (url == null || !url.toString().endsWith(profile)) {
+			throw new RuntimeException("Error getting Standard.profile.uml");
+		}
+		
+		urlString = urlString.substring(0, urlString.length() - profile.length());
+		
+		return URI.createURI(urlString);
+	}
+	
+
 	private boolean _debug;
+	private URI _umlResourcePluginURI;
 	private ResourceSet _resourceSet;
 	private HashMap<String, Stereotype> _stereotypes;
 	private HashMap<String, Profile> _profiles;

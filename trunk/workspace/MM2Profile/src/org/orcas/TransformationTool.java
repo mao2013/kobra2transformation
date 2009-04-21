@@ -90,6 +90,8 @@ public class TransformationTool {
 				
 				Association association = (Association) type;
 				
+				System.out.println(association.getName());
+				
 				EList<Property> ownedEnds = association.getOwnedEnds();
 							
 				// Create stereotypes 
