@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="org.orcas.progenese.contribution1"
+            nameFilter="*.uml"
+            objectClass="org.eclipse.core.resources.IResource">
+            <menu 
+                  label="Progenese Tool"
+                  path="additions"
+                  id="org.orcas.progenese.popupSubMenu">
+                  <groupMarker 
+                         name="content">
+                  </groupMarker>
+                  <separator
+                         name="additions">
+                  </separator>
+            </menu>
+                  
+            <action 
+                  id="org.orcas.progenese.convertToUMLProfile"
+                  label="Convert to UML2 Profile"
+                  icon="icons/sample.gif"
+                  tooltip="Converts a Metamodel to a UML Profile Representation"
+                  menubarPath="org.orcas.progenese.popupSubMenu/content"
+                  enablesFor="1"
+                  class="org.orcas.progenese.popup.actions.ProfileConvertionActionDelegate">
+            </action>
+        </objectContribution>
+            </extension>
+   <extension
+         point="org.eclipse.ui.viewActions">
+      <viewContribution
+            id="org.orcas.progenese.viewContribution1"
+            targetID="org.orcas.progenese.viewContribution1">
+      </viewContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.orcas.progenese.preferences.ProgenesePreferencePage"
+            id="org.orcas.progenese.preferences.ProgenesePreferencePage"
+            name="Progenese">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.orcas.progenese.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+</plugin>
