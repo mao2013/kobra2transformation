@@ -6,7 +6,7 @@
       <objectContribution
             adaptable="true"
             id="org.orcas.progenese.contribution1"
-            nameFilter="*.uml"
+            nameFilter="*.*"
             objectClass="org.eclipse.core.resources.IResource">
             <menu 
                   label="Progenese Tool"
@@ -23,7 +23,7 @@
             <action 
                   id="org.orcas.progenese.convertToUMLProfile"
                   label="Convert to UML2 Profile"
-                  icon="icons/sample.gif"
+                  icon="$nl$/icons/sample.gif"
                   tooltip="Converts a Metamodel to a UML Profile Representation"
                   menubarPath="org.orcas.progenese.popupSubMenu/content"
                   enablesFor="1"
@@ -31,19 +31,13 @@
             </action>
         </objectContribution>
             </extension>
-   <extension
-         point="org.eclipse.ui.viewActions">
-      <viewContribution
-            id="org.orcas.progenese.viewContribution1"
-            targetID="org.orcas.progenese.viewContribution1">
-      </viewContribution>
-   </extension>
+   
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
             class="org.orcas.progenese.preferences.ProgenesePreferencePage"
             id="org.orcas.progenese.preferences.ProgenesePreferencePage"
-            name="Progenese">
+            name="Progenese Tool">
       </page>
    </extension>
    <extension
@@ -51,5 +45,6 @@
       <initializer
             class="org.orcas.progenese.preferences.PreferenceInitializer">
       </initializer>
+       
    </extension>
 </plugin>
