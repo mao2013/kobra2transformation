@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="org.orcas.kobra2generator.tools.contribution1"
+            objectClass="org.eclipse.core.resources.IFile">
+         <menu
+               id="org.orcas.kobra2generator.tools.menu1"
+               label="KobrA2 Generator"
+               path="additions">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               class="org.orcas.kobra2generator.tools.popup.actions.KobraModelGeneratorAction"
+               enablesFor="1"
+               id="org.orcas.kobra2generator.tools.newAction"
+               label="Convert to KobrA2 Model"
+               menubarPath="org.orcas.kobra2generator.tools.menu1/group1">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.orcas.kobra2generator.tools.preferences.KobrA2ModelGeneratorPage"
+            id="org.orcas.kobra2generator.tools.preferences.KobrA2ModelGeneratorPage"
+            name="KobrA2 Model Generator">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.orcas.kobra2generator.tools.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+
+</plugin>
