@@ -6,7 +6,7 @@
       <objectContribution
             adaptable="true"
             id="org.orcas.progenese.contribution1"
-            nameFilter="*.*"
+            nameFilter="*.uml"
             objectClass="org.eclipse.core.resources.IResource">
             <menu 
                   label="Progenese Tool"
@@ -46,5 +46,11 @@
             class="org.orcas.progenese.preferences.PreferenceInitializer">
       </initializer>
        
+   </extension>
+   <extension point="org.eclipse.emf.ecore.uri_mapping">
+      <mapping
+            source="org.orcas.progenese.mapping1"
+            target="org.orcas.progenese.mapping1">
+      </mapping>
    </extension>
 </plugin>
