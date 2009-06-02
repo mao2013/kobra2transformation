@@ -32,10 +32,12 @@ import org.eclipse.uml2.uml.Stereotype;
 import org.eclipse.uml2.uml.UMLFactory;
 import org.eclipse.uml2.uml.UMLPackage;
 import org.eclipse.uml2.uml.internal.impl.ClassImpl;
+import org.eclipse.uml2.uml.internal.resource.UMLResourceFactoryImpl;
 import org.eclipse.uml2.uml.resource.UMLResource;
 
 public class UML2Util {
 
+	@SuppressWarnings("restriction")
 	public UML2Util() {
 		
 		_debug = true;
@@ -48,10 +50,11 @@ public class UML2Util {
 		Registry registry = _createRegistry();
 				
 		_resourceSet = new ResourceSetImpl();
-		_resourceSet.setResourceFactoryRegistry(registry);
-
-		URI umlResourcePluginURI = _findPluginURI();
-		registerPathmaps(umlResourcePluginURI);
+		//_resourceSet.setResourceFactoryRegistry(registry);
+		_resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("uml", new UMLResourceFactoryImpl());
+		
+		//URI umlResourcePluginURI = _findPluginURI();
+		//registerPathmaps(umlResourcePluginURI);
 		
 
 		/*Map<String, Object> protMap = UMLResource.Factory.Registry.INSTANCE.getProtocolToFactoryMap();
@@ -87,9 +90,7 @@ public class UML2Util {
 		org.eclipse.uml2.uml.Class metaclass, Stereotype stereotype, boolean required) {
 
 		Extension extension = stereotype.createExtension(metaclass, required);
-		
 		_debug((required ? "Required extension '": "Extension '") + extension.getQualifiedName() + "' created.");
-		
 		return extension;
 	}
 	
@@ -121,10 +122,12 @@ public class UML2Util {
 	}
 	
 	public Stereotype createOrRetrieveStereotype(org.eclipse.uml2.uml.Package package_, String name, boolean isAbstract) {
-	
-		
-		Profile profile = createOrRetrieveProfile(package_.getName());
+			
+		Profile profile = null;
 
+		if (package_ != null)
+			profile = createOrRetrieveProfile(package_.getName());
+		
 		Stereotype stereotype = _stereotypes.get(name);
 		
 		if (stereotype == null){
@@ -169,7 +172,7 @@ public class UML2Util {
         _debug("Profile '" + profile.getQualifiedName() + "' defined.");
     }
 
-	public PrimitiveType importPrimitiveType(
+	/*public PrimitiveType importPrimitiveType(
 			org.eclipse.uml2.uml.Package package_, String name) {
 
 		Model umlLibrary = (Model) load(URI.createURI(UMLResource.UML_PRIMITIVE_TYPES_LIBRARY_URI));
@@ -180,13 +183,9 @@ public class UML2Util {
 		_debug("Primitive type '" + primitiveType.getQualifiedName() + "' imported.");
 		
 		return primitiveType;
-	}
+	}*/
 
-	public org.eclipse.uml2.uml.Package load(URI uri) {
-		
-
-		
-		
+	public org.eclipse.uml2.uml.Package load(URI uri) {	
 		Resource resource = _resourceSet.getResource(uri, true);
 		//Resource umlMetaResource = 
 		//	_resourceSet.getResource(URI.createURI(_umlResourcePluginURI + "metamodels/UML.metamodel.uml"), true) ;
@@ -237,13 +236,13 @@ public class UML2Util {
 	
 	public void registerPathmaps(URI umlResourcePluginURI) {
 		
-		URIConverter.URI_MAP.put(URI.createURI(UMLResource.LIBRARIES_PATHMAP),
+		URIConverter.URI_MAP.put(URI.createPlatformPluginURI(UMLResource.LIBRARIES_PATHMAP, true),
 			umlResourcePluginURI.appendSegment("libraries").appendSegment(""));
 		
-		URIConverter.URI_MAP.put(URI.createURI(UMLResource.METAMODELS_PATHMAP),
+		URIConverter.URI_MAP.put(URI.createPlatformPluginURI(UMLResource.METAMODELS_PATHMAP, true),
 			umlResourcePluginURI.appendSegment("metamodels").appendSegment(""));
 		
-		URIConverter.URI_MAP.put(URI.createURI(UMLResource.PROFILES_PATHMAP),
+		URIConverter.URI_MAP.put(URI.createPlatformPluginURI(UMLResource.PROFILES_PATHMAP, true),
 			umlResourcePluginURI.appendSegment("profiles").appendSegment(""));
 	}
 
@@ -256,8 +255,6 @@ public class UML2Util {
 	}*/
 	
 	public org.eclipse.uml2.uml.Class getMetaclass(String name){
-		
-		
 		
 		org.eclipse.uml2.uml.Package package_ =
 			(Package) _resourceSet.getPackageRegistry().get(UMLResource.UML_METAMODEL_URI);
@@ -279,7 +276,6 @@ public class UML2Util {
 	public void save(org.eclipse.uml2.uml.Package package_, URI uri) throws IOException {
 
         Resource resource = _resourceSet.createResource(uri);
-
         resource.getContents().add(package_);
         resource.save(null);
         
@@ -303,11 +299,8 @@ public class UML2Util {
 	}
 
 	private URI _findPluginURI(){
-		
 		final String profile = "profiles/Standard.profile.uml";
-		
 		URL url = getClass().getClassLoader().getResource(profile);
-		
 		String urlString = url.toString();
 		
 		if (url == null || !url.toString().endsWith(profile)) {
@@ -315,10 +308,8 @@ public class UML2Util {
 		}
 		
 		urlString = urlString.substring(0, urlString.length() - profile.length());
-		
 		return URI.createURI(urlString);
-	}
-	
+	}	
 
 	private boolean _debug;
 	private ResourceSet _resourceSet;
